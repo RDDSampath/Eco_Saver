@@ -6,7 +6,7 @@ const footer =()=>{
     return(
         <footer>
             <div className='footer'>
-                    <ul class="foot-button-top">
+                    <ul className="foot-button-top">
                 <li>
                     <a href="#">HOME</a>
                 </li>

@@ -1,0 +1,51 @@
+.dash-container{
+    width:100%;
+    height:48vw;
+}
+/*home*/
+.d-text{
+    margin-left: 1vw;
+    margin-top: 0.5vw;
+    color: gray;
+  }
+  .d-value{
+    margin-left: 1vw;
+    margin-top: 1.5vw;
+    font-weight: bold;
+  }
+  .dash-table-box{
+    float: left;
+    width: 40vw;
+    height: 35vw;
+    background-color: #74eea171;
+    border-radius: 1vw;
+    box-shadow: 0.1vw 0.1vw 0.5vw rgba(0, 0, 0, 0.256);
+  }
+  .dash-table-box-a{
+    float: right;
+    margin-right: 6vw;
+    width: 30vw;
+    height: 35vw;
+    border-radius: 1vw;
+  }
+  .dash-column{
+    margin-top: 0vw;
+  }
+  .dash-box-4{
+    width:14vw;
+    height:12vw;
+    background-color: #106f33;
+    float: left;
+    margin:0.1vw;
+    border-radius: 1vw;
+    margin-top: 8vw;
+  }
+  .dash-box-5{
+    width:28.2vw;
+    height:11vw;
+    background-color: #106f33;
+    float: left;
+    margin:0.1vw;
+    border-radius: 0.2vw;
+    margin-top: 1vw;
+  }

@@ -6,4 +6,11 @@ import Linkedin from '../assest/icons/linkedin.png';
 import Twitter from '../assest/icons/twitter.png';
 
 
-export default {Logo,Mode,Facebook,Linkedin,Twitter,Flogo};
+export default {
+    Logo,
+    Mode,
+    Facebook,
+    Linkedin,
+    Twitter,
+    Flogo
+};
