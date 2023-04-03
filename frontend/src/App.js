@@ -11,7 +11,7 @@ function App() {
     <BrowserRouter> 
     <Header />
       <Routes>
-          <Route index element={<Home/>} />
+      <Route index element={<OrganicPlaces/>}/>
           <Route path="/footer" element={<></>}/>
       </Routes>
       <Footer />
