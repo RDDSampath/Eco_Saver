@@ -22,3 +22,8 @@
     border-radius: 0.5vw;
   }
 
+  .sidenav a:hover {
+    color: #f1f1f1;
+    background-color: #106f33;
+  }
+
