@@ -84,4 +84,9 @@ a[aria-expanded="true"] {
     background: #6d7fcc;
 }
 
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+
 
