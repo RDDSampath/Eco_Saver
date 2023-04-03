@@ -155,6 +155,12 @@ const OrganicPlaces =()=>{
 </div>
 </div>
 
+</div>
+</div>
+</div>
+)};
+export default OrganicPlaces;
+
 
 
 
