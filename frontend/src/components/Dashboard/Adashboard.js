@@ -8,3 +8,4 @@ const Adashboard =()=>{
         </div>
     )
 };
+export default Adashboard;
