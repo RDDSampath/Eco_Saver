@@ -35,3 +35,8 @@
     margin-left: 50px;
   }
 
+  .sidenav.open {
+    width: 14%;
+    float:left;
+  }
+
