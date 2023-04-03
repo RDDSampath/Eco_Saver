@@ -44,5 +44,11 @@ const OrganicPlaces =()=>{
         </div>
 
         <div class="des"></div>
+        <p>Hidellana, Rathnapura, Sri Lanka</p>
+        <button>search</button>
+
+        </div>
+
+        </div>
 
       
