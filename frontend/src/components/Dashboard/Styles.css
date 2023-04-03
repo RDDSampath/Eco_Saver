@@ -37,3 +37,14 @@ body{
     text-align: center;
     padding: 4px;
 }
+
+/*make button changes*/
+button{
+    margin-top: 30px;
+    margin-bottom: 40px;
+    background-color: white;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
