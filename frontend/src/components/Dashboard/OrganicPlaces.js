@@ -22,3 +22,10 @@ const OrganicPlaces =()=>{
             <div style={{flexDirection:'row'}}>  
 
             <div style={{textAlign: 'right', marginBottom: '10px'}}> 
+
+            &nbsp;
+                &nbsp;
+        <button>+ Add Place</button>
+        &nbsp;
+        &nbsp;
+        &nbsp;
