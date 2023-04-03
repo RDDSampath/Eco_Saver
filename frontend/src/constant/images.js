@@ -12,4 +12,4 @@ import Home_5 from '../assest/icons/home_5.png';
 import Home_6 from '../assest/icons/home_6.png';
 
 
-export default {Logo,Mode,Facebook,Linkedin,Twitter,Flogo};
+export default {Logo,Mode,Facebook,Linkedin,Twitter,Home_1,Home_2,Home_3,Home_4,Home_5,Home_6,Flogo};
