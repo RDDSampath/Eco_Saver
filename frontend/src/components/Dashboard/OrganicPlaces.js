@@ -111,6 +111,28 @@ const OrganicPlaces =()=>{
 
 </div>
 
+<div class="cards">
+
+<div class="image">
+<a href='/'><img src={images.Home_5} alt='home_5'/></a>
+
+</div>
+
+<div class="title">
+    <h6>Window Garden House</h6>
+
+</div>
+
+<div class="des">
+    <p>1/1A Moratuwa, Colombo</p>
+    <button>search</button>
+
+</div>
+
+</div>
+
+
+
 
 
 
