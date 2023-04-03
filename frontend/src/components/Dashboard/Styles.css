@@ -48,3 +48,11 @@ button{
     border-radius: 5px;
     cursor: pointer;
 }
+
+/*make button hover changes*/
+button:hover{
+    background-color: black;
+    color: white;
+    transition: .5s;
+    
+}
