@@ -1,2 +1,10 @@
 import React from "react";
 import './styles.css';
+
+const Adashboard =()=>{
+    return(
+        <div>
+            
+        </div>
+    )
+};
