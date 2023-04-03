@@ -37,4 +37,7 @@ const OrganicPlaces =()=>{
         <div class="image"></div>
         <a href='/'><img src={images.Home_1} alt='home_1'/></a>
 
+        </div>
+        <div class="title"></div>
+
       
