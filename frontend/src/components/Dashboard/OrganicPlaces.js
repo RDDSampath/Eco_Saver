@@ -35,5 +35,6 @@ const OrganicPlaces =()=>{
 
         <div class="cards"></div>
         <div class="image"></div>
+        <a href='/'><img src={images.Home_1} alt='home_1'/></a>
 
       
