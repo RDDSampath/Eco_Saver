@@ -79,3 +79,47 @@
     font-weight: bold;
   }
 
+  .dash-table-box{
+    float: left;
+    width: 40vw;
+    height: 35vw;
+    background-color: #74eea171;
+    border-radius: 1vw;
+    box-shadow: 0.1vw 0.1vw 0.5vw rgba(0, 0, 0, 0.256);
+  }
+
+  .dash-table-box-2{
+    float: right;
+    margin-right: 6vw;
+    width: 30vw;
+    height: 35vw;
+    background-color: #74eea171;
+    border-radius: 1vw;
+    box-shadow: 0.1vw 0.1vw 0.5vw rgba(0, 0, 0, 0.256);
+  }
+
+  .dash-column-1{
+    width:30vw;
+    height:17.5vw;
+    border:1px solid black;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .dash-column-2{
+    width:30vw;
+    height:17.5vw;
+    border:1px solid black;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .dash-box-4{
+    width:14vw;
+    height:12vw;
+    background-color: #106f33;
+    float: left;
+    margin:0.1vw;
+    border-radius: 1vw;
+  }
+
