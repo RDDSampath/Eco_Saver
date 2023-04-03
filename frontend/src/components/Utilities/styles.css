@@ -40,3 +40,30 @@
     float:left;
   }
 
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+  .dash-main-box{
+    float:right;
+    flex-direction:row;
+    width:80%;
+    align-items:center;
+    position: relative;
+  }
+
+  .dash-box{
+    width:15vw;
+    height:7vw;
+    background-color: #82f5a440;
+    border-radius: 1vw;
+    margin: 2vw;
+    float:left;
+    box-shadow: 0.1vw 0.1vw 0.5vw rgba(0, 0, 0, 0.256);
+  }
+
+  .dash-box:hover{
+    background-color: #2caa5ab0;
+  }
+
