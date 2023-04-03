@@ -67,3 +67,15 @@
     background-color: #2caa5ab0;
   }
 
+  .d-text{
+    margin-left: 1vw;
+    margin-top: 0.5vw;
+    color: gray;
+  }
+
+  .d-value{
+    margin-left: 1vw;
+    margin-top: 1.5vw;
+    font-weight: bold;
+  }
+
