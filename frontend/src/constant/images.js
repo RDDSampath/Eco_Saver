@@ -6,6 +6,7 @@ import Linkedin from '../assest/icons/linkedin.png';
 import Twitter from '../assest/icons/twitter.png';
 import Home_1 from '../assest/icons/home_1.png';
 import Home_2 from '../assest/icons/home_2.png';
+import Home_3 from '../assest/icons/home_3.png';
 
 
 export default {Logo,Mode,Facebook,Linkedin,Twitter,Flogo};
