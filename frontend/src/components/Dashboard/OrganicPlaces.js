@@ -13,4 +13,10 @@ const OrganicPlaces =()=>{
           setActiveTab(tab);
         }
       };
-      
+
+      return(
+        <div className='container-c'>
+            <SideNav className='sidenav'/>
+            <div className='container-create'>
+
+                
