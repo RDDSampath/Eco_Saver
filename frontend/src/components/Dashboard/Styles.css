@@ -25,3 +25,9 @@ body{
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
 }
+
+/*make title changes*/
+.title{
+    text-align:center;
+    padding: 4px;
+}
