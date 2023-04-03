@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Header from './components/home/header';
 import Footer from './components/home/footer';
-import Home from './components/home/home';
+import OrganicPlaces from './components/Dashboard/OrganicPlaces';
 
 function App() {
   return (
