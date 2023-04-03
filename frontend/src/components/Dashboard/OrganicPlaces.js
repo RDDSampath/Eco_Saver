@@ -29,3 +29,8 @@ const OrganicPlaces =()=>{
         &nbsp;
         &nbsp;
         &nbsp;
+
+        </div>
+
+
+        <div class="cards"></div>
