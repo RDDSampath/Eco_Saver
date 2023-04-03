@@ -134,6 +134,28 @@ const OrganicPlaces =()=>{
 
 
 
+<div class="cards">
+
+<div class="image">
+<a href='/'><img src={images.Home_6} alt='home_6'/></a>
+
+</div>
+
+<div class="title">
+    <h6>White Garden</h6>
+
+</div>
+
+<div class="des">
+    <p>No 8/1A, Colombo, Sri Lanka</p>
+    <button>search</button>
+
+</div>
+
+</div>
+</div>
+
+
 
 
 
