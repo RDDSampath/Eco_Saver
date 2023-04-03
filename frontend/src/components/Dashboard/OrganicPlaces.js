@@ -71,4 +71,29 @@ const OrganicPlaces =()=>{
 
 </div>
 
+<div class="cards">
+
+<div class="image">
+<a href='/'><img src={images.Home_3} alt='home_3'/></a>
+
+</div>
+
+<div class="title">
+    <h6>Lady bird Home</h6>
+
+</div>
+
+<div class="des">
+    <p>1/1C Malabe, Kaduwela</p>
+    <button>search</button>
+
+</div>
+
+</div>
+
+
+
+
+
+
       
