@@ -39,5 +39,10 @@ const OrganicPlaces =()=>{
 
         </div>
         <div class="title"></div>
+        <h6>Green tea home</h6>
+
+        </div>
+
+        <div class="des"></div>
 
       
