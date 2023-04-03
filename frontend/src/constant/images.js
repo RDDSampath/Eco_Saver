@@ -8,6 +8,7 @@ import Home_1 from '../assest/icons/home_1.png';
 import Home_2 from '../assest/icons/home_2.png';
 import Home_3 from '../assest/icons/home_3.png';
 import Home_4 from '../assest/icons/home_4.png';
+import Home_5 from '../assest/icons/home_5.png';
 
 
 export default {Logo,Mode,Facebook,Linkedin,Twitter,Flogo};
