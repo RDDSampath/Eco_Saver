@@ -8,3 +8,13 @@
 body{
     font-family: Arial;
 }
+
+/* make card changes*/
+.cards{
+    width: 20%;
+    display: inline-block;
+    background-color: white;
+    border-radius: 5px;
+    margin: 40px;
+    box-shadow: 2px 2px 10px black;  
+}
