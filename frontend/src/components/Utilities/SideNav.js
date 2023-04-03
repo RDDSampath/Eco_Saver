@@ -16,3 +16,5 @@ const SideNavi = () => {
       </div>
     );
   }
+
+  export default SideNavi;
