@@ -8,14 +8,14 @@ import OrganicPlaces from './components/Dashboard/OrganicPlaces';
 
 function App() {
   return (
-    <BrowserRouter> <center>
+    <BrowserRouter> 
     <Header />
       <Routes>
           <Route index element={<Home/>} />
           <Route path="/footer" element={<></>}/>
       </Routes>
       <Footer />
-      </center>
+      
     </BrowserRouter>
   );
 }
