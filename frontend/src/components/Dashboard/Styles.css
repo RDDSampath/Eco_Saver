@@ -40,6 +40,12 @@ body{
     padding: 4px;
 }
 
+.theme{
+    text-align: center;
+    font-weight: bold;
+    padding-top: 3vw;
+}
+
 /*make description changes*/
 .des{
     text-align: center;
@@ -64,3 +70,43 @@ button:hover{
     transition: .5s;
     
 }
+
+.addP {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .addP span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .addP span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .addP:hover span {
+    padding-right: 25px;
+  }
+  
+  .addP:hover span:after {
+    opacity: 1;
+    right: 0;
+  }

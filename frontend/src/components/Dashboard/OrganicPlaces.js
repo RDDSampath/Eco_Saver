@@ -17,12 +17,16 @@ const OrganicPlaces =()=>{
             <SideNav className='sidenav'/>
             <div className='container-create'>
 
+        
+
 
                 <div style={{flexDirection:'row'}}>
 
                 <div style={{textAlign: 'right', marginBottom: '10px'}}>
-               
-        <button>+ Add Place</button>
+
+       
+
+        <button class="addP"><span>+ Add </span></button>
         &nbsp;
         &nbsp;
         &nbsp;

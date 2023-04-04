@@ -7,10 +7,10 @@ const SideNavi = () => {
       <div style={{flexDirection:'row'}}>
           <div>
               <div className="sidenav open">
-                  <a href="#">Organic Dashboard</a>
-                  <a href="#">Organic Disposal</a>
-                  <a href="#">My Profile</a>
-                  <a href="#">Log Out</a>
+                  <a href="#"><center>Organic Dashboard</center></a>
+                  <a href="#"><center>Organic Disposal Plcaces</center></a>
+                  <a href="#"><center>My Profile</center></a>
+                  <a href="#"><center>Log Out</center></a>
               </div>
         </div>
       </div>
