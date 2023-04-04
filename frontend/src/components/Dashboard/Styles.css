@@ -28,7 +28,7 @@ body{
 
 /*make changes to the location image*/
 .location img{
-    width: 7%;
+    width: 6%;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
 }
