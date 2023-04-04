@@ -15,7 +15,7 @@ const OrganicPlaces =()=>{
     return(
         <div className='container-c'>
             <SideNav className='sidenav'/>
-            <div className='container-create'>
+            <div className='container-backg'>
 
         
 

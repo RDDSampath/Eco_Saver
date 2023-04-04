@@ -115,4 +115,15 @@ button:hover{
   .addP:hover span {
     padding-right: 25px;
   }
+
+/*make changes to the background*/
+.container-backg{
+    background-color: rgb(181, 222, 186);
+    flex-direction: row;
+}
+
+/*make left side of the side navigation bar*/
+.sidenav{
+    float:left;
+}
   
