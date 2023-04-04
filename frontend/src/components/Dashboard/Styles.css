@@ -71,6 +71,7 @@ button:hover{
     
 }
 
+/*create design to the + add button more creatively*/
 .addP {
     display: inline-block;
     border-radius: 4px;
@@ -86,6 +87,7 @@ button:hover{
     margin: 5px;
   }
   
+  /*add creative arrow head to the button*/
   .addP span {
     cursor: pointer;
     display: inline-block;
@@ -93,6 +95,7 @@ button:hover{
     transition: 0.5s;
   }
   
+   /*add creative arrow head to the button*/
   .addP span:after {
     content: '\00bb';
     position: absolute;
@@ -101,12 +104,15 @@ button:hover{
     right: -20px;
     transition: 0.5s;
   }
+
+    /*add creative arrow head to the button*/
+    .addP:hover span:after {
+        opacity: 1;
+        right: 0;
+    }
   
+  /*create arrow head and the text on the button with space*/
   .addP:hover span {
     padding-right: 25px;
   }
   
-  .addP:hover span:after {
-    opacity: 1;
-    right: 0;
-  }
