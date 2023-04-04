@@ -24,28 +24,11 @@ const OrganicPlaces =()=>{
        
       </div>
 
-               
 
 
 
 
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
+    /* Organic Dashboard */
 
 
 
