@@ -5,7 +5,10 @@ import Header from './components/home/header';
 import Footer from './components/home/footer';
 import Home from './components/home/home';
 import NDashboard from './components/Dashboard/Ndashboard';
-
+import BDashboard from './components/Dashboard/Bdasboard';
+import CreateRequest from "./components/Inorganic/CreateRequest";
+import DisposalPlaces from "./components/Organic/DisposalPlaces";
+import Chart from "./components/Dashboard/Chart";
 //<Route path="/h" element={<NDashboard/>}/>
 
 function App() {
@@ -13,7 +16,12 @@ function App() {
     <BrowserRouter>
       <Header/>
       <Routes>
-        <Route index element={<NDashboard/>}/>
+        <Route index element={<Home/>}/>
+        <Route path="/a" element={<NDashboard/>}/>
+        <Route path="/b" element={<BDashboard/>}/>
+        <Route path="/c" element={<CreateRequest/>}/>
+        <Route path="/d" element={<DisposalPlaces/>}/>
+       <Route path="/e" element={<Chart/>}/>
       </Routes>
       <Footer />
     </BrowserRouter>

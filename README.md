@@ -1,2 +1,0 @@
-# ITPM-Project
-MERN Project

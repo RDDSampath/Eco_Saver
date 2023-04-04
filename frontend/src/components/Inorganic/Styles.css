@@ -1,0 +1,131 @@
+.container-c{
+    width:100vw;
+    height:48vw;
+}
+.container-create{
+    width:100vw;
+    height:48vw;
+    background-color: rgb(255, 255, 255);
+    flex-direction: row;
+    box-shadow: 1vw 1vw 1vw black;
+}
+.create-left{
+    width:30vw;
+    height:35vw;
+    float: right;
+    margin: 1vw;
+    margin-right: 2.5vw;
+    background-color: rgb(220, 181, 181);
+    border-radius: 1vw;
+}
+.create-right{
+    width:50vw;
+    height:35vw;
+    float: left;
+    margin: 1vw;
+    border-radius: 1vw;
+    background-color: rgba(63, 183, 33, 0.288);
+}
+.sidenav{
+    float:left;
+}
+.topic-create{
+    text-align: center;
+    font-weight: bold;
+    padding-top: 3vw;
+    padding-bottom: 2vw;
+}
+.right-c{
+    width:32vw ;
+    height:35vw ;
+    background-color: #B8DCC3;
+    float: right;
+    border-radius: 0 1vw 1vw 0;
+}
+.left-c{
+    width:18vw ;
+    height:35vw ;
+    background-color: #E6FFE6;
+    float: left;
+    border-radius: 1vw 0vw 0vw 1vw;
+}
+.sub-topic-c{
+    text-align: center;
+    font-weight: bold;
+    padding-top: 2vw;
+    width:16vw;
+}
+.box-c-list{
+    width:31vw;
+    height: 33vw;
+    margin: 0.5vw;
+    background-color: #B8DCC3;
+    border-radius: 1vw;
+}
+.box-c-list input{
+    width:16vw;
+    height: 4vw;
+    border: none;
+    border-radius:1vw ;
+}
+.input{
+    width:20vw;
+    height: 4vw;
+    border-radius: 1vw;
+    margin: 1vw;
+    margin-left: 5vw;
+    background-color: rgb(255, 255, 255);
+}
+.box-c-list h6{
+    font-weight: 'bold';
+    text-align: justify;
+    margin-left: 5vw;
+}
+.next-Btn{
+    margin-left:13vw ;
+    margin-top: 4vw;
+    background-color: #024731;
+    color:azure;
+    box-shadow: 0.5vw 0.3vw 1vw black; 
+}
+.input-l{
+    width:25vw;
+    height: 3vw;
+    border-radius: 0.2vw;
+    margin: 1vw;
+    margin-left: 3vw;
+    background-color: rgb(255, 255, 255);
+}
+
+.box-c-list .input-ll{
+    width:20vw;
+    height: 3vw;
+    border: none;
+    border-radius:0.2vw ;
+}
+.home-ino{
+    width: 23vw;
+    height: 15vw;
+    border-radius: 0.2vw;
+}
+.h-container{
+    width:86%;
+    height:auto;
+    background-color: #ffffff;
+    float:right;
+}
+.h-box{
+    width:23vw;
+    height:20vw;
+    background-color: rgb(255, 255, 255);
+    float:left;
+    margin:1.5vw ;
+}
+.location{
+    width:1.2vw;
+    height:1.2vw;
+    margin-right: 0.8vw;
+}
+.hname{
+    margin-right: 1vw;
+}
