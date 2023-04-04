@@ -184,6 +184,8 @@ const OrganicPlaces =()=>{
 
 </div>
 </div>
+
+
                                   
         </div>
         </div>
