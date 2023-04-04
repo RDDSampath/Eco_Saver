@@ -1,10 +1,9 @@
 import React,{useState} from 'react';
-import './OrganicD.css';
+import './Styles.css';
 import SideNav from '../Utilities/SideNav';
 import { Nav, NavItem, Button, TabContent, TabPane } from 'reactstrap';
 import images from '../../constant/images';
-
-const OrganicDash =()=>{
+const OrganicPlaces =()=>{
     const [activeTab, setActiveTab] = useState('tab1');
     const [next,setNext] = useState('');
 
@@ -13,12 +12,48 @@ const OrganicDash =()=>{
       setActiveTab(tab);
     }
   };
+    return(
+        <div className='container-c'>
+            <SideNav className='sidenav'/>
+            <div className='container-create'>
+              
+                <div style={{flexDirection:'row'}}>
 
-  return(
-    <div className='container-c'>
-        <SideNav className='sidenav'/>
-        <div className='container-create'>
-          
-            <div style={{flexDirection:'row'}}>
+                <div style={{textAlign: 'right', marginBottom: '10px'}}>
+              
+       
+      </div>
 
-            <div style={{textAlign: 'right', marginBottom: '10px'}}>
+               
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  
+        </div>
+        </div>
+    </div>
+)};
+export default OrganicPlaces;
+
