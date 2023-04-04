@@ -50,7 +50,7 @@ const OrganicPlaces =()=>{
 <p><a href='/'><img src={images.Location} alt='location'/></a>Hidellana, Rathnapura, Sri Lanka</p>
 </div>
 
-    <button>search</button>
+    <button>Search</button>
 
 </div>
 
@@ -75,7 +75,7 @@ const OrganicPlaces =()=>{
 <div class="location">
     <p><a href='/'><img src={images.Location} alt='location'/></a>No 3, Colombo, Sri Lanka</p>
 </div>
-    <button>search</button>
+    <button>Search</button>
     
 
 </div>
@@ -101,7 +101,7 @@ const OrganicPlaces =()=>{
 <div class="location">
     <p><a href='/'><img src={images.Location} alt='location'/></a>1/1C Malabe, Kaduwela</p>
 </div>    
-    <button>search</button>
+    <button>Search</button>
     
 
 </div>
@@ -127,7 +127,7 @@ const OrganicPlaces =()=>{
 <div class="location">
     <p><a href='/'><img src={images.Location} alt='location'/></a>2/1B, Badulla, Sri Lanka</p>
 </div>    
-    <button>search</button>
+    <button>Search</button>
 
 </div>
 
@@ -152,7 +152,7 @@ const OrganicPlaces =()=>{
 <div class="location">
     <p><a href='/'><img src={images.Location} alt='location'/></a>1/1A Moratuwa, Colombo</p>
 </div>    
-    <button>search</button>
+    <button>Search</button>
 
 </div>
 
@@ -177,20 +177,16 @@ const OrganicPlaces =()=>{
 <div class="location">
     <p><a href='/'><img src={images.Location} alt='location'/></a>No 8/1A, Colombo, Sri Lanka</p>
 </div>    
-    <button>search</button>
+    <button>Search</button>
 
 
 </div>
 
 </div>
 </div>
-                 
-
-
-                 
-                   
-                </div>
-            </div>
+                                  
+        </div>
+        </div>
     </div>
 )};
 export default OrganicPlaces;
