@@ -11,7 +11,7 @@ body{
 
 /* make card changes*/
 .cards{
-    width: 20%;
+    width: 15%;
     display: inline-block;
     background-color: white;
     border-radius: 5px;

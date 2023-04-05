@@ -39,7 +39,7 @@ const OrganicPlaces =()=>{
 <div class="cards">
 
 <div class="image">
-<a href='/'><img src={images.Home_1} alt='home_1'/></a>
+<a href='/'><img src={images.Home_4} alt='home_4'/></a>
 
 </div>
 
@@ -51,7 +51,7 @@ const OrganicPlaces =()=>{
 <div class="des">
 
 <div class="location">
-<p><a href='/'><img src={images.Location} alt='location'/></a>Hidellana, Rathnapura, Sri Lanka</p>
+<p><a href='/'><img src={images.Location} alt='location'/></a>no.05, Hidellana, Sri Lanka</p>
 </div>
 
     <button>Search</button>

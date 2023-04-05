@@ -19,10 +19,10 @@ function App() {
       <Routes>
 
         
-        
+      <Route index element={<OrganicDash/>}/>  
 
       <Route index element={<OrganicPlaces/>}/>
-      <Route index element={<OrganicDash/>}/>
+      
       
 
       
