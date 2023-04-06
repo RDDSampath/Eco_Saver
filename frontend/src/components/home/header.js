@@ -10,13 +10,13 @@ const header =()=>{
         <div className='nav1'>
         <ul class="nav-button-top">
         <li>
-            <a href="#">Mode <img className='mode' src={images.Mode} alt='mode'/></a>
+            <a href="/">Mode <img className='mode' src={images.Mode} alt='mode'/></a>
           </li>
           <li >
-            <a href="#">Return policy</a>
+            <a href="/">Return policy</a>
           </li>
           <li>
-            <a  href="#">About us</a>
+            <a  href="/">About us</a>
           </li>
           <li>
             <a href="#">Contact us </a>

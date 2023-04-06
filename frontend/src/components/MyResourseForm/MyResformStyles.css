@@ -1,0 +1,47 @@
+.container-2{
+    width: 100vw;
+    height: 48vw;
+    
+}
+
+.form-1{
+    
+    width: 60vw;
+    height: 45vw;
+    background: linear-gradient(to right,#00CF1C,#ADEEB4
+    );
+    margin-top: 5vw;
+    border-radius: 1vw;
+}
+.frm{
+    width: 50vw;
+    height:35vw;
+    padding-top: 2vw;
+    margin-top: 1.2vw;
+    background-color: #FFF;
+    border-radius: 1vw;
+    
+}
+
+h4{
+    color: black;
+    margin-right:32vw;
+    font-size: 1.5vw;
+    font-weight: bold;
+}
+.submit{
+    margin-top: 0.8vw;
+    margin-left: 45vw;
+    padding: 0.8vw 1.5vw;
+    background-color: #014E35;
+    border-radius: 0.5vw;
+    font-weight: bold;
+    color: #FFF;
+}
+.letters{
+    padding: 12px 20px;
+}
+.in{
+    margin-right: 44vw;
+    font-size: 1.5vw;
+}

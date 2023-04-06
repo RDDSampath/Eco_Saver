@@ -1,0 +1,92 @@
+.container-a{
+    width: 100vw;
+    
+}
+.ResImg{
+    width: 100vw;
+    height: 31vw;
+}
+.aa{
+    width:100vw;
+    height: 5vw;
+    margin-top: 1vw;
+}
+.bb{
+   
+    background-color:#014E35;
+    float: left;
+    margin-left: 4vw;
+    margin-top: 1.5vw;
+    padding: 8px 12px;
+    color: #FFF;
+    font-weight: bold;
+    border-radius: 0.7vw;
+
+}
+.searchBox{
+    margin-top: 2vw;
+}
+.resBox{
+    height:50vw;
+    width: 80vw;
+    background: linear-gradient(to right,#00CF1C,#ADEEB4);
+    margin: 1vw 0vw;
+    border-radius:1.2vw;
+
+}
+.inResBox{
+    height:32vw;
+    width: 75vw;
+    background-color: #FFF;
+    border-radius:1.2vw;
+}
+.name .h4{
+    margin-right:30vw;
+    
+}
+.details{
+    
+    flex-direction: row;
+    float: right;
+    margin-right: 5vw;
+    width: 45vw;  
+}
+.res-a{
+    height: 20vw;
+    width: 20vw;
+    margin-top: 5vw;
+    margin-left:4vw;
+}
+.details{
+   margin-top: 2vw;
+   margin-left: 0.6vw;
+}
+.data-a{
+    margin-top: 0.4vw;
+    float: left;
+    width: 25vw;
+    color:steelblue;
+}
+.data-b{
+    font-weight: bold;
+}
+.btnD{
+    margin-top: 0.5vw;
+    float: right;
+    background-color: indianred;
+    font-weight: bold;
+    padding: 0.5vw 1vw;
+    border-radius: 0.8vw;
+}
+.cmt{
+    float: left;
+    margin-left:3vw;
+}
+.snt-a{
+    background-color:#FFF;
+    margin-top: 2vw;
+    padding: 0vw 1vw;
+    width: 5vw;
+    border-radius: 0.8vw;
+    border: px solid black;
+}

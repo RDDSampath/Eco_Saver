@@ -1,0 +1,46 @@
+.container-l{
+    width: 100%;
+    height: 48vw;
+    
+}
+header{
+    width:100vw;
+    height:5vw;
+    background-color: #7DD91973;
+}
+.logo-a{
+    width:6vw;
+    float:left;
+    margin-left: 2vw;
+    margin-top: 0.5vw;
+}
+.btn-l{
+    width:8vw;
+    height: 2vw;
+    float:right;
+    margin-left: 1vw;
+    margin-top: 1.5vw;
+    margin-right: 1vw;
+    border-radius:0.2vw;
+    color: #024731;
+    font-weight: bold;
+    text-decoration: none;
+
+}
+.footer-a{
+    width:100vw;
+    height:5vw;
+    background-color: #024731;
+}
+.bin-a{
+    width:3vw;
+    float:right;
+    margin-top: 1vw;
+    margin-right: 1vw;
+}
+h4{
+    color: aliceblue;
+    padding-top: 1.5vw;
+    font-size: 1vw;
+    
+}
