@@ -55,7 +55,7 @@ const Ndashboard =()=>{
     return(
             <div className="dash-container">
                 <SideNav/>
-                <div className='dash-main-box'>
+          <div className='dash-main-box'>
             <div className='dash-box-a'>
                 <div style={{width:'8vw',float:'left'}}>
                   <h6 className='d-text'>Request</h6>
