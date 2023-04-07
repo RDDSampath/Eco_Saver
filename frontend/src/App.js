@@ -8,8 +8,10 @@ import Home from './components/home/home';
 import Login from "./components/Login/Login";
 import MyResource  from "./components/MyResources/MyResource";
 import MyResourseForm  from "./components/MyResourseForm/MyResourseForm";
-import ViewMyResource from "./components/ViewMyResources/ViewMyResources"
-import SignUp from "./components/Signup/SignUp"
+import ViewMyResource from "./components/ViewMyResources/ViewMyResources";
+import SignUp from "./components/Signup/SignUp";
+import CompanySign from "./components/CompanySign/CompanySign";
+
 function App() {
   return (
     <BrowserRouter> <center> <Header/> 
@@ -21,6 +23,8 @@ function App() {
           <Route path="/myResourceform" element={<MyResourseForm/>}/>
           <Route path="/ViewMyResources" element={<ViewMyResource/>}/>
           <Route path="/signup" element={<SignUp/>}/>
+          <Route path="/comSign" element={<CompanySign/>}/>
+
       </Routes>
       <Footer/>
       </center>

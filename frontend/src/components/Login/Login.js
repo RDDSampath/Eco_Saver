@@ -26,7 +26,7 @@ const Login =()=>{
                        <button className='btnSign'>Sign In</button><br/>
     
                        <h6 className='do'>Doesn't have an account yet?</h6>
-                       <h6 className='link'>Sign up</h6>
+                       <a href='/signup'><h6 className='link'>Sign up</h6></a>
                         
                    </div>   
                </div>
