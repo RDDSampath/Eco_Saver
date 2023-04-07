@@ -9,7 +9,7 @@ const MyResource = () => {
        <img src={images.MyRes} alt='resimg' className='ResImg'/>
         <div className='aa'>
         <a href='/myResourceform'><div  className='bb'>Add My Resource</div></a>
-        <a href='/'><div  className='bb'>View My Resource</div></a>
+        <a href='/ViewMyResources'><div  className='bb'>View My Resource</div></a>
         <h5 className='srh' style={{marginTop:'2vw',float:'left',marginLeft:'44vw',marginTop:'1.7vw',fontWeight:'bold'}}>Search</h5>
         <input type='text'  placeholder='Search category' style={{width:'16vw',height:'3vw',marginTop:'1.2vw', float:'right',marginRight:'2vw',borderRadius:'0.3vw'}}/>
 

@@ -10,6 +10,6 @@ import Form1Img from '../assest/Image/form1.jpeg';
 import Sent from '../assest/Image/Sent.png';
 import Form1Img2 from '../assest/Image/Form1Imge2.png';
 import Waste from '../assest/Image/waste.png';
-
+import Login from '../assest/Image/login.png';
 // eslint-disable-next-line import/no-anonymous-default-export
-export default {Logo,Mode,Facebook,Linkedin,Twitter,Flogo,Bin,MyRes,Form1Img,Sent,Form1Img2,Waste};
+export default {Logo,Mode,Facebook,Linkedin,Twitter,Flogo,Bin,MyRes,Form1Img,Sent,Form1Img2,Waste,Login};

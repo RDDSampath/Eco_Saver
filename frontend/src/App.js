@@ -9,7 +9,7 @@ import Login from "./components/Login/Login";
 import MyResource  from "./components/MyResources/MyResource";
 import MyResourseForm  from "./components/MyResourseForm/MyResourseForm";
 import ViewMyResource from "./components/ViewMyResources/ViewMyResources"
-
+import SignUp from "./components/Signup/SignUp"
 function App() {
   return (
     <BrowserRouter> <center> <Header/> 
@@ -20,7 +20,7 @@ function App() {
           <Route path="/myResource" element={<MyResource/>}/>
           <Route path="/myResourceform" element={<MyResourseForm/>}/>
           <Route path="/ViewMyResources" element={<ViewMyResource/>}/>
-          
+          <Route path="/signup" element={<SignUp/>}/>
       </Routes>
       <Footer/>
       </center>
