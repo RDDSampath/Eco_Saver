@@ -1,12 +1,12 @@
 const express = require('express');
-const Posts = require('../models/posts');
+const Inorganics = require('../models/Inorganic');
 
 const router = express.Router();
 
-//Add posts
-router.post('/add', (req,res) =>{
+//Add Inorganics
+router.post('/inorganic/add', (req,res) =>{
 
-    let newPost = new Posts(req.body);
+    let newPost = new Inorganics(req.body);
 
     newPost.save((err)=>{
         if(err){
@@ -15,14 +15,14 @@ router.post('/add', (req,res) =>{
             });
         }
         return res.status(200).json({
-            success:"Posts saved successfully"
+            success:"Inorganics saved successfully"
         });
     });
 });
 
-//get posts
-router.get('/getall', (req,res) =>{
-    Posts.find().exec((err,posts) =>{
+//get Inorganics
+router.get('/inorganic/getall', (req,res) =>{
+    Inorganics.find().exec((err,Inorganics) =>{
         if(err){
             return res.status(400).json({
                 error:err
@@ -30,15 +30,15 @@ router.get('/getall', (req,res) =>{
         }
         return res.status(200).json({
             success:true,
-            existingPosts:posts
+            existingInorganics:Inorganics
         });
     });
 });
 
 
-//update posts
-router.put('/update/:id',(req,res)=>{
-    Posts.findByIdAndUpdate(
+//update Inorganics
+router.put('/inorganic/update/:id',(req,res)=>{
+    Inorganics.findByIdAndUpdate(
         req.params.id,
         {
             $set:req.body
@@ -58,8 +58,8 @@ router.put('/update/:id',(req,res)=>{
 
 //delete post
 
-router.delete('/delete/:id',(req,res) =>{
-    Posts.findByIdAndRemove(req.params.id).exec((err,deletePost) =>{
+router.delete('/inorganic/delete/:id',(req,res) =>{
+    Inorganics.findByIdAndRemove(req.params.id).exec((err,deletePost) =>{
 
         if(err) return res.status(400).json({
             message:"Delete Unsuccessfull",err
