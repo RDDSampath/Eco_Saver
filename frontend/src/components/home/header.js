@@ -1,8 +1,7 @@
 import React from 'react';
 import './styles.css';
 import images from '../../constant/images';
-import colors from '../../constant/colors';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 const header =()=>{
     return(
