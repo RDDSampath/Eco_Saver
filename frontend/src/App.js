@@ -7,7 +7,7 @@ import Footer from './components/home/footer';
 
 
 import OrganicPlaces from './components/Dashboard/OrganicPlaces';
-import OrganicDash from './components/Dashboard/OrganicDash';
+
 
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
       <Routes>
 
         
-      <Route index element={<OrganicDash/>}/>  
+   
 
       <Route index element={<OrganicPlaces/>}/>
       
