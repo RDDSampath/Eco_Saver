@@ -1,0 +1,30 @@
+
+.box{
+     margin:auto;
+     width:1300px;
+     border:2px solid #14141427;
+     background-color: #bebebec7;
+     padding:20px;
+     border-radius: 25px;
+     margin: 100px;
+        
+}
+
+.box1{
+     margin:auto;
+     width:1000px;
+     border:2px solid #14141427;
+     background-color: #bebebec7;
+     padding:20px;
+     border-radius: 25px;
+     margin: 100px;
+        
+}
+
+/* 
+font-family: 'Kanit', sans-serif;
+font-family: 'Manrope', sans-serif;
+font-family: 'Mochiy Pop One', sans-serif;
+font-family: 'Nova Flat', cursive;
+font-family: 'Poppins', sans-serif; 
+*/
