@@ -1,32 +1,45 @@
 .sidenav {
-    height: 48vw;
+    height: fit-content;
     width: 0;
     position: relative;
     z-index: 1;
-    background-color: #04ab41;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-    border-radius: .2vw;
+    background: rgba( 109, 234, 106, 0.4 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 12px );
+    -webkit-backdrop-filter: blur( 12px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    padding-bottom: 4vw;
   }
-
-  .sidenav a {
-    padding: 8px 8px 8px 32px;
+  
+  .sidenav a{
+    width:13vw;
+    margin-bottom: 0.5vw;
+    margin-left: 0.5vw;
+    background: linear-gradient(to right,#04eda1 ,#71e760);
+    background-color: #04eda1;
+    color: #fff;
+    font-family: Tahoma;
+    font-size: 1vw;
+    font-weight: 500;
     text-decoration: none;
-    font-size: 18px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-    background-color: rgb(255, 255, 255);
-    margin: 0.5vw;
-    border-radius: 0.5vw;
-  }
-
-  .sidenav a:hover {
-    color: #f1f1f1;
-    background-color: #106f33;
-  }
-
+    padding: 16px 37px;
+    border: 1px solid #ffffff;
+    border-radius: 7px;
+    display: inline-block;
+    box-shadow: 1px 4px 10px 4px rgba(144.6328854560852,142.02498466289975,142.02498466289975,0.5);
+    margin-top: 0.2vw;
+   }
+   .sidenav a:hover{
+    background: linear-gradient(to right,#04e199 ,#6bdb5b);
+    background-color: #01feaa;
+   }
+   .sidenav a:active{
+    transform: scale(0.95);
+    background-color: #020202;
+    color:white;
+   }
+  
   .sidenav .closebtn {
     position: relative;
     top: 0;
@@ -34,12 +47,12 @@
     font-size: 36px;
     margin-left: 50px;
   }
-
+  
   .sidenav.open {
     width: 14%;
     float:left;
   }
-
+  
   @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
@@ -52,7 +65,7 @@
     align-items:center;
     position: relative;
   }
-
+  
   .dash-box{
     width:15vw;
     height:7vw;
@@ -62,9 +75,9 @@
     float:left;
     box-shadow: 0.1vw 0.1vw 0.5vw rgba(0, 0, 0, 0.256);
   }
-
   .dash-box:hover{
     background-color: #2caa5ab0;
+
   }
 
   .d-text{
@@ -72,13 +85,11 @@
     margin-top: 0.5vw;
     color: gray;
   }
-
   .d-value{
     margin-left: 1vw;
     margin-top: 1.5vw;
     font-weight: bold;
   }
-
   .dash-table-box{
     float: left;
     width: 40vw;
@@ -87,7 +98,6 @@
     border-radius: 1vw;
     box-shadow: 0.1vw 0.1vw 0.5vw rgba(0, 0, 0, 0.256);
   }
-
   .dash-table-box-2{
     float: right;
     margin-right: 6vw;
@@ -97,7 +107,6 @@
     border-radius: 1vw;
     box-shadow: 0.1vw 0.1vw 0.5vw rgba(0, 0, 0, 0.256);
   }
-
   .dash-column-1{
     width:30vw;
     height:17.5vw;
@@ -105,7 +114,6 @@
     flex-direction: row;
     align-items: center;
   }
-
   .dash-column-2{
     width:30vw;
     height:17.5vw;
@@ -113,7 +121,6 @@
     flex-direction: row;
     align-items: center;
   }
-
   .dash-box-4{
     width:14vw;
     height:12vw;
@@ -122,3 +129,36 @@
     margin:0.1vw;
     border-radius: 1vw;
   }
+  .navLogo{
+    animation: sample 2s ease-in-out infinite;
+  }
+  @keyframes sample{
+    0% {
+      margin-left: 5.5vw;
+    }
+    50% {
+      margin-left: 6vw;
+    }
+    100% {
+      margin-left: 5.5vw;
+    }
+    
+  }
+  .navLogo2{
+    animation: samplea 8s ease-in-out infinite;
+  }
+  @keyframes samplea{
+    0% {
+      transform: scale(1);
+
+    }
+    50% {
+      transform: scale(1.1);
+
+    }
+    100% {
+      transform: scale(1);
+    }
+    
+  }
+  

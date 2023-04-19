@@ -5,34 +5,30 @@ const cors = require('cors');
 
 const app = express();
 
-//importroutes
-const testRoutes = require('./routes/Tests');
+//import routes
+const organicRoutes = require('./routes/Organics');
 
-//middleware
+//app middleware
 app.use(bodyParser.json());
 app.use(cors());
-app.use(
-    cors({
-      origin: ["http://localhost:3000"],
-      methods: ["GET", "POST", "PUT", "DELETE"],
-      credentials: true,
-    })
-  );
-  //routes
-app.use(testRoutes);
 
-const PORT = 8500;
-const DB_URL = 'mongodb+srv://hacksick7:sampath1997@tms.g0vz0.mongodb.net/mydatabase?retryWrites=true&w=majority';
+//route middleware
+app.use(organicRoutes);
+
+
+const PORT = 8000;
+const DB_URL = 'mongodb+srv://rddsdhanu:alba123@ecosaver.lk73zkm.mongodb.net/?retryWrites=true&w=majority';
 
 mongoose.connect(DB_URL,{
-    useNewUrlParser:true,
-    useUnifiedTopology:true
-})
-.then(()=>{
-    console.log("DB Connected!");
-})
-.catch((err)=> console.log('DB connection errror',err));
+    useNewUrlParser: true,
+    useUnifiedTopology: true
 
-app.listen(PORT,()=>{
-    console.log(`app is running on ${PORT}`);
+})
+.then(() =>{
+    console.log('DB connected');
+})
+.catch((err) => console.log('DB connection error',err));
+
+app.listen(PORT, () =>{
+    console.log(`App is running on ${PORT}`);
 });
