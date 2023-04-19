@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import './Styles.css';
-import SideNav from '../Utilities/SideNav';
+import SideNavC from '../Utilities/SideNavC';
 import { Nav, NavItem, Button, TabContent, TabPane } from 'reactstrap';
 import images from '../../constant/images';
 const OrganicPlaces =()=>{
@@ -14,7 +14,7 @@ const OrganicPlaces =()=>{
   };
     return(
         <div className='container-c'>
-            <SideNav className='sidenav'/>
+            <SideNavC className='sidenav'/>
             <div className='container-backg'>
                 <div style={{flexDirection:'row'}}>
                 <div style={{textAlign: 'right', marginBottom: '10px'}}>
