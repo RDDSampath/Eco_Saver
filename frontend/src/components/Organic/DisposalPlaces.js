@@ -1,6 +1,6 @@
 import React from 'react';
 import './Styles.css';
-import SideNavI from '../Utilities/SideNavI';
+import SideNavC from '../Utilities/SideNavC';
 import Homea from '../../assest/Image/homea.png';
 import Homeb from '../../assest/Image/homeb.png';
 import Homec from '../../assest/Image/homec.png';
@@ -22,7 +22,7 @@ const DisposalPlaces =()=>{
     
     return(
         <div className='container-d'>
-            <SideNavI/>
+            <SideNavC/>
             <div className='h-container'>
                 {place.map((place, index) => (
               <div key={index} className='h-box'>

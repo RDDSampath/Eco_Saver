@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import './Styles.css';
-import SideNavB from '../Utilities/SideNavB';
+import SideNav from '../Utilities/SideNav';
 import { Nav, NavItem, Button, TabContent, TabPane, Card } from 'reactstrap';
 import PhoneInput from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
@@ -68,7 +68,7 @@ const CreateRequest =()=>{
   };
     return(
         <div className='container-c'>
-            <SideNavB className='sidenav'/>
+            <SideNav className='sidenav'/>
             <div className='container-create'>
                 <h3 className='topic-create'>Inorganic Garbadge Collection</h3>
                 <div style={{flexDirection:'row'}}>

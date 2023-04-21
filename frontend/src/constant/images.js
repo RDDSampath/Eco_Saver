@@ -28,8 +28,15 @@ import S5 from '../assest/Image/s5.png';
 import S6 from '../assest/Image/s6.png';
 import LogoNav from '../assest/Image/logoNav.png';
 import LogoNav2 from '../assest/Image/logoNav2.png';
-
-
+import Home_1 from '../assest/Image/homea.png';
+import Home_2 from '../assest/Image/homeb.png';
+import Home_3 from '../assest/Image/homec.png';
+import Home_4 from '../assest/Image/homed.png';
+import Home_5 from '../assest/Image/homee.png';
+import Home_6 from '../assest/Image/homef.png';
+import RecycleMan from '../assest/Image/recycleMan.png';
+import EcoGirlBlue from '../assest/Image/ecogirlblue.png';
+import EcoGirlYellow from '../assest/Image/ecogirlyellow.png';
 
 import Background from '../assest/Image/background.svg';
 export default {
@@ -43,5 +50,7 @@ export default {
     N1,N2,N3,N4,
     Background,
     S1,S2,S3,S4,S5,S6,
-    LogoNav,LogoNav2
+    LogoNav,LogoNav2,
+    Home_1,Home_2,Home_3,Home_4,Home_5,Home_6,
+    RecycleMan,EcoGirlBlue,EcoGirlYellow
 };
