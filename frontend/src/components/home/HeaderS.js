@@ -1,7 +1,13 @@
-import React from 'react';
+import React,{useState, useEffect} from 'react';
 import images from '../../constant/images';
 
-const header =()=>{
+const HeaderS =()=>{
+
+  const handleLogout= () => {
+    window.localStorage.clear();
+    window.location.href = '/';
+  };
+  
     return(
       <nav className="nav">
         <div className='nav1'>
@@ -24,10 +30,18 @@ const header =()=>{
             <img className='logo-style' src={images.Logo} alt='logo'/>
             <ul className='title-menue'>
             <li>
-            <a class="RegisterBtn" href="/signin">Register</a>
-              </li>
-              <li>
-              <a class="logInBtn" href="/login">LOG IN</a>
+                <div> 
+                    <div style={{width:'15vw', alignItems:'center', justifyContent:'center'}}>
+                        <a href='' className='H-img'>
+                        <img src={images.Prof} alt='profile' className='H-imga'/>
+                        </a>
+                        <a  className='H-img' onClick={handleLogout}>
+                            <img src={images.Logout} alt='logout' className='H-imgb' />
+                        </a>
+                    </div>
+                    <h6 style={{fontSize:'12px', marginRight:'10px', fontWeight:600}}>kamal</h6>
+                    
+                </div>
               </li>
               <li>
                 <a href='/'>Product Listing</a>
@@ -46,4 +60,4 @@ const header =()=>{
     </nav>
     )
 };
-export default header;
+export default HeaderS;

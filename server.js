@@ -8,6 +8,10 @@ const app = express();
 //import routes
 const inorganicRoutes = require('./routes/Inorganics');
 const priceListRoutes = require('./routes/PriceLists');
+const organicRoutes = require('./routes/Organics');
+const productRoutes = require('./routes/Products');
+const myResFormRoutes = require('./routes/MyResForms');
+const userRoutes = require('./routes/User');
 
 //app middleware
 app.use(bodyParser.json());
@@ -16,6 +20,10 @@ app.use(cors());
 //route middleware
 app.use(inorganicRoutes);
 app.use(priceListRoutes);
+app.use(organicRoutes);
+app.use(productRoutes);
+app.use(myResFormRoutes);
+app.use(userRoutes);
 
 
 const PORT = 8000;
@@ -30,6 +38,7 @@ mongoose.connect(DB_URL,{
     console.log('DB connected');
 })
 .catch((err) => console.log('DB connection error',err));
+
 
 app.listen(PORT, () =>{
     console.log(`App is running on ${PORT}`);

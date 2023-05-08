@@ -1,5 +1,4 @@
 import React,{useState, useEffect} from 'react';
-import './Styles.css';
 import SideNav from '../Utilities/SideNav';
 import {Button} from 'reactstrap';
 import 'react-phone-number-input/style.css';

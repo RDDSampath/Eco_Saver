@@ -1,6 +1,5 @@
 import React,{useState} from 'react';
-import './Styles.css';
-import SideNavB from '../Utilities/SideNavB';
+import SideNav from '../Utilities/SideNav';
 import { Nav, NavItem, Button, TabContent, TabPane, Card } from 'reactstrap';
 import PhoneInput from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
@@ -68,7 +67,7 @@ const CreateRequest =()=>{
   };
     return(
         <div className='container-c'>
-            <SideNavB className='sidenav'/>
+            <SideNav className='sidenav'/>
             <div className='container-create'>
                 <h3 className='topic-create'>Inorganic Garbadge Collection</h3>
                 <div style={{flexDirection:'row'}}>
@@ -168,8 +167,8 @@ const CreateRequest =()=>{
                                 </div>
                                 </TabPane>
                                 <TabPane tabId="tab2">
-                                <div className="list-group">
-                                    <div type="div" className="box-c-list">
+                                <div className="">
+                                    <div className="box-c-list">
                                     <h3 className='reqList'>Metal</h3>
                                         <h6 className='input-Text'>Iron plate</h6>
                                             
@@ -189,10 +188,12 @@ const CreateRequest =()=>{
                                             onChange={handleInputChange}
                                             className='input-a'
                                             placeholder="   00"
+                                            styles={{height:'10px'}}
                                             /><b> KG</b>
+
                                         
                                         <h6 className='input-Text'>Other</h6>
-                                        
+                                            
                                             <input type="number" 
                                             name='IronOther'
                                             value={formData.IronOther}

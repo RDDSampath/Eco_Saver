@@ -1,8 +1,10 @@
 import React from "react";
-import SideNav from '../Utilities/SideNav';
+import SideNavC from '../Utilities/SideNavC';
 import { ResponsivePie } from '@nivo/pie';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+import images from "../../constant/images";
 
-const Ndashboard =()=>{
+const ODashboard =()=>{
   const p1 = [
     {
       id: 'Yes',
@@ -51,11 +53,92 @@ const Ndashboard =()=>{
       color: '#FE6D8E',
     },
   ];
+
+  const bardata = [
+    {
+      "name": "Page A",
+      "uv": 4000,
+      "pv": 2400
+    },
+    {
+      "name": "Page B",
+      "uv": 3000,
+      "pv": 1398
+    },
+    {
+      "name": "Page C",
+      "uv": 2000,
+      "pv": 9800
+    },
+    {
+      "name": "Page D",
+      "uv": 2780,
+      "pv": 3908
+    },
+    {
+      "name": "Page E",
+      "uv": 1890,
+      "pv": 4800
+    },
+    {
+      "name": "Page F",
+      "uv": 2390,
+      "pv": 3800
+    },
+    {
+      "name": "Page G",
+      "uv": 3490,
+      "pv": 4300
+    }
+  ]
+
+  const items = [
+    {
+      id: 1,
+      title: "Item 1",
+      image: "https://via.placeholder.com/150",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    {
+      id: 2,
+      title: "Item 2",
+      image: "https://via.placeholder.com/150",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    {
+      id: 3,
+      title: "Item 3",
+      image: "https://via.placeholder.com/150",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    {
+      id: 4,
+      title: "Item 4",
+      image: "https://via.placeholder.com/150",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    {
+      id: 5,
+      title: "Item 5",
+      image: "https://via.placeholder.com/150",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    }
+  ];
+  const place = [
+    { title: 'place 1', Image: images.Home_1, homeName: 'Green tea home',address:'Hidellana , Rathnapura , Sri Lanka' },
+    { title: 'place 2', Image: images.Home_2, homeName: 'Star sun ',address:'No 3 , Colombo ,  Sri Lanka' },
+    { title: 'place 3', Image: images.Home_3, homeName: 'Window Garden House',address:'1 /1C Malabe , Kaduwela' }
+  ];
     return(
-            <div className="dash-container">
-                <SideNav/>
+        <div className="organic-dash">
+                <SideNavC/>
           <div className='dash-main-box'>
-            <h1>Buser</h1>
+            <h1>Organic Dashboard</h1>
             <div className='dash-box-a'>
                 <div style={{width:'8vw',float:'left'}}>
                   <h6 className='d-text'>Request</h6>
@@ -182,66 +265,47 @@ const Ndashboard =()=>{
             </div>
         </div>
         <div className='dash-main-box'>
-            <div className='dash-table-box'>
-            <p className='topic-ND'>Historical Data</p>
-        <div className="col-lg-3 mt-2 mb-2" style={{width:'20vw',marginLeft:'1vw'}}>
-            <input
-            className="form-control"
-            style={{width:'15vw', float:'left'}}
-            type="search"
-            placeholder="Search..."
-            name="searchQuery"
-            />
-              <br/><br/>
-          </div>
-            <table className="table">
-            <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Name</th>
-                <th scope="col">ID</th>
-                <th scope="col">Drive Time</th>
-                <th scope="col">Charges</th>
-                <th scope="col">Action</th>
-            </tr>
-            </thead>
-            <tbody>
-            
-                <tr>
-                <th></th>
-                <td>
-                    <a href='#'>a</a>
-                    </td>
-                <td>b</td>
-                <td>c</td>
-                <td>d</td>
-                <td>
-                    <a href="">
-                    <i className="fa fa-trash-o" style={{fontSize:'30px',color:'red'}}></i>
-                    </a>
-                </td>
-                </tr>
-            </tbody>
-        </table>
-              
-
+          <div className="chartCard">
+            <div className="CardheadChart">
+              <h4>Total Content</h4>
             </div>
-            <div className='dash-table-box-a'>
-              <div className='dash-column'>
-                <div className='dash-box-4'></div>
-                <div className='dash-box-4'></div>
+            <BarChart width={730} height={250} data={bardata}>
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="name" />
+                <YAxis />
+                <Tooltip />
+                <Legend />
+                <Bar dataKey="pv" fill="#8884d8" />
+                <Bar dataKey="uv" fill="#82ca9d" />
+              </BarChart>
+            </div>
+            <img src={images.EcoGirlBlue} className="oDash-img"/>
+            
+            <div className="chartCard-right">
+            <div className='od-container'>
+              <div style={{flexDirection:'row',}}><h5>Organic disposal selling  Places</h5>
+              <button id="seeMore" name="submit">Most Recent</button>
               </div>
-              <div className='dash-column'>
-                <div className='dash-box-4'></div>
-                <div className='dash-box-4'></div>
+              
+                {place.map((place, index) => (
+              <div key={index} className='o-box'>
+                <img src={place.Image} alt='house' className='ohome-ino'/>
+                <div>
+                <img src={images.Location} alt='location' className='location'/>
+                  <b className='hname'>{place.homeName}</b>
+                  {place.address}
+                </div>
               </div>
-              <div className='dash-column'>
-                <div className='dash-box-5'></div>
-              </div>
+                ))}
+          </div>
+            </div>
+            <div >
+            
+              
             </div>
         </div>
 
-            </div>
+    </div>
     )
 };
-export default Ndashboard;
+export default ODashboard;

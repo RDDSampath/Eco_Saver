@@ -4,7 +4,6 @@ import moment from 'moment';
 import SideNavB from '../Utilities/SideNavB';
 import 'bootstrap/dist/css/bootstrap.css';
 import { ResponsivePie } from '@nivo/pie';
-import './styles.css';
 import images from '../../constant/images';
 import { Nav, NavItem, Button, TabContent, TabPane, Label } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -17,6 +16,7 @@ import 'slick-carousel/slick/slick-theme.css';
 const Bdashboard =()=>{
     const [activeTab, setActiveTab] = useState('tab1');
     const [inorganics, setInorganics] = useState([]);
+    const uid = inorganics.userId;
     const settings = {
       dots: false,
       infinite: true,
@@ -36,12 +36,12 @@ const Bdashboard =()=>{
     axios.get("/inorganic/getall").then(res => {
       if(res.data.success) {
         setInorganics(res.data.existingInorganics);
+        console.log(res.data.existingInorganics);
         console.log('Inorganic',inorganics);
       }
     });
   };
 
-  
   const totalWeight = inorganics.reduce((acc, curr) => acc + parseInt(curr.totalWeight), 0);
   const totalPrice = inorganics.reduce((acc, curr) => acc + parseInt(curr.totalPrice), 0);
 
@@ -129,6 +129,8 @@ const handleSearchArea = (e) => {
       retrieveInorganics();
     })
   };
+
+
     return(
         <div className="dash-container">
             <SideNavB/>
