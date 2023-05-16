@@ -3,9 +3,9 @@ import images from '../../constant/images';
 
 const HeaderS =()=>{
 
-  const handleLogout= () => {
+  const logOut = () => {
     window.localStorage.clear();
-    window.location.href = '/';
+    window.location.href = "/";
   };
   
     return(
@@ -35,7 +35,7 @@ const HeaderS =()=>{
                         <a href='' className='H-img'>
                         <img src={images.Prof} alt='profile' className='H-imga'/>
                         </a>
-                        <a  className='H-img' onClick={handleLogout}>
+                        <a  className='H-img' onClick={logOut}>
                             <img src={images.Logout} alt='logout' className='H-imgb' />
                         </a>
                     </div>
@@ -50,7 +50,11 @@ const HeaderS =()=>{
                 <a href='/'> Recycling Education</a>
               </li>
               <li>
-                <a href='/'> Waste Management</a> 
+              <a href="/inorganic">Waste Management &#9662;</a>
+                <ul className="dropdown-menu">
+                  <li className='drop'><a href="/organic">Organic </a></li>
+                  <li className='drop'><a href="/inorganic">Inorganic</a></li>
+                </ul>
               </li>
               <li>
                 <a href='/'>HOME</a>

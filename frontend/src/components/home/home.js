@@ -1,9 +1,12 @@
 import images from "../../constant/images";
+import Header from "../home/header";
+import Footer from "./footer";
 
 
 const home =()=>{
     return(
         <div className='home'>
+            <Header/>
             <div className='section-1' id='sec_1'>
             <h1 className='sec-topic' >𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐭𝐨 𝐄𝐜𝐨𝐒𝐚𝐯𝐞𝐫</h1>
             <p>
@@ -20,22 +23,22 @@ const home =()=>{
                 <h2 className="Title-Home">management and recycling solutions</h2></div>
                 <div className="box-H">
                     <div className="box-1">
-                        <img Src={images.Gc} className='h-image'/>
+                        <img src={images.Gc} className='h-image'/>
                         <h6 className="about-Text">Saw any garbage lying around that needs to be collected?</h6>
                         <a href='/' className="btn" ><div className="btn-hs">Schedule a Garbage Collection</div></a>
                     </div>
                     <div className="box-1">
-                        <img Src={images.Wc} className='h-image'/>
+                        <img src={images.Wc} className='h-image'/>
                         <h6 className="about-Text">Have any recyclable waste lying around that you'd like to sell?</h6>
                         <a href='/' className="btn" ><div className="btn-hs">Sell Your Recyclable Waste</div></a>
                     </div>
                     <div className="box-1">
-                        <img Src={images.Rc} className='h-image'/>
+                        <img src={images.Rc} className='h-image'/>
                         <h6 className="about-Text">Looking for sustainable products made from recycled waste?</h6>
                         <a href='/' className="btn" ><div className="btn-hs">Shop Sustainable Products</div></a>
                     </div>
                     <div className="box-1">
-                        <img Src={images.Pc} className='h-image'/>
+                        <img src={images.Pc} className='h-image'/>
                         <h6 className="about-Text">Are you Interested in waste sorting and recycling?</h6>
                         <a href='/' className="btn" ><div className="btn-hs">Learn Waste sorting and Recycling</div></a>
                     </div>
@@ -65,6 +68,7 @@ At EcoSaver, we are committed to providing eco-friendly solutions for waste mana
                
 
                 </div>
+            <Footer/>
     </div>
     )
 };

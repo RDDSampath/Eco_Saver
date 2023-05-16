@@ -5,6 +5,7 @@ import images from '../../constant/images';
 import axios from 'axios';
 
 function PostDisposal() {
+  console.log(images);
   const [formData, setFormData] = useState({
     Owner_name: '',
     Owner_number: '',
@@ -12,15 +13,43 @@ function PostDisposal() {
     Place_name: '',
     type: '',
     weight: '',
-    location: ''
+    location: '',
+    imageUrl:[]
   });
+  console.log(formData);
+
+  const handleImageChange = (event) => {
+    const files = Array.from(event.target.files);
+    const imagePromises = files.map((file) => {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = (event) => resolve(event.target.result);
+        reader.onerror = (error) => reject(error);
+        reader.readAsDataURL(file);
+      });
+    });
+
+    Promise.all(imagePromises)
+      .then((base64Images) => {
+        setFormData({
+          ...formData,
+          imageUrl: [base64Images],
+        });
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+
+      
+  };
+
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
 
     setFormData({
       ...formData,
-      [name]: value
+      [name]: value,
     });
   };
 
@@ -38,7 +67,8 @@ function PostDisposal() {
           Place_name: '',
           type: '',
           weight: '',
-          location: ''
+          location: '',
+          imageUrl: [],
         });
       } else {
         alert('Failed to add Organic Disposal Place');
@@ -65,7 +95,10 @@ function PostDisposal() {
                           <input type='text' name='email_address' value={formData.email_address} onChange={handleInputChange} placeholder='Kaml@gmail.com' className='o-input' /><br/>
                           <label>Enter the name of the place where  Organic Disposals are. *</label><br/>
                           <input type='text' name='Place_name' value={formData.Place_name} onChange={handleInputChange} placeholder='Green tea home' className='o-input' /><br/>
-                          <label>Upload a image of the place</label><a href=''><span>Upload *</span></a><br/>
+
+                          <label>Upload a image of the place</label>
+                          <input type="file" multiple onChange={handleImageChange} className='o-input' />
+                          <span>Upload *</span><br/>
                           <button id="submit" name="submit">Submit</button>
                         </div>
                         <div className='form-card-right'>
@@ -78,7 +111,7 @@ function PostDisposal() {
                           <input type='text' name='weight' value={formData.weight} onChange={handleInputChange} placeholder='10' className='o-input' /><br/>
                           <label>Enter location *</label><br/>
                           <input type='text' name='location' value={formData.location} onChange={handleInputChange} placeholder='A/2b Hidellana, Rathnapura, Sri Lanka' className='o-input' /><br/>
-                          <img src={images.EcoGirlYellow} alt='image'/>
+                          <img src={formData.imageUrl ==! [] ?(images.EcoGirlBlue):(formData.imageUrl)} style={{marginTop:'1vw'}}/>
                         </div>
                     </div>
                     </form>

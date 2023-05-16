@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import SideNav from '../Utilities/SideNav';
+import SideNav from '../Utilities/SideNavB';
 import { Nav, NavItem, Button, TabContent, TabPane, Card } from 'reactstrap';
 import PhoneInput from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
@@ -8,6 +8,8 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import images from '../../constant/images';
+import Header from '../home/HeaderS';
+import Footer from '../home/footer';
 
 
 const CreateRequest =()=>{
@@ -67,6 +69,7 @@ const CreateRequest =()=>{
   };
     return(
         <div className='container-c'>
+            <Header/>
             <SideNav className='sidenav'/>
             <div className='container-create'>
                 <h3 className='topic-create'>Inorganic Garbadge Collection</h3>
@@ -78,7 +81,7 @@ const CreateRequest =()=>{
                             <h4 className='sub-topic-c' >Add Your Collection</h4>  
                                 <NavItem>
                                     <Button
-                                        className={activeTab === 'tab1' ? 'active' : ''}
+                                        className={activeTab === 'tab1' ? 'activeTab' : ''}
                                         onClick={() => toggleTab('tab1')}
                                         id='CRBtn'
                                     >
@@ -87,7 +90,7 @@ const CreateRequest =()=>{
                                     </NavItem>
                                     <NavItem>
                                     <Button
-                                        className={activeTab === 'tab2' ? 'active' : ''}
+                                        className={activeTab === 'tab2' ? 'activeTab' : ''}
                                         onClick={() => toggleTab('tab2')}
                                         id='CRBtn'
                                     >
@@ -96,7 +99,7 @@ const CreateRequest =()=>{
                                     </NavItem>
                                     <NavItem>
                                     <Button
-                                        className={activeTab === 'tab3' ? 'active' : ''}
+                                        className={activeTab === 'tab3' ? 'activeTab' : ''}
                                         onClick={() => toggleTab('tab3')}
                                         id='CRBtn'
                                     >
@@ -105,7 +108,7 @@ const CreateRequest =()=>{
                                     </NavItem>
                                     <NavItem>
                                     <Button
-                                        className={activeTab === 'tab4' ? 'active' : ''}
+                                        className={activeTab === 'tab4' ? 'activeTab' : ''}
                                         onClick={() => toggleTab('tab4')}
                                         id='CRBtn'
                                     >
@@ -114,7 +117,7 @@ const CreateRequest =()=>{
                                 </NavItem>
                                 <NavItem>
                                     <Button
-                                        className={activeTab === 'tab5' ? 'active' : ''}
+                                        className={activeTab === 'tab5' ? 'activeTab' : ''}
                                         onClick={() => toggleTab('tab5')}
                                         id='CRBtn'
                                     >
@@ -162,12 +165,18 @@ const CreateRequest =()=>{
                                             placeholder="   00"
                                             /><b> KG</b>
                                         
-                                        <Button className='next-Btn' onClick={() => toggleTab('tab2')}>Next<span></span></Button>
+                                        <Button className='next-Btn' onClick={() => toggleTab('tab2')}>Next</Button>
+                                        <img src={images.N1} style={{
+                                            width:'13vw',
+                                            height:'13vw',
+                                            marginLeft:'2vw',
+                                            marginTop:'2vw'
+                                        }}/>
                                     </div>
                                 </div>
                                 </TabPane>
                                 <TabPane tabId="tab2">
-                                <div className="">
+                                <div className="list-group">
                                     <div className="box-c-list">
                                     <h3 className='reqList'>Metal</h3>
                                         <h6 className='input-Text'>Iron plate</h6>
@@ -202,7 +211,13 @@ const CreateRequest =()=>{
                                             placeholder="   00"
                                             /><b> KG</b>
                                         
-                                        <Button className='next-Btn' onClick={() => toggleTab('tab3')}>Next<span></span></Button>
+                                        <Button className='next-Btn' onClick={() => toggleTab('tab3')}>Next</Button>
+                                        <img src={images.N2} style={{
+                                            width:'13vw',
+                                            height:'13vw',
+                                            marginLeft:'2vw',
+                                            marginTop:'2vw'
+                                        }}/>
                                     </div>
                                 </div>
                                 </TabPane>
@@ -240,7 +255,13 @@ const CreateRequest =()=>{
                                             placeholder="   00"
                                             /><b> KG</b>
                                         
-                                        <Button className='next-Btn' onClick={() => toggleTab('tab4')}>Next<span></span></Button>
+                                        <Button className='next-Btn' onClick={() => toggleTab('tab4')}>Next</Button>
+                                        <img src={images.N3} style={{
+                                            width:'13vw',
+                                            height:'13vw',
+                                            marginLeft:'2vw',
+                                            marginTop:'2vw'
+                                        }}/>
                                     </div>
                                 </div>
                                 </TabPane>
@@ -278,7 +299,13 @@ const CreateRequest =()=>{
                                             placeholder="   00" 
                                             /><b> KG</b>
                                         
-                                        <Button className='next-Btn' onClick={() => toggleTab('tab5')}>Set Location<span></span></Button>
+                                        <Button className='next-Btn' onClick={() => toggleTab('tab5')}>Set Location</Button>
+                                        <img src={images.N4} style={{
+                                            width:'13vw',
+                                            height:'13vw',
+                                            marginLeft:'2vw',
+                                            marginTop:'2vw'
+                                        }}/>
                                     </div>
                                 </div>
                                 </TabPane>
@@ -326,16 +353,15 @@ const CreateRequest =()=>{
                                                     value={formData.PhoneNo}
                                                     onChange={handlePhoneChange}
                                                     defaultCountry="LK"
+                                                    className='input-a' 
                                                     style={{
-                                                        width:'20vw',
-                                                        height: '3vw',
                                                         border: 'none',
                                                         borderRadius:'none',
-                                                        marginLeft:'7vw'
                                                       }}
+                                                      
                                                 />
                                                 
-                                                <button className='next-Btn' disabled><Link to='/v' state={{formData:formData}} style={{textDecoration:'none', color:'#FFF'}}>Request</Link></button>
+                                                <button className='next-Btn' disabled><Link to='/inorganic/viewRequest' state={{formData:formData}} style={{textDecoration:'none', color:'#FFF'}}>Request</Link></button>
                                                 
                                                 </div>
                                                
@@ -367,6 +393,7 @@ const CreateRequest =()=>{
                     </div>
                 </div>
             </div>
+            <Footer/>
     </div>
 )};
 export default CreateRequest;

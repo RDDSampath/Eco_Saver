@@ -8,6 +8,8 @@ import axios from 'axios';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import Header from '../home/HeaderS';
+import Footer from '../home/footer';
 
   const ViewRequest =(props)=>{
 
@@ -61,7 +63,7 @@ const otherW = (parseInt(formData.Batteries) + parseInt(formData.Bulbs) + parseI
       const res = await axios.post('/inorganic/add', formDataWithTotal);
       if (res.status === 200) {
         alert('Form data submitted successfully!');
-        window.location = '/b';
+        window.location = '/inorganic';
       } else {
         alert('DB Something went wrong!');
       }
@@ -82,6 +84,7 @@ const otherW = (parseInt(formData.Batteries) + parseInt(formData.Bulbs) + parseI
   
     return(
         <div className='container-c'>
+          <Header/>
             <SideNav className='sidenav'/>
             <div className='container-create'>
             <h3 className='topic-create'>Inorganic waste </h3>
@@ -136,6 +139,7 @@ const otherW = (parseInt(formData.Batteries) + parseInt(formData.Bulbs) + parseI
                     </div>
                 </div>
             </div>
+            <Footer/>
     </div>
 )};
 export default ViewRequest;

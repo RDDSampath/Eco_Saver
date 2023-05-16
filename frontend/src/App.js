@@ -1,112 +1,80 @@
-import React,{useState, useEffect} from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import './App.css';
-import Header from './components/home/header';
-import Footer from './components/home/footer2';
-import Home from './components/home/home';
-import NDashboard from './components/Dashboard/Ndashboard';
-import BDashboard from './components/Dashboard/Bdasboard';
-import CreateRequest from "./components/Inorganic/CreateRequest";
-import DisposalPlaces from "./components/Organic/DisposalPlaces";
-import ViewRequest from "./components/Inorganic/ViewRequest";
-import OrganicPlaces from "./components/Organic/OrganicPlaces";
-import PostDisposal from "./components/Organic/PostDisposal";
-import ODashboard from "./components/Dashboard/ODashboard";
-import UpdateDisposal from "./components/Organic/UpdateDisposal";
-import DetailDisposal from "./components/Organic/DetailDisposal";
-import RecycleProduct from "./components/Products/RecycleProduct";
+import React from "react";
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+
+//****============ Dashboard ================****//
+import UserDashboard from './components/Dashboard/Bdasboard';
+import BUserDashboard from "./components/Dashboard/Ndashboard";
+import OrganicDashboard from "./components/Dashboard/ODashboard";
+
+//****============ Utilities ================****//
+// import SideNav from "./components/Utilities/SideNav";
+// import SideNavC from "./components/Utilities/SideNavC";
+// import SideNavB from "./components/Utilities/SideNavB";
+
+//****========== Login ==============****//
 import Login from "./components/Login/Login";
-import SignAB from "./components/Login/SignIn";
-import Headers from "./components/home/HeaderS";
-// import Login1 from "./components/Login/login1";
+import SignUp from "./components/Login/SignIn";
+import UserDetails from "./components/Login/userDetails";
+import Home from "./components/home/home";
+
+//****============Inorganic================****//
+import CreateRecipe from "./components/Inorganic/CreateRequest";
+import ViewRequeest from "./components/Inorganic/ViewRequest";
+
+//****============Organic================****//
+import DetailDisposal from "./components/Organic/DetailDisposal";
+import DisposalPlace from "./components/Organic/DisposalPlaces";
+import OrganicPlaces from "./components/Organic/DisposalPlaces";
+import PostDisposal from "./components/Organic/PostDisposal";
+import UpdateDisposal from "./components/Organic/UpdateDisposal";
+
+//****============My Resourses================****//
 import MyResources from "./components/MyResources/MyResources";
-import MyResourseForms from "./components/MyResources/MyResourseForms";
+import MyResourcesForm from "./components/MyResources/MyResourseForms";
 import ViewMyResources from "./components/MyResources/ViewMyResources";
 
-const App = () => {
-
-  const [userData, setUserData] = useState("");
-  const [admin, setAdmin] = useState(false);
-
-  console.log("USER DATA ==>",userData);
-
-  useEffect(() => {
-    fetch("/user/data", {
-      method: "POST",
-      crossDomain: true,
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-        "Access-Control-Allow-Origin": "*",
-      },
-      body: JSON.stringify({
-        token: window.localStorage.getItem("token"),
-      }),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data, "userData");
-        if (data.data.userType == "Admin") {
-          setAdmin(true);
-        }
-
-        setUserData(data.data);
-
-        if (data.data == "token expired") {
-          alert("Token expired login again");
-          window.localStorage.clear();
-          window.location.href = "./login";
-        }
-      });
-  }, []);
-
+function App() {
+  const isLoggedIn = window.localStorage.getItem("loggedIn");
+  console.log("isLoggedIn ==>", isLoggedIn);
   return (
-    <div>
-    {admin == true ? (
-    <BrowserRouter>
-      <Headers/>
-      <Routes>
-        <Route index element={<Home/>}/>
-        <Route path="/BuserDashboard" element={<NDashboard/>}/>
-        <Route path="/userDashboard" element={<BDashboard/>}/>
-        <Route path="/c" element={<CreateRequest/>}/>
-        <Route path="/d" element={<DisposalPlaces/>}/>
-        <Route path="/v" element={<ViewRequest/>}/>
-        <Route path="/o" element={<OrganicPlaces/>}/>
-        <Route path="/p" element={<PostDisposal/>}/>
-        <Route path="/od" element={<ODashboard/>}/>
-        <Route path="/ud" element={<UpdateDisposal/>}/>
-        <Route path="/dd" element={<DetailDisposal/>}/>
-        <Route path="/rr" element={<RecycleProduct/>}/>
-        <Route path="/login" element={<Login/>}/>
-        <Route path="/signin" element={<SignAB/>}/>
-        <Route path="/mr" element={<MyResources/>}/>
-        <Route path="/mrf" element={<MyResourseForms/>}/>
-        <Route path="/vmr" element={<ViewMyResources/>}/>
-      </Routes>
-      <Footer />
-    </BrowserRouter>):(
-    <BrowserRouter>
-    <Header/>
-    <Routes>
-      <Route index element={<Home/>}/>
-      <Route path="/d" element={<DisposalPlaces/>}/>
-      <Route path="/v" element={<ViewRequest/>}/>
-      <Route path="/o" element={<OrganicPlaces/>}/>
-      <Route path="/p" element={<PostDisposal/>}/>
-      <Route path="/ud" element={<UpdateDisposal/>}/>
-      <Route path="/dd" element={<DetailDisposal/>}/>
-      <Route path="/rr" element={<RecycleProduct/>}/>
-      <Route path="/login" element={<Login/>}/>
-      <Route path="/signin" element={<SignAB/>}/>
-      {/* <Route path="/mr" element={<MyResource/>}/>
-      <Route path="/mrf" element={<MyResourseForm/>}/>
-      <Route path="/vmr" element={<ViewMyResources/>}/> */}
-    </Routes>
-    <Footer />
-  </BrowserRouter>
-  )}
-  </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route
+            exact
+            path="/"
+            element={isLoggedIn == "true" ? <UserDetails /> : <Home />}
+          />
+          {/* Login & Register */}
+          <Route path="/sign-in" element={<Login />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/sign-up" element={<SignUp />} />
+          <Route path="/userDetails" element={<UserDetails />} />
+          
+          {/* Organic */}
+          <Route path="/organic" element={<OrganicDashboard />} />
+          <Route path="/organic/disposal" element={<DetailDisposal />} />
+          <Route path="/organic/disposalPlaces" element={<DisposalPlace />} />
+          <Route path="/organic/postDisposal" element={<PostDisposal />} />
+          <Route path="/organic/updateDisposal" element={<UpdateDisposal />} />
+          <Route path="/organic/organicPlaces" element={<OrganicPlaces />} />
+
+          {/* Inorganic */}
+          <Route path="/inorganic" element={<UserDashboard />} />
+          <Route path="/inorganicB" element={<BUserDashboard />} />
+          <Route path="/inorganic/createRequest" element={<CreateRecipe />} />
+          <Route path="/inorganic/viewRequest" element={<ViewRequeest />} />
+
+          {/* My Resources */}
+          <Route path="/myResources" element={<MyResources />} />
+          <Route path="/myResourcesForm" element={<MyResourcesForm />} />
+          <Route path="/viewMyResources" element={<ViewMyResources />} />
+
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

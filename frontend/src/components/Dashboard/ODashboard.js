@@ -3,6 +3,8 @@ import SideNavC from '../Utilities/SideNavC';
 import { ResponsivePie } from '@nivo/pie';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 import images from "../../constant/images";
+import Header from "../home/HeaderS";
+import Footer from "../home/footer";
 
 const ODashboard =()=>{
   const p1 = [
@@ -136,7 +138,8 @@ const ODashboard =()=>{
   ];
     return(
         <div className="organic-dash">
-                <SideNavC/>
+          <Header/>
+          <SideNavC/>
           <div className='dash-main-box'>
             <h1>Organic Dashboard</h1>
             <div className='dash-box-a'>
@@ -168,7 +171,7 @@ const ODashboard =()=>{
                     style={{padding:'0.5vw'}}
                   />
                 </div>
-                <h4 className='d-value' style={{float:'left'}}>164</h4>
+                <h3 className='d-value' style={{float:'left'}}>164</h3>
             </div>
             <div className='dash-box-a'>
                 <div style={{width:'8vw',float:'left'}}>
@@ -199,7 +202,7 @@ const ODashboard =()=>{
                     style={{padding:'0.5vw'}}
                   />
                 </div>
-                <h4 className='d-value' style={{float:'left'}}>5000</h4>
+                <h3 className='d-value' style={{float:'left'}}>5000</h3>
             </div>
             <div className='dash-box-a'>
                 <div style={{width:'8vw',float:'left'}}>
@@ -230,7 +233,7 @@ const ODashboard =()=>{
                     style={{padding:'0.5vw'}}
                   />
                 </div>
-                <h4 className='d-value' style={{float:'left'}}>5000 LKR</h4>
+                <h3 className='d-value' style={{float:'left'}}>5000 LKR</h3>
             </div>
             <div className='dash-box-a'>
                 <div style={{width:'8vw',float:'left'}}>
@@ -261,7 +264,7 @@ const ODashboard =()=>{
                     style={{padding:'0.5vw'}}
                   />
                 </div>
-                <h4 className='d-value' style={{float:'left'}}>50000 KG</h4>
+                <h3 className='d-value' style={{float:'left'}}>50000 KG</h3>
             </div>
         </div>
         <div className='dash-main-box'>
@@ -304,7 +307,10 @@ const ODashboard =()=>{
               
             </div>
         </div>
-
+        <br/>
+        <br/>
+        <br/>
+        <Footer/>
     </div>
     )
 };

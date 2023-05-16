@@ -23,22 +23,23 @@ const SignIn =()=>{
         email,
         address,
         password,
+        userType: "Admin",
       }),
     })
       .then((res) => res.json())
       .then((data) => {
         if (data.error) {
           setError(data.error);
+          alert(data.error);
         } else {
           alert("Registration successful");
-          window.location.href="./login"
+          window.location.href="./sign-in"
           // redirect to login page
         }
       })
       .catch((error) => {
-        setError("Failed to register user");
-        alert(error);
-        console.error(error);
+        alert("Failed to register user");
+        console.log(error);
       });
   }
 

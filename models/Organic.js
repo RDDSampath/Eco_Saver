@@ -29,6 +29,10 @@ const organicSchema = new mongoose.Schema({
     location:{
         type:String,
         required:true
+    },
+    imageUrl:{
+        type:Array,
+        required:true
     }
 
 });

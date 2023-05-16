@@ -22,6 +22,7 @@
     "mdb-react-ui-kit": "^6.0.0",
     "mongoose": "^6.3.0",
     "nodemon": "^2.0.15",
+    "react-paginate": "^8.2.0",
     "react-router-dom": "^6.3.0",
     "slick-carousel": "^1.8.1"
   }

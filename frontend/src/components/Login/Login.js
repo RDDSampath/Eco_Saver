@@ -1,39 +1,64 @@
 import React,{useState}from 'react';
 import images from '../../constant/images';
+import {toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const Login =()=>{
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [refresh, setRefresh] = useState(false);
 
-  function handleSubmit(e) {
-    e.preventDefault();
+    const success = () => toast.success('login successful!', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
+    const unsuccess = () => toast.error('login failed!', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
 
-    console.log(email, password);
-    fetch("/user/login", {
-      method: "POST",
-      crossDomain: true,
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-        "Access-Control-Allow-Origin": "*",
-      },
-      body: JSON.stringify({
-        email,
-        password,
-      }),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data, "userRegister");
-        if (data.status === "ok") {
-          alert("Login Successfull");
-          window.location.href = '/userDashboard';
-          window.localStorage.setItem("token", data.data);
-          window.localStorage.setItem("loggedIn", true);
-        }else{
-            alert("Loging Unsuccessfull !")
-        }
-      });
+    function handleSubmit(e) {
+      e.preventDefault();
+  
+      console.log(email, password);
+      fetch("/user/login", {
+        method: "POST",
+        crossDomain: true,
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+          "Access-Control-Allow-Origin": "*",
+        },
+        body: JSON.stringify({
+          email,
+          password,
+        }),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data, "userRegister");
+          if (data.status == "ok") {
+            success();
+            window.localStorage.setItem("token", data.data);
+            window.localStorage.setItem("loggedIn", true);
+            window.location.href = "./userDetails";
+          }else{
+            unsuccess();
+          }
+        });
   };
 
     return(
@@ -71,7 +96,7 @@ const Login =()=>{
                        </form>
     
                        <h6 className='do'>Doesn't have an account yet?</h6>
-                       <a href='/signin'><h6 className='link'>Sign up</h6></a>
+                       <a href='/sign-up'><h6 className='link'>Sign up</h6></a>
                         
                    </div>   
                </div>

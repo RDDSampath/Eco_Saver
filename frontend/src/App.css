@@ -31,7 +31,7 @@ font-family: 'Poppins', sans-serif;
 
 .dash-container{
      width:100%;
-     height:48vw;
+     height:86vw;
      background-image: url(./assest/Image/backgroundAnim.svg);
      background-size: cover;
      /* background: rgb(9,121,97);
@@ -57,6 +57,7 @@ font-family: 'Poppins', sans-serif;
      margin-left: 1vw;
      margin-top: 1.5vw;
      font-weight: bold;
+     font-size: 1vw;
      font-family: 'Manrope', sans-serif;
    }
    .dash-table-box-b{
@@ -95,7 +96,7 @@ font-family: 'Poppins', sans-serif;
    .dash-table-box-c{
      width: 73.5vw;
      height: 10vw;
-     margin-top: 22vw;
+     margin-top: 30vw;
      box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
      backdrop-filter: blur( 20px );
      -webkit-backdrop-filter: blur( 20px );
@@ -135,16 +136,16 @@ font-family: 'Poppins', sans-serif;
    }
    .dash-box-a{
      width:15vw;
-     height:7vw;
+     height:6vw;
      flex-direction: 'row';
      margin: 2vw;
      float:left;
-     background: rgba( 255, 255, 255, 0.5 );
-     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+     background: rgba(255, 255, 255, 0);
+     box-shadow: 0 8px 32px 0 rgba(36, 31, 135, 0.37);
      backdrop-filter: blur( 0px );
      -webkit-backdrop-filter: blur( 0px );
      border-radius: 0.8vw;
-     border: 1px solid rgba( 255, 255, 255, 0.18 );
+     border: 1px solid rgb(255, 255, 255);
      
    }
    .chart-pie{
@@ -492,7 +493,7 @@ font-family: 'Poppins', sans-serif;
      background-size:cover;
      /* background-position: fixed;
      background-attachment: fixed; */
-      background-image: url('./assest/Image/WorldMap.svg'); 
+     background-image: radial-gradient(circle at 67% 83%, hsla(317,0%,96%,0.05) 0%, hsla(317,0%,96%,0.05) 1%,transparent 1%, transparent 5%,transparent 5%, transparent 100%),radial-gradient(circle at 24% 80%, hsla(317,0%,96%,0.05) 0%, hsla(317,0%,96%,0.05) 27%,transparent 27%, transparent 63%,transparent 63%, transparent 100%),radial-gradient(circle at 23% 5%, hsla(317,0%,96%,0.05) 0%, hsla(317,0%,96%,0.05) 26%,transparent 26%, transparent 82%,transparent 82%, transparent 100%),radial-gradient(circle at 21% 11%, hsla(317,0%,96%,0.05) 0%, hsla(317,0%,96%,0.05) 35%,transparent 35%, transparent 45%,transparent 45%, transparent 100%),radial-gradient(circle at 10% 11%, hsla(317,0%,96%,0.05) 0%, hsla(317,0%,96%,0.05) 21%,transparent 21%, transparent 81%,transparent 81%, transparent 100%),radial-gradient(circle at 19% 61%, hsla(317,0%,96%,0.05) 0%, hsla(317,0%,96%,0.05) 20%,transparent 20%, transparent 61%,transparent 61%, transparent 100%),radial-gradient(circle at 13% 77%, hsla(317,0%,96%,0.05) 0%, hsla(317,0%,96%,0.05) 63%,transparent 63%, transparent 72%,transparent 72%, transparent 100%),radial-gradient(circle at 30% 93%, hsla(317,0%,96%,0.05) 0%, hsla(317,0%,96%,0.05) 33%,transparent 33%, transparent 82%,transparent 82%, transparent 100%),linear-gradient(90deg, rgb(22,207,152),rgb(16,139,116));
  }
  .section-2{
      width: 100%;
@@ -765,7 +766,6 @@ font-family: 'Poppins', sans-serif;
      width:100vw;
      height:48vw;
      flex-direction: row;
-     box-shadow: 1vw 1vw 1vw black;
  }
  .create-left{
      width:25vw;
@@ -841,25 +841,25 @@ font-family: 'Poppins', sans-serif;
      margin: 0.5vw;
      border-radius: 1vw;
  }
- .box-c-list input{
+ /* .box-c-list input{
      width:16vw;
-     height: 4vw;
+     height: 2vw;
      border: none;
-     border-radius:1vw ;
- }
+     border-radius:0.2vw ;
+ } */
  
  .input-a {
-     margin-left: 10vw;
+     margin-left: 14vw;
+     margin-right: 0.5vw;
      font-size: 1vw;
-     border-width: 1px;
-     border-color: #fcfcfc;
      background-color: #ffffff;
-     color: #00ff25;
+     color: #057305;
      border-style: solid;
      font-family: 'Manrope', sans-serif;
-     border-radius: 1px;
-     box-shadow: 2px 0px 10px rgba(66,66,66,.75);
-     height: 1vw;
+     border-radius: 0.3vw;
+     border:1px solid gray;
+     height: 3vw;
+     width:14vw;
  }
  .input-a:focus {
      outline:none;
@@ -870,7 +870,7 @@ font-family: 'Poppins', sans-serif;
      margin-left: 5vw;
  }
  .next-Btn{
-     width:15vw;
+     width:10vw;
      background: linear-gradient(to right,#185c12 ,#46e750);
      background-color: #185c12;
      color: #fff;
@@ -886,7 +886,8 @@ font-family: 'Poppins', sans-serif;
      justify-content: center;
      align-items: center;
      box-shadow: 0px 0px 26px 11px rgba(255,255,255,0.5);
-     margin-left: 15vw;
+     float: right;
+     margin-right: 3vw;
      margin-top: 2vw;
      text-decoration: none;
     }
@@ -1018,10 +1019,8 @@ font-family: 'Poppins', sans-serif;
      background: linear-gradient(to right,#3ce56e ,#9fdb97);
      background-color: #3ce56e;
     }
-    #CRBtn:active{
+    .activeTab{
      transform: scale(1.1);
-     color: #000000;
-     border: 1px solid #000000;
     }
     .reqList{
      font-family: 'Manrope', sans-serif;
@@ -1272,13 +1271,22 @@ font-family: 'Poppins', sans-serif;
      .sidenav {padding-top: 15px;}
      .sidenav a {font-size: 18px;}
    }
- 
    .dash-main-box{
+    float:right;
+    flex-direction:row;
+    width:80%;
+    align-items:center;
+    position: relative;
+    margin-top: 2vw;
+  }
+ 
+   .dash-main-box-body{
      float:right;
      flex-direction:row;
      width:80%;
      align-items:center;
      position: relative;
+     margin-top: 6vw;
    }
    
    .dash-box{
@@ -2083,4 +2091,28 @@ h4{
   width:2vw;
   float:left;
 
+}
+
+.dropdown-menu {
+  display: block;
+  
+
+}
+
+li:hover .dropdown-menu {
+  display: block;
+}
+
+.drop a{
+  width:8vw;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1vw;
+  background-color: #00cf1c73;
+}
+.drop a:hover{
+  color: #009213;
+  font-weight: bold;
+  font-size: 1vw;
+  background-color: #ffffff;
 }

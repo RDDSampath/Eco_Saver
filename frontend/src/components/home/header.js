@@ -24,19 +24,19 @@ const header =()=>{
             <img className='logo-style' src={images.Logo} alt='logo'/>
             <ul className='title-menue'>
             <li>
-            <a class="RegisterBtn" href="/signin">Register</a>
+            <a class="RegisterBtn" href="/sign-up">Register</a>
               </li>
               <li>
-              <a class="logInBtn" href="/login">LOG IN</a>
+              <a class="logInBtn" href="/sign-in">LOG IN</a>
               </li>
               <li>
-                <a href='/'>Product Listing</a>
+                <a href='/sign-in'>Product Listing</a>
               </li>
               <li>
-                <a href='/'> Recycling Education</a>
+                <a href='/sign-in'> Recycling Education</a>
               </li>
               <li>
-                <a href='/'> Waste Management</a> 
+                <a href='/sign-in'> Waste Management</a> 
               </li>
               <li>
                 <a href='/'>HOME</a>

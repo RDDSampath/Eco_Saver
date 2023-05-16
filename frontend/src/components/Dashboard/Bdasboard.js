@@ -6,12 +6,18 @@ import 'bootstrap/dist/css/bootstrap.css';
 import { ResponsivePie } from '@nivo/pie';
 import images from '../../constant/images';
 import { Nav, NavItem, Button, TabContent, TabPane, Label } from 'reactstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faTrash } from '@fortawesome/free-solid-svg-icons';
-import '@fortawesome/fontawesome-free/css/all.min.css';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import jsPDF from "jspdf";
+import "jspdf-autotable";
+import HeaderS from '../home/HeaderS';
+import Footer from '../home/footer';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faTrash, faFileExport } from '@fortawesome/free-solid-svg-icons';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
+
 
 const Bdashboard =()=>{
     const [activeTab, setActiveTab] = useState('tab1');
@@ -26,10 +32,47 @@ const Bdashboard =()=>{
       slidesToShow: 1,
       slidesToScroll: 1
     };
+    useEffect(() => {
+      retrieveInorganics();
+    }, []);
 
-  useEffect(() => {
-    retrieveInorganics();
-  }, []);
+    const generateReport = () => {
+      const doc = new jsPDF();
+
+      doc.autoTable({
+        head: [[
+        "House No",
+        "Street",
+        "City",
+        "PhoneNo",
+        "totalWeight",
+        "totalPrice",
+        "date"
+        ]],
+        body: inorganics.map((item) => [
+        item.HouseNo,
+        item.Street,
+        item.City,
+        item.PhoneNo,
+        item.totalWeight+" KG",
+        item.totalPrice+" LKR",
+        item.date   
+        ]),
+      });
+
+      // Add styling to the PDF document
+      doc.setFontSize(12);
+      doc.text("User Name ", 10, 5);
+      doc.text("Inorganic Historical Report", 10, 10);
+      doc.text("Generated on " + new Date().toLocaleString(), 10, 280);
+      doc.setFontSize(8);
+      doc.setTextColor(100);
+      
+
+      // Export the PDF document
+      doc.save("inorganicHistoricalData.pdf");
+    }
+
 
 
   const retrieveInorganics = () => {
@@ -125,7 +168,7 @@ const handleSearchArea = (e) => {
     axios.delete('/inorganic/delete/'+id)
       .then((res) => {
       alert("Successfully Deleted");
-      window.location = '/b';
+      window.location = '/inorganic';
       retrieveInorganics();
     })
   };
@@ -133,6 +176,7 @@ const handleSearchArea = (e) => {
 
     return(
         <div className="dash-container">
+            <HeaderS/>
             <SideNavB/>
             <div className='dash-main-box'>
               <h1 style={{fontFamily: 'Kanit',}}>User Dashboard</h1>
@@ -165,7 +209,7 @@ const handleSearchArea = (e) => {
                     style={{padding:'0.5vw'}}
                   />
                 </div>
-                <h4 className='d-value' style={{float:'left'}}>{inorganics.length}</h4>
+                <h3 className='d-value' style={{float:'left'}}>{inorganics.length}</h3>
             </div>
             <div className='dash-box-a'>
                 <div style={{width:'8vw',float:'left'}}>
@@ -175,15 +219,12 @@ const handleSearchArea = (e) => {
                   <ResponsivePie
                     data={p2}
                     innerRadius={0.5}
-                    padAngle={0.7}
-                    cornerRadius={3}
                     colors={{ datum: 'data.color' }}
                     borderWidth={1}
                     borderColor={{ from: 'color', modifiers: [['darker', 0.2]] }}
-                    radialLabelsSkipAngle={10}
+                    radialLabelsSkipAngle={2}
                     radialLabelsTextXOffset={6}
                     radialLabelsTextColor="#333333"
-                    radialLabelsLinkOffset={0}
                     radialLabelsLinkDiagonalLength={16}
                     radialLabelsLinkHorizontalLength={24}
                     radialLabelsLinkStrokeWidth={1}
@@ -196,7 +237,7 @@ const handleSearchArea = (e) => {
                     style={{padding:'0.5vw'}}
                   />
                 </div>
-                <h4 className='d-value' style={{float:'left'}}>5000</h4>
+                <h3 className='d-value' style={{float:'left'}}>5000</h3>
             </div>
             <div className='dash-box-a'>
                 <div style={{width:'8vw',float:'left'}}>
@@ -206,15 +247,12 @@ const handleSearchArea = (e) => {
                   <ResponsivePie
                     data={p3}
                     innerRadius={0.5}
-                    padAngle={0.7}
-                    cornerRadius={3}
                     colors={{ datum: 'data.color' }}
                     borderWidth={1}
                     borderColor={{ from: 'color', modifiers: [['darker', 0.2]] }}
-                    radialLabelsSkipAngle={10}
+                    radialLabelsSkipAngle={2}
                     radialLabelsTextXOffset={6}
                     radialLabelsTextColor="#333333"
-                    radialLabelsLinkOffset={0}
                     radialLabelsLinkDiagonalLength={16}
                     radialLabelsLinkHorizontalLength={24}
                     radialLabelsLinkStrokeWidth={1}
@@ -227,7 +265,7 @@ const handleSearchArea = (e) => {
                     style={{padding:'0.5vw'}}
                   />
                 </div>
-                <h4 className='d-value' style={{float:'left'}}>{totalPrice} LKR</h4>
+                <h3 className='d-value' style={{float:'left'}}>{totalPrice} LKR</h3>
             </div>
             <div className='dash-box-a'>
                 <div style={{width:'8vw',float:'left'}}>
@@ -237,15 +275,12 @@ const handleSearchArea = (e) => {
                   <ResponsivePie
                     data={p4}
                     innerRadius={0.5}
-                    padAngle={0.7}
-                    cornerRadius={3}
                     colors={{ datum: 'data.color' }}
                     borderWidth={1}
                     borderColor={{ from: 'color', modifiers: [['darker', 0.2]] }}
-                    radialLabelsSkipAngle={10}
+                    radialLabelsSkipAngle={2}
                     radialLabelsTextXOffset={6}
                     radialLabelsTextColor="#333333"
-                    radialLabelsLinkOffset={0}
                     radialLabelsLinkDiagonalLength={16}
                     radialLabelsLinkHorizontalLength={24}
                     radialLabelsLinkStrokeWidth={1}
@@ -258,14 +293,14 @@ const handleSearchArea = (e) => {
                     style={{padding:'0.5vw'}}
                   />
                 </div>
-                <h4 className='d-value' style={{float:'left'}}>{totalWeight} KG</h4>
+                <h3 className='d-value' style={{float:'left'}}>{totalWeight} KG</h3>
             </div>
         </div>
-    <div className='dash-main-box'>
+    <div className='dash-main-box-body'>
         <div className='dash-table-box-b'>
         <div >
       <p className='topic-ND'>Historical Data</p>
-      <div className="col-lg-3 mt-2 mb-2" style={{width:'20vw',marginLeft:'1vw'}}>
+      <div className="col-lg-3 mt-2 mb-2" style={{width:'40vw',marginLeft:'1vw'}}>
             <input
             className="form-control"
             style={{width:'15vw', float:'left'}}
@@ -274,8 +309,13 @@ const handleSearchArea = (e) => {
             name="searchQuery"
             onChange={handleSearchArea}
             />
+            <a onClick={generateReport}>
+            <FontAwesomeIcon icon={faFileExport} 
+            style={{width:'1.8vw',height:'1.8vw', marginLeft:'5vw', marginRight:'1vw', color:'blue'}} /> 
+             Report Generate</a>
               <br/><br/>
           </div>
+
       <div className="N-table">
       <table style={{width:'100%',height:'10vw'}}>
             <thead>
@@ -432,9 +472,9 @@ const handleSearchArea = (e) => {
                             </div>
                         </Slider>
         </div>
-    </div>
-
-        </div>
+      </div>
+  <Footer/>
+</div>
 )
 };
 export default Bdashboard;
