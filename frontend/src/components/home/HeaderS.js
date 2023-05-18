@@ -47,7 +47,12 @@ const HeaderS =()=>{
                 <a href='/'>Product Listing</a>
               </li>
               <li>
-                <a href='/'> Recycling Education</a>
+                <a href='/'> Recycling Education &#9662;</a>
+                <ul className="dropdown-menu">
+                  <li className='drop'><a href="/myResources">My Resources </a></li>
+                  <li className='drop'><a href="/myResourcesForm">Create Resources</a></li>
+                  <li className='drop'><a href="/viewMyResource">View Resources</a></li>
+                </ul>
               </li>
               <li>
               <a href="/inorganic">Waste Management &#9662;</a>

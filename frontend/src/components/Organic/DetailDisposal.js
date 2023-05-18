@@ -1,10 +1,21 @@
-import React from 'react'
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 import SideNavC from '../Utilities/SideNavC';
 import { Card } from 'reactstrap';
 import images from '../../constant/images';
 
 
 function DetailDisposal() {
+
+    const onDelete = (id) => {
+        axios.delete('/inorganic/delete/'+id)
+          .then((res) => {
+          alert("Successfully Deleted");
+          window.location = '/inorganic';
+          
+        })
+        alert("Faild Delete");
+      };
 
   return (
     <div className='container-c'>
@@ -16,7 +27,7 @@ function DetailDisposal() {
                         <div className='form-card-left'>
                             <img src={images.Home_1} className='homeImg' />
                             <button id="edit" name="submit">Edit</button>
-                            <button id="delete" name="submit">Delete</button>
+                            <button id="delete" name="submit" onClick={onDelete}>Delete</button>
                         </div>
                         <div className='form-card-right'>
                             <label style={{fontSize:'2vw'}}>Green tea home</label><div/>

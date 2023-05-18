@@ -1,7 +1,25 @@
-import React from 'react'
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 import images from '../../constant/images';
+import Header from '../home/HeaderS';
+import Footer from '../home/footer';
 
 const ViewMyResources = () => {
+  const [myResForms, setMyResForms] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('/myResForm/getall');
+        setMyResForms(response.data.existingrMyresForm);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+  
+    fetchData();
+  }, []);
+
     return (
       <div className='container-b'>
           <h4 className='topic-v'>My Recycling Education Resources</h4>

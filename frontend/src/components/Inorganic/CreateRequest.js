@@ -378,13 +378,13 @@ const CreateRequest =()=>{
                         {/**slide show*/}
                         <Slider {...settings}>
                             <div>
-                                <img src={images.S1} alt="slider" style={{width:'25vw',height:'35vw',borderRadius:'0.3vw'}} />
+                                <img src={images.S1} alt="slider" style={{width:'25vw',height:'30vw',borderRadius:'2vw'}} />
                             </div>
                             <div>
-                                <img src={images.S2} alt="slider" style={{width:'25vw',height:'35vw',borderRadius:'0.3vw'}} />
+                                <img src={images.S2} alt="slider" style={{width:'25vw',height:'30vw',borderRadius:'2vw'}} />
                             </div>
                             <div>
-                                <img src={images.S3} alt="slider" style={{width:'25vw',height:'35vw',borderRadius:'0.3vw'}} />
+                                <img src={images.S3} alt="slider" style={{width:'25vw',height:'30vw',borderRadius:'2vw'}} />
                             </div>
                         </Slider>
 

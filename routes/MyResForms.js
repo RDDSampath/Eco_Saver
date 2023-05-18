@@ -1,5 +1,5 @@
 const express = require('express');
-const myResForm = require('../models/MYResForm');
+const myResForm = require('../models/MyResForm');
 
 const router = express.Router();
 
@@ -22,7 +22,7 @@ router.post('/myResForm/add', (req,res) =>{
 
 //get myResForm
 router.get('/myResForm/getall', (req,res) =>{
-    myResForm.find().exec((err,myResForm) =>{
+    myResForm.find().exec((err,MyresForm) =>{
         if(err){
             return res.status(400).json({
                 error:err
@@ -30,7 +30,7 @@ router.get('/myResForm/getall', (req,res) =>{
         }
         return res.status(200).json({
             success:true,
-            existingrmyResForm:myResForm
+            existingrMyresForm:MyresForm
         });
     });
 });

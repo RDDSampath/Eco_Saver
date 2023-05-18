@@ -2,10 +2,10 @@ const mongoose = require('mongoose');
 
 const MyResFormSchema = new mongoose.Schema({
     
-    resId:{
-        type:String,
-        required:true
-    },
+    // resId:{
+    //     type:String,
+    //     required:true
+    // },
     title:{
         type:String,
         required:true
@@ -15,8 +15,8 @@ const MyResFormSchema = new mongoose.Schema({
         required:true
     },
     file:{
-        type:String,
-        required:true
+        type:Array,
+        
     },
     tags:{
         type:String,

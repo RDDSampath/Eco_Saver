@@ -37,6 +37,9 @@ font-family: 'Poppins', sans-serif;
      /* background: rgb(9,121,97);
      background: linear-gradient(189deg, rgba(9,121,97,1) 0%, rgba(255,255,255,1) 0%, rgba(37,255,183,1) 66%); */
  }
+ .container-d{
+  background-color: #cbeed8;
+ }
  .organic-dash{
      width:100%;
      height: 67vw;
@@ -769,12 +772,21 @@ font-family: 'Poppins', sans-serif;
  }
  .create-left{
      width:25vw;
-     height:35vw;
+     height:30vw;
      float: right;
      margin: 1vw;
+     margin-top: 3vw;
      margin-right: 5vw;
      background-color: rgb(255, 255, 255);
-     border-radius: 1vw;
+     border-radius: 2vw;
+     box-shadow:
+  2.8px 2.8px 2.2px rgba(22, 236, 10, 0.02),
+  6.7px 6.7px 5.3px rgba(38, 210, 15, 0.028),
+  12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+  22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+  41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+  100px 100px 80px rgba(0, 0, 0, 0.07)
+;
  }
  .create-right{
      width:50vw;
@@ -925,15 +937,17 @@ font-family: 'Poppins', sans-serif;
  .h-container{
      width:86%;
      height:auto;
-     background-color: #ffffff;
+     background-color: rgba(255, 255, 255, 0.293);
      float:right;
  }
  .h-box{
      width:23vw;
      height:20vw;
-     background-color: rgb(255, 255, 255);
+     background-color: rgb(231, 248, 244);
      float:left;
      margin:1.5vw ;
+     border-radius: 0.5vw;
+     border: 1px solid rgb(14, 240, 86);
  }
  .location{
      width:1.2vw;
@@ -1893,10 +1907,10 @@ header{
     
 }
 
-.form-1{
-    
-    width: 60vw;
+.form-1{ 
+    width: 56vw;
     height: 45vw;
+    margin-left: 20vw;
     background: linear-gradient(to right,#00CF1C,#ADEEB4
     );
     margin-top: 5vw;
@@ -1904,11 +1918,14 @@ header{
 }
 .frm{
     width: 50vw;
-    height:35vw;
+    height:38vw;
     padding-top: 2vw;
     margin-top: 1.2vw;
     background-color: #FFF;
     border-radius: 1vw;
+    margin-left: 2.5vw;
+    
+
     
 }
 
@@ -1928,7 +1945,7 @@ h4{
     color: #FFF;
 }
 .letters{
-    padding: 12px 20px;
+    padding: 0px 20px;
 }
 .in-d{
     margin-right: 44vw;
@@ -1965,22 +1982,27 @@ h4{
   margin-top: 2vw;
 }
 .resBox{
-  height:50vw;
-  width: 80vw;
+  height:35vw;
+  width: 78vw;
   background: linear-gradient(to right,#00CF1C,#ADEEB4);
   margin: 1vw 0vw;
-  border-radius:1.2vw;
+  border-radius:1vw;
+  margin-left: 10vw;
 
 }
 .inResBox{
   height:32vw;
   width: 75vw;
   background-color: #FFF;
-  border-radius:1.2vw;
+  border-radius:0.5vw;
+  margin-left: 2vw;
 }
 .name .h4{
   margin-right:30vw;
   
+}
+.name{
+  margin-left: 3vw;
 }
 .details{
   
