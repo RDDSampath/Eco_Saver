@@ -19,7 +19,7 @@ const header =()=>{
             <a  href="/">About us</a>
           </li>
           <li>
-            <a href="#">Contact us </a>
+            <a href="/">Contact us </a>
           </li>
         </ul>
         </div>
@@ -30,7 +30,7 @@ const header =()=>{
               <a class='sign-btn' href='/' style={{color:'#016142'}}>SIGN UP</a>
             </li>
             <li>
-              <a class='log-btn' href='/' style={{color:'#00ff00'}}>LOG IN</a>
+              <a class='log-btn' href='/login' style={{color:'#00ff00'}}>LOG IN</a>
             </li>
             <li>
               <a href='/'>Product Listing</a>

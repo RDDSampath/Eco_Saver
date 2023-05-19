@@ -8,7 +8,7 @@ const app = express();
 //Import routes
 const postRoutes = require('./routes/Posts');
 const MyResFormRoutes = require('./routes/MyResForm');
-const cusRegFormRoutes = require('./routes/cusRegForm');
+
 
 //App middleware
 app.use(bodyParser.json());
@@ -17,7 +17,7 @@ app.use(cors());
 //route middleware
 app.use(postRoutes);
 app.use(MyResFormRoutes);
-app.use(cusRegFormRoutes);
+
 
 const PORT = 8000;
 const DB_URL ='mongodb+srv://kavindu1998:Kavindu98@ecosever.rng2jnw.mongodb.net/?retryWrites=true&w=majority';
