@@ -57,6 +57,7 @@ function App() {
           <Route path="/organic" element={<OrganicDashboard />} />
           <Route path="/organic/disposal" element={<DetailDisposal />} />
           <Route path="/organic/disposalPlaces" element={<DisposalPlace />} />
+          <Route path="/organic/postDisposal" element={<PostDisposal />} />
 
 
           {/* Inorganic */}
