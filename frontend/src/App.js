@@ -24,11 +24,7 @@ import CreateRecipe from "./components/Inorganic/CreateRequest";
 import ViewRequeest from "./components/Inorganic/ViewRequest";
 
 //****============Organic================****//
-import DetailDisposal from "./components/Organic/DetailDisposal";
-import DisposalPlace from "./components/Organic/DisposalPlaces";
-import OrganicPlaces from "./components/Organic/DisposalPlaces";
-import PostDisposal from "./components/Organic/PostDisposal";
-import UpdateDisposal from "./components/Organic/UpdateDisposal";
+
 
 //****============My Resourses================****//
 import MyResources from "./components/MyResources/MyResources";
