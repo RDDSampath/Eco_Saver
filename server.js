@@ -24,6 +24,7 @@ app.use(cors());
 //route middleware
 app.use(inorganicRoutes);
 app.use(priceListRoutes);
+app.use(organicRoutes);
 app.use(productRoutes);
 app.use(myResFormRoutes);
 
