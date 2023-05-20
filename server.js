@@ -121,6 +121,15 @@ app.post("/user/login", async (req, res) => {
    });
   
   //========= get All users =================//
+
+  app.get("/user/getAllUser", async (req, res) => {
+    try {
+      const allUser = await User.find({});
+      res.send({ status: "ok", data: allUser });
+    } catch (error) {
+      console.log(error);
+    }
+  });
   
   //========= delete user =================//
   
