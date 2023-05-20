@@ -26,7 +26,7 @@ import ViewRequeest from "./components/Inorganic/ViewRequest";
 //****============Organic================****//
 import DetailDisposal from "./components/Organic/DetailDisposal";
 import DisposalPlace from "./components/Organic/DisposalPlaces";
-
+import OrganicPlaces from "./components/Organic/DisposalPlaces";
 
 //****============My Resourses================****//
 import MyResources from "./components/MyResources/MyResources";
