@@ -3,6 +3,8 @@ import axios from 'axios';
 import images from '../../constant/images';
 import jsPDF from "jspdf";
 import "jspdf-autotable";
+import Header from '../home/HeaderS';
+import Footer from '../home/footer';
 
 const MyResources = () => {
   const [myResForms, setMyResForms] = useState([]);
@@ -50,10 +52,12 @@ const MyResources = () => {
   
   return (
     <div className='container-a'>
+     
+     <Header/>
        <img src={images.MyRes} alt='resimg' className='ResImg'/>
         <div className='aa'>
-        <a href='/myResourceform'><div  className='bb'>Add My Resource</div></a>
-        <a href='/ViewMyResources'><div  className='bb'>View My Resource</div></a>
+        <a href='/myResourcesForm'><div  className='bb'>Add My Resource</div></a>
+        <a href='/viewMyResources'><div  className='bb'>View My Resource</div></a>
         <h5 className='srh' style={{marginTop:'2vw',float:'left',marginLeft:'44vw',marginTop:'1.7vw',fontWeight:'bold'}}>Search</h5>
         <input type='text'  placeholder='Search category' style={{width:'16vw',height:'3vw',marginTop:'1.2vw', float:'right',marginRight:'2vw',borderRadius:'0.3vw'}}/>
 
@@ -76,6 +80,7 @@ const MyResources = () => {
           <a href='/'><img src={images.Sent} alt='sent' className='snt-a'/> </a> */}
       </div>
       ))}
+       <Footer/>
     </div>
   )
 }

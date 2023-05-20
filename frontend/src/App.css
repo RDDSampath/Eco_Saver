@@ -1905,7 +1905,8 @@ header{
 .container-2{
     width: 100vw;
     height: 48vw;
-    
+    background-image: url('./assest/Image/backgroundAnim.svg');
+     background-size: cover;
 }
 
 .form-1{ 
@@ -1956,7 +1957,8 @@ h4{
 /* MyRes */
 .container-a{
   width: 100vw;
-  
+  background-image: url('./assest/Image/backgroundAnim.svg');
+  background-size: cover;  
 }
 .ResImg{
   width: 100vw;
