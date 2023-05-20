@@ -60,7 +60,7 @@ const HeaderS =({userData})=>{
                 <ul className="dropdown-menu">
                   <li className='drop'><a href="/myResources">My Resources </a></li>
                   <li className='drop'><a href="/myResourcesForm">Create Resources</a></li>
-                  <li className='drop'><a href="/ViewMyResources">View Resources</a></li>
+                  <li className='drop'><a href="/viewMyResources">View Resources</a></li>
                 </ul>
               </li>
               <li>
