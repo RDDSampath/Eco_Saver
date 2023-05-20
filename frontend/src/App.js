@@ -24,7 +24,7 @@ import CreateRecipe from "./components/Inorganic/CreateRequest";
 import ViewRequeest from "./components/Inorganic/ViewRequest";
 
 //****============Organic================****//
-
+import DetailDisposal from "./components/Organic/DetailDisposal";
 
 //****============My Resourses================****//
 import MyResources from "./components/MyResources/MyResources";
