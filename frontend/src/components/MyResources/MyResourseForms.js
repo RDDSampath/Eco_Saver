@@ -70,6 +70,8 @@ const MyResourseForms = () => {
         alert('Failed to add');
     });
 };
+
+
     return (
         <div className='container-2'>
           <Header/>
@@ -119,7 +121,6 @@ const MyResourseForms = () => {
       </div>
       <button className='submit' id="submit" name="submit">Submit</button>
     </form>
-    
     </div>
     <Footer/>
   </div>
