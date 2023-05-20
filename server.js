@@ -120,7 +120,7 @@ app.post("/user/login", async (req, res) => {
       }
    });
   
-
+  //========= get All users =================//
   
   //========= delete user =================//
   
