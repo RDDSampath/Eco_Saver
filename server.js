@@ -8,7 +8,6 @@ const app = express();
 //import routes
 const inorganicRoutes = require('./routes/Inorganics');
 const priceListRoutes = require('./routes/PriceLists');
-
 const productRoutes = require('./routes/Products');
 const myResFormRoutes = require('./routes/MyResForms');
 const bcrypt = require("bcryptjs");
