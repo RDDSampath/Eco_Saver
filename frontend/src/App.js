@@ -34,6 +34,7 @@ import UpdateDisposal from "./components/Organic/UpdateDisposal";
 import MyResources from "./components/MyResources/MyResources";
 import MyResourcesForm from "./components/MyResources/MyResourseForms";
 import ViewMyResources from "./components/MyResources/ViewMyResources";
+import UpdateMyResources from "./components/MyResources/MyResourseFormsUpdate";
 
 function App() {
   const isLoggedIn = window.localStorage.getItem("loggedIn");
@@ -55,10 +56,10 @@ function App() {
           
           {/* Organic */}
           <Route path="/organic" element={<OrganicDashboard />} />
-          <Route path="/organic/disposal" element={<DetailDisposal />} />
+          <Route path="/organic/disposal/:data" element={<DetailDisposal />} />
           <Route path="/organic/disposalPlaces" element={<DisposalPlace />} />
           <Route path="/organic/postDisposal" element={<PostDisposal />} />
-          <Route path="/organic/updateDisposal" element={<UpdateDisposal />} />
+          <Route path="/organic/updateDisposal/:data" element={<UpdateDisposal />} />
           <Route path="/organic/organicPlaces" element={<OrganicPlaces />} />
 
           {/* Inorganic */}
@@ -71,6 +72,7 @@ function App() {
           <Route path="/myResources" element={<MyResources />} />
           <Route path="/myResourcesForm" element={<MyResourcesForm />} />
           <Route path="/viewMyResources" element={<ViewMyResources />} />
+          <Route path="/updateMyResources/:data" element={<UpdateMyResources />} />
 
         </Routes>
       </div>

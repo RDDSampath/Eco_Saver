@@ -49,6 +49,12 @@ import Comsign from '../assest/Image/comsignup.png';
 import Background from '../assest/Image/background.svg';
 import Prof from '../assest/Image/prof.png';
 import Logout from '../assest/Image/logout.png';
+import A7 from '../assest/Image/a1.png';
+import A2 from '../assest/Image/a2.png';
+import A3 from '../assest/Image/a3.png';
+import A4 from '../assest/Image/a4.png';
+import A5 from '../assest/Image/a5.png';
+import A6 from '../assest/Image/a6.png';
 export default {
     Logo,Flogo,
     Mode,
@@ -64,5 +70,6 @@ export default {
     RecycleMan,EcoGirlBlue,EcoGirlYellow,A1
     ,About,Contact,
     Bin,MyRes,Form1Img,Sent,Form1Img2,Waste,Login1,Signup1,Comsign,
-    Prof,Logout
+    Prof,Logout,
+    A6,A2,A3,A4,A5,A7  
 };

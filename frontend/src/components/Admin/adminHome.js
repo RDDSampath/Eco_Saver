@@ -96,8 +96,8 @@ export default function AdminHome({ userData }) {
   return (
     <div className="auth-wrapper" style={{ height: "auto" }}>
       <div className="auth-inner" style={{ width: "auto" }}>
-        <h3>Welcom Admin</h3>
-        <table style={{ width: 500 }}>
+        <h3 style={{ width: 500,marginLeft:'5vw' }}>Welcom Admin</h3>
+        <table style={{ width: 500,marginLeft:'5vw' }}>
           <tr>
             <th>Name</th>
             <th>Phone Number</th>
@@ -122,7 +122,7 @@ export default function AdminHome({ userData }) {
             );
           })}
         </table>
-        <ReactPaginate
+        {/* <ReactPaginate
           breakLabel="..."
           nextLabel="next >"
           onPageChange={handlePageClick}
@@ -140,10 +140,10 @@ export default function AdminHome({ userData }) {
           nextLinkClassName="page-link"
           activeClassName="active"
           forcePage={currentPage.current-1}
-        />
-        <input placeholder="Limit" onChange={e=>setLimit(e.target.value)}/>
-        <button onClick={changeLimit}>Set Limit</button>
-        <button onClick={logOut} className="btn btn-primary">
+        /> */}
+        {/* <input placeholder="Limit" onChange={e=>setLimit(e.target.value)}/>
+        <button onClick={changeLimit}>Set Limit</button> */}
+        <button onClick={logOut} className="btn btn-primary" style={{marginLeft:'50vw' }}>
           Log Out
         </button>
       </div>

@@ -3,19 +3,28 @@ import axios from 'axios';
 import SideNavC from '../Utilities/SideNavC';
 import { Card } from 'reactstrap';
 import images from '../../constant/images';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 
-function DetailDisposal() {
+const DetailDisposal = () => {
+    const location = useLocation();
+    const navigate = useNavigate();
+  const { place } = location.state;
+  const id = place._id;
+
+    console.log('data==>>>', id);
 
     const onDelete = (id) => {
-        axios.delete('/inorganic/delete/'+id)
+        axios.delete('/organic/delete/'+id)
           .then((res) => {
           alert("Successfully Deleted");
-          window.location = '/inorganic';
-          
+          window.location = '/organic';
         })
-        alert("Faild Delete");
       };
+      const handleClick = (place) => {
+        navigate(`/organic/updateDisposal/${place._id}`, { state: { place } });
+      };
+
 
   return (
     <div className='container-c'>
@@ -25,17 +34,17 @@ function DetailDisposal() {
                 <Card className='pdCardIn' style={{marginTop:'3vw',width:'64vw',height:'30vw'}}>
                     <div className='form-card'>
                         <div className='form-card-left'>
-                            <img src={images.Home_1} className='homeImg' />
-                            <button id="edit" name="submit">Edit</button>
-                            <button id="delete" name="submit" onClick={onDelete}>Delete</button>
+                            <img src={place.imageUrl} className='homeImg' />
+                            <button id="edit" name="submit" onClick={()=>handleClick(place)}>Edit</button>
+                            <button id="delete" name="submit" onClick={()=>onDelete(id)}>Delete</button>
                         </div>
                         <div className='form-card-right'>
-                            <label style={{fontSize:'2vw'}}>Green tea home</label><div/>
-                            <span></span><label>A/2b Hidellana , Rathnapura , Sri Lanka</label><div/>
-                            <label>Kaml de Silva</label><div/>
-                            <label>0711345674</label><div/>
+                            <label style={{fontSize:'2vw'}}>{place.Place_name}</label><div/>
+                            <span></span><label>{place.location}</label><div/>
+                            <label>{place.Owner_name}</label><div/>
+                            <label>{place.Owner_number}</label><div/>
                             <label>Kaml@gmail.com</label><div/>
-                            <label>Waste clothes-10 Kg</label><div/>
+                            <label>{place.type}-{place.weight}</label><div/>
                             <img src={images.RecycleMan} style={{marginLeft:'15vw'}} /><br/>
                         
                         </div>

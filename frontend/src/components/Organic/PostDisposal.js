@@ -104,8 +104,10 @@ function PostDisposal() {
                         <div className='form-card-right'>
                         <label>Enter Organic Disposal Type *</label><br/>
                         <select  name="type" value={formData.type} className="o-input" onChange={handleInputChange}>
-                          <option value="1">Option one</option>
-                          <option value="2">Option two</option>
+                          <option value="1">Paper sheets</option>
+                          <option value="2">Food disposal</option>
+                          <option value="1">Tree leaf litter and other parts of trees</option>
+                          <option value="2">Waste clothes.</option>
                         </select><br/>
                           <label>Weight (kg) *</label><br/>
                           <input type='text' name='weight' value={formData.weight} onChange={handleInputChange} placeholder='10' className='o-input' /><br/>

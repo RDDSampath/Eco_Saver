@@ -1,7 +1,14 @@
 import React,{useState, useEffect} from 'react';
 import images from '../../constant/images';
 
-const HeaderS =()=>{
+const HeaderS =({userData})=>{
+
+  if (userData == null) {
+    const uData = JSON.parse(localStorage.getItem('userData'));
+    userData = {
+      userName: uData.userName,
+    };
+  }
 
   const logOut = () => {
     window.localStorage.clear();
@@ -31,15 +38,17 @@ const HeaderS =()=>{
             <ul className='title-menue'>
             <li>
                 <div> 
-                    <div style={{width:'15vw', alignItems:'center', justifyContent:'center'}}>
+                    <div style={{width:'8vw', alignItems:'center', justifyContent:'center'}}>
                         <a href='' className='H-img'>
                         <img src={images.Prof} alt='profile' className='H-imga'/>
+                        <h6 style={{fontSize:'12px', marginRight:'2px', fontWeight:600}}>{userData.userName}</h6>
                         </a>
                         <a  className='H-img' onClick={logOut}>
                             <img src={images.Logout} alt='logout' className='H-imgb' />
+                            
                         </a>
                     </div>
-                    <h6 style={{fontSize:'12px', marginRight:'10px', fontWeight:600}}>kamal</h6>
+                    
                     
                 </div>
               </li>
@@ -51,7 +60,7 @@ const HeaderS =()=>{
                 <ul className="dropdown-menu">
                   <li className='drop'><a href="/myResources">My Resources </a></li>
                   <li className='drop'><a href="/myResourcesForm">Create Resources</a></li>
-                  <li className='drop'><a href="/viewMyResource">View Resources</a></li>
+                  <li className='drop'><a href="/ViewMyResources">View Resources</a></li>
                 </ul>
               </li>
               <li>

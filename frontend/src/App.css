@@ -492,11 +492,11 @@ font-family: 'Poppins', sans-serif;
  /*home*/
  .section-1{
      width: 100%;
-     height:42.5vw;
+     height:55vw;
      background-size:cover;
      /* background-position: fixed;
      background-attachment: fixed; */
-     background-image: radial-gradient(circle at 67% 83%, hsla(317,0%,96%,0.05) 0%, hsla(317,0%,96%,0.05) 1%,transparent 1%, transparent 5%,transparent 5%, transparent 100%),radial-gradient(circle at 24% 80%, hsla(317,0%,96%,0.05) 0%, hsla(317,0%,96%,0.05) 27%,transparent 27%, transparent 63%,transparent 63%, transparent 100%),radial-gradient(circle at 23% 5%, hsla(317,0%,96%,0.05) 0%, hsla(317,0%,96%,0.05) 26%,transparent 26%, transparent 82%,transparent 82%, transparent 100%),radial-gradient(circle at 21% 11%, hsla(317,0%,96%,0.05) 0%, hsla(317,0%,96%,0.05) 35%,transparent 35%, transparent 45%,transparent 45%, transparent 100%),radial-gradient(circle at 10% 11%, hsla(317,0%,96%,0.05) 0%, hsla(317,0%,96%,0.05) 21%,transparent 21%, transparent 81%,transparent 81%, transparent 100%),radial-gradient(circle at 19% 61%, hsla(317,0%,96%,0.05) 0%, hsla(317,0%,96%,0.05) 20%,transparent 20%, transparent 61%,transparent 61%, transparent 100%),radial-gradient(circle at 13% 77%, hsla(317,0%,96%,0.05) 0%, hsla(317,0%,96%,0.05) 63%,transparent 63%, transparent 72%,transparent 72%, transparent 100%),radial-gradient(circle at 30% 93%, hsla(317,0%,96%,0.05) 0%, hsla(317,0%,96%,0.05) 33%,transparent 33%, transparent 82%,transparent 82%, transparent 100%),linear-gradient(90deg, rgb(22,207,152),rgb(16,139,116));
+     background-image: url(./assest/Image/back1.png);
  }
  .section-2{
      width: 100%;
@@ -519,7 +519,7 @@ font-family: 'Poppins', sans-serif;
  .section-4{
      width: 100%;
      height:42.5vw;
-     background-image: url(./assest/Image/ecoBackground.png);
+     background-image: url(./assest/Image/back2.png);
      background-position: fixed;
      background-attachment: fixed;
      background-size: cover;
@@ -534,7 +534,7 @@ font-family: 'Poppins', sans-serif;
      backdrop-filter: blur( 10.5px );
      -webkit-backdrop-filter: blur( 10.5px );
      border-radius: 10px;
-     border: 1px solid rgba( 255, 255, 255, 0.18 );                                                                                                                                     
+     border: 2px solid rgba(0, 0, 0, 0.18);                                                                                                                                     
  }
  .box-1:hover{
      transform: scale(1.1);
@@ -597,19 +597,18 @@ font-family: 'Poppins', sans-serif;
      color: #00855b;
      font-weight: 500;
      font-size: 1vw;
-     background: rgba(16, 255, 108, 0.6);
-     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+     background: rgba(255, 255, 255, 0.6);
+      box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
      backdrop-filter: blur( 7.5px );
      -webkit-backdrop-filter: blur( 7.5px );
      border-radius: 10px;
      border: 1px solid rgb(255, 255, 255);
-     font-family: 'Mochiy Pop One', sans-serif;
+     font-family: 'Nova Flat', cursive;
  }
  .btn-hs:hover{
-     transform: scale(1.);
      transition-duration: 0s;
-     background-color: #00ff00;
-     color: white;
+     background-color: #63f89f;
+     color: rgb(38, 46, 37);
  }
  .H-left_box{
      width: 60vw;
@@ -1571,10 +1570,11 @@ a.article:hover {
 
 .sec-topic{
   font-family: Georgia, serif;
-  font-size: 4vw;
+  font-size: 5vw;
   letter-spacing: 0px;
   word-spacing: 0px;
-  color: #000000;
+  color: #030502;
+  text-shadow: #166706 10px 10px 10px;
   font-weight: 700;
   text-decoration: none solid rgb(68, 68, 68);
   font-style: normal;
@@ -1584,8 +1584,8 @@ a.article:hover {
   margin-left: 5vw;
   float: left;
   animation-name: samplec;
-  animation-duration: 5s; 
-  animation-iteration-count: 2;
+  animation-duration: 10s;
+  animation-iteration-count: 10;
 }
 
 @keyframes samplec{
@@ -1607,13 +1607,14 @@ a.article:hover {
   font-size: 1.8vw;
   letter-spacing: 0px;
   word-spacing: 1px;
-  color: #104606;
+  color: #ffffff;
+  text-shadow: #ffffff 10px 10px 10px;
   font-weight: 400;
   text-decoration: none solid rgb(68, 68, 68);
   font-style: normal;
   font-variant: small-caps;
   text-transform: uppercase;
-  margin-top: 2vw;
+  margin-top: 6vw;
   margin-left: 7vw;
   line-height: 3vw;
   float: left;
@@ -2056,16 +2057,25 @@ h4{
   width: 100vw;
 }
 .topic-v{
-  margin-left: 35vw;
-  font-size:x-large;
+  margin-left: 25vw;
+  font-size:2.5vw;
+  margin-top: 2vw;
+  font-weight: 700;
 }
 .inResBox1{
   height:32vw;
   width: 95vw;
-  background-color: #A9E9A8;
+
   border-radius:1.2vw;
   margin-bottom: 1vw;
   margin-top: 2vw;
+  margin-left: 2vw;
+  background: rgba( 207, 255, 205, 0.45 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 14.5px );
+-webkit-backdrop-filter: blur( 14.5px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 .details1{ 
   flex-direction: row;
@@ -2092,12 +2102,13 @@ h4{
   margin-top: 0.5vw;
   margin-left: 1vw;
   float: right;
-  background-color: #014E35;
+  background-color: #1ee5a6;
   font-weight: bold;
   padding: 0.5vw 1vw;
-  border-radius: 0.8vw;
+  border-radius: 0.2vw;
   color: #fff;
   margin-top:4vw;
+  border:1px solid #105f46;
 }
 
 .H-img{
@@ -2127,13 +2138,13 @@ li:hover .dropdown-menu {
 
 .drop a{
   width:8vw;
-  color: #fff;
+  color: #010101;
   font-weight: bold;
   font-size: 1vw;
-  background-color: #00cf1c73;
+  background-color: #cfd7d073;
 }
 .drop a:hover{
-  color: #009213;
+  color: #098019;
   font-weight: bold;
   font-size: 1vw;
   background-color: #ffffff;

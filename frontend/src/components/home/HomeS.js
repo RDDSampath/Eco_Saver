@@ -3,10 +3,10 @@ import images from "../../constant/images";
 import HeaderS from "./HeaderS";
 
 const HomeS =({userData})=>{
-      console.log(userData, "userData");
+
     return(
         <div className='home'>
-          <HeaderS/>
+          <HeaderS userData={userData}/>
              
             <div className='section-1' id='sec_1'>
             <h1 className='sec-topic' >𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐭𝐨 𝐄𝐜𝐨𝐒𝐚𝐯𝐞𝐫</h1>
@@ -15,32 +15,30 @@ const HomeS =({userData})=>{
 
             </p>
                 <img src={images.A1} className='home-sideLogo'/>
-                
-        
             </div>
-            <div className='section-2'>
             <div className="T-home">
                 <h2 className="Title-Home">Create a cleaner, greener world with our innovative garbage </h2>
                 <h2 className="Title-Home">management and recycling solutions</h2></div>
+            <div className='section-2'>
                 <div className="box-H">
                     <div className="box-1">
-                        <img src={images.Gc} className='h-image'/>
-                        <h6 className="about-Text">Saw any garbage lying around that needs to be collected?</h6>
-                        <a href='/' className="btn" ><div className="btn-hs">Schedule a Garbage Collection</div></a>
+                        <img src={images.A3} className='h-image'/><br/><br/><br/>
+                        {/* <h6 className="about-Text">Saw any garbage lying around that needs to be collected?</h6> */}
+                        <a href='/organic' className="btn" ><div className="btn-hs">Schedule a Garbage Collection</div></a>
                     </div>
                     <div className="box-1">
-                        <img src={images.Wc} className='h-image'/>
-                        <h6 className="about-Text">Have any recyclable waste lying around that you'd like to sell?</h6>
-                        <a href='/' className="btn" ><div className="btn-hs">Sell Your Recyclable Waste</div></a>
+                        <img src={images.A5} className='h-image'/><br/><br/><br/>
+                        {/* <h6 className="about-Text">Have any recyclable waste lying around that you'd like to sell?</h6> */}
+                        <a href='/inorganic' className="btn" ><div className="btn-hs">Sell Your Recyclable Waste</div></a>
                     </div>
                     <div className="box-1">
-                        <img src={images.Rc} className='h-image'/>
-                        <h6 className="about-Text">Looking for sustainable products made from recycled waste?</h6>
-                        <a href='/' className="btn" ><div className="btn-hs">Shop Sustainable Products</div></a>
+                        <img src={images.A2} className='h-image'/><br/><br/><br/>
+                        {/* <h6 className="about-Text">Looking for sustainable products made from recycled waste?</h6> */}
+                        <a href='/myResources' className="btn" ><div className="btn-hs">Shop Sustainable Products</div></a>
                     </div>
                     <div className="box-1">
-                        <img src={images.Pc} className='h-image'/>
-                        <h6 className="about-Text">Are you Interested in waste sorting and recycling?</h6>
+                        <img src={images.A6} className='h-image'/><br/><br/><br/>
+                        {/* <h6 className="about-Text">Are you Interested in waste sorting and recycling?</h6> */}
                         <a href='/' className="btn" ><div className="btn-hs">Learn Waste sorting and Recycling</div></a>
                     </div>
                 </div>

@@ -23,7 +23,7 @@ const SignIn =()=>{
         email,
         address,
         password,
-        userType: "Admin",
+        userType: "user",
       }),
     })
       .then((res) => res.json())

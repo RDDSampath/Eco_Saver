@@ -37,7 +37,7 @@ export default function App() {
             <MDBCol md="3" lg="4" xl="3" className='mx-auto mb-4'>
               <h6 className='text-uppercase fw-bold mb-4'>
                 <MDBIcon icon="gem" className="me-3" />
-                Company name
+                EcoSaver
               </h6>
               <p>
                 Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
@@ -49,7 +49,7 @@ export default function App() {
               <h6 className='text-uppercase fw-bold mb-4'>Products</h6>
               <p>
                 <a href='#!' className='text-reset'>
-                  Angular
+                  MDBootstrap
                 </a>
               </p>
               <p>
@@ -115,9 +115,9 @@ export default function App() {
       </section>
 
       <div className='text-center p-4' id='foterbottom'>
-        © 2021 Copyright:
-        <a className='text-reset fw-bold' href='https://mdbootstrap.com/'>
-          MDBootstrap.com
+        © 2023 Copyright:
+        <a className='text-reset fw-bold' href='/'>
+          EcoSaver.com
         </a>
       </div>
     </MDBFooter>

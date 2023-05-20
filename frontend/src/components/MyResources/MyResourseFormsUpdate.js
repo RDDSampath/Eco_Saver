@@ -2,43 +2,21 @@ import React,{useState} from 'react'
 import axios from 'axios';
 import Header from '../home/HeaderS';
 import Footer from '../home/footer';
+import { useLocation, useNavigate } from 'react-router-dom';
 
-const MyResourseForms = () => {
-  
+
+const MyResourseFormsUpdate = () => {
+  const loc = useLocation();
+  const navigate = useNavigate();
+  const { item } = loc.state;
+  const id = item._id;
   const [formData, setFormData] = useState({
-          title: '',
-          Category: '',
-          tags: '',
-          description: '',
-          file: [],
+          title: item.title,
+          Category: item.Category,
+          tags: item.tags,
+          description: item.description
   });
   console.log(formData);
-
-  const handleImageChange = (event) => {
-    const files = Array.from(event.target.files);
-    const imagePromises = files.map((file) => {
-      return new Promise((resolve, reject) => {
-        const reader = new FileReader();
-        reader.onload = (event) => resolve(event.target.result);
-        reader.onerror = (error) => reject(error);
-        reader.readAsDataURL(file);
-      });
-    });
-
-    Promise.all(imagePromises)
-      .then((base64Images) => {
-        setFormData({
-          ...formData,
-          file: [base64Images],
-        });
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-
-      
-  };
-
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -52,22 +30,21 @@ const MyResourseForms = () => {
   const onSubmit = (e) => {
     e.preventDefault();
 
-    axios.post('/myResForm/add', formData).then((res) => {
+    axios.put('/myResForm/update/'+id, formData).then((res) => {
       if (res.data.success) {
-        alert('Added Successfully');
-        window.location = "/myResources";
+        alert('updated successfully');
         setFormData({
           title: '',
           Category: '',
           tags: '',
-          description: '',
-          file: [],
+          description: ''
         });
+        window.location = "/viewMyResources";
       } else {
-        alert('Failed to add ');
+        alert('Failed to update ');
       }
     }).catch((error) => {
-        alert('Failed to add');
+        alert('Failed to update');
     });
 };
     return (
@@ -75,7 +52,7 @@ const MyResourseForms = () => {
           <Header/>
             <div className='form-1'>
              <div className='topic'>
-                <h5 style={{marginLeft:'3vw',paddingTop:'1vw'}}>Add My Recycling Resources</h5>
+                <h5 style={{marginLeft:'3vw',paddingTop:'1vw'}}>Update My Recycling Resources</h5>
              </div>
     <form  className='frm '  onSubmit={onSubmit}>
      <div className='letters'>        
@@ -98,12 +75,6 @@ const MyResourseForms = () => {
         </select>
 
       </div>
-      <div className='file'style={{ width: '100%' }}>
-        <label htmlFor="file" className='in-d'>File:</label><br/>
-        <input type="file" onChange={handleImageChange} className='o-input' />
-        
-      </div>
-
       <div className='tags'style={{ width: '100%' }}>
         <label htmlFor="tags" className='in-d'>Tags:</label><br/>
         <input type="text" name="tags" className='o-input'
@@ -117,7 +88,7 @@ const MyResourseForms = () => {
         ></textarea>
       </div>
       </div>
-      <button className='submit' id="submit" name="submit">Submit</button>
+      <button className='submit' id="submit" name="submit">Update</button>
     </form>
     
     </div>
@@ -125,4 +96,4 @@ const MyResourseForms = () => {
   </div>
   )
 }
-export default MyResourseForms;
+export default MyResourseFormsUpdate;

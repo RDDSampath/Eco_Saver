@@ -1,4 +1,5 @@
-import React from "react";
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 import SideNavC from '../Utilities/SideNavC';
 import { ResponsivePie } from '@nivo/pie';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
@@ -7,54 +8,7 @@ import Header from "../home/HeaderS";
 import Footer from "../home/footer";
 
 const ODashboard =()=>{
-  const p1 = [
-    {
-      id: 'Yes',
-      value: 3,
-      color: '#ffffff',
-    },
-    {
-      id: 'No',
-      value: 6,
-      color: '#475BE8',
-    },
-  ];
-  const p2 = [
-    {
-      id: 'Yes',
-      value: 3,
-      color: '#ffffff',
-    },
-    {
-      id: 'No',
-      value: 6,
-      color: '#FD8539',
-    },
-  ];
-  const p3 = [
-    {
-      id: 'Yes',
-      value: 3,
-      color: '#ffffff',
-    },
-    {
-      id: 'No',
-      value: 6,
-      color: '#2ED480',
-    },
-  ];
-  const p4 = [
-    {
-      id: 'Yes',
-      value: 3,
-      color: '#ffffff',
-    },
-    {
-      id: 'No',
-      value: 6,
-      color: '#FE6D8E',
-    },
-  ];
+  
 
   const bardata = [
     {
@@ -136,6 +90,70 @@ const ODashboard =()=>{
     { title: 'place 2', Image: images.Home_2, homeName: 'Star sun ',address:'No 3 , Colombo ,  Sri Lanka' },
     { title: 'place 3', Image: images.Home_3, homeName: 'Window Garden House',address:'1 /1C Malabe , Kaduwela' }
   ];
+  const [organics, setOrganics] = useState([]);
+  useEffect(() => {
+    retrieveOrganics();
+  }, []);
+
+  const retrieveOrganics = () => {
+    axios.get("/organic/getall").then(res => {
+      if(res.data.success) {
+        setOrganics(res.data.existingOrganics);
+      }
+    });
+  };
+
+  let tpoint = (organics.length*10);
+  let point = (organics.length*100);
+
+  const p1 = [
+    {
+      id: 'Yes',
+      value: organics.length,
+      color: '#ffffff',
+    },
+    {
+      id: 'No',
+      value: organics.length+'0',
+      color: '#475BE8',
+    },
+  ];
+  const p2 = [
+    {
+      id: 'Yes',
+      value: tpoint+'0',
+      color: '#ffffff',
+    },
+    {
+      id: 'No',
+      value: tpoint,
+      color: '#FD8539',
+    },
+  ];
+  const p3 = [
+    {
+      id: 'Yes',
+      value: point+'0',
+      color: '#ffffff',
+    },
+    {
+      id: 'No',
+      value: point,
+      color: '#2ED480',
+    },
+  ];
+  const p4 = [
+    {
+      id: 'Yes',
+      value: 3,
+      color: '#ffffff',
+    },
+    {
+      id: 'No',
+      value: 6,
+      color: '#FE6D8E',
+    },
+  ];
     return(
         <div className="organic-dash">
           <Header/>
@@ -171,7 +189,7 @@ const ODashboard =()=>{
                     style={{padding:'0.5vw'}}
                   />
                 </div>
-                <h3 className='d-value' style={{float:'left'}}>164</h3>
+                <h3 className='d-value' style={{float:'left'}}>{organics.length}</h3>
             </div>
             <div className='dash-box-a'>
                 <div style={{width:'8vw',float:'left'}}>
@@ -206,7 +224,7 @@ const ODashboard =()=>{
             </div>
             <div className='dash-box-a'>
                 <div style={{width:'8vw',float:'left'}}>
-                  <h6 className='d-text'>Total Earn</h6>
+                  <h6 className='d-text'>Today Point</h6>
                 </div>
                 <div style={{width:'4vw',height:'4vw',float:'right',margin:'0.8vw',padding:'0.2vw'}}>
                   <ResponsivePie
@@ -233,11 +251,11 @@ const ODashboard =()=>{
                     style={{padding:'0.5vw'}}
                   />
                 </div>
-                <h3 className='d-value' style={{float:'left'}}>5000 LKR</h3>
+                <h3 className='d-value' style={{float:'left'}}>20ECO</h3>
             </div>
             <div className='dash-box-a'>
                 <div style={{width:'8vw',float:'left'}}>
-                  <h6 className='d-text'>Total weight</h6>
+                  <h6 className='d-text'>Total Point</h6>
                 </div>
                 <div style={{width:'4vw',height:'4vw',float:'right',margin:'0.8vw',padding:'0.2vw'}}>
                   <ResponsivePie
@@ -264,7 +282,7 @@ const ODashboard =()=>{
                     style={{padding:'0.5vw'}}
                   />
                 </div>
-                <h3 className='d-value' style={{float:'left'}}>50000 KG</h3>
+                <h3 className='d-value' style={{float:'left'}}>400ECO</h3>
             </div>
         </div>
         <div className='dash-main-box'>

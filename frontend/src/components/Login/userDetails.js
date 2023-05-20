@@ -9,7 +9,7 @@ export default function UserDetails() {
   
 
   useEffect(() => {
-    fetch("/user/data", {
+    fetch("/userData", {
       method: "POST",
       crossDomain: true,
       headers: {
@@ -32,6 +32,9 @@ export default function UserDetails() {
           alert("Token expired login again");
           window.localStorage.clear();
           window.location.href = "/";
+        } else {
+          // Store userData in local storage
+          localStorage.setItem('userData', JSON.stringify(data.data));
         }
       });
   }, []);

@@ -3,29 +3,27 @@ import axios from 'axios';
 import SideNavC from '../Utilities/SideNavC';
 import { Card } from 'reactstrap';
 import images from '../../constant/images';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const UpdateDisposal=(props)=> {
 
+    const loc = useLocation();
+    const navigate = useNavigate();
+    const { place } = loc.state;
+    const id = place._id;
+
   const [formData, setFormData] = useState({
-    Owner_name: '',
-    Owner_number: '',
-    email_address: '',
-    Place_name: '',
-    type: '',
-    weight: '',
-    location: ''
+    Owner_name: place.Owner_name,
+    Owner_number: place.Owner_number,
+    email_address: place.email_address,
+    Place_name: place.Place_name,
+    type: place.type,
+    weight: place.weight,
+    location: place.location,
+    imageUrl: place.imageUrl,
   });
   const { Owner_name, Owner_number, email_address, Place_name, type, weight, location } = formData;
-   const id = props.match.params.id;
-
-  useEffect(() => {
-    axios.get('/organic'+id).then((res) => {
-      if (res.data.success) {
-        setFormData(res.data.organic);
-      }
-    });
-  }, [id]);
-
+   
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -49,6 +47,8 @@ const UpdateDisposal=(props)=> {
           weight: '',
           location: '',
         });
+      }else {
+        alert('Failed to update Organic');
       }
     });
   };
@@ -62,15 +62,19 @@ const UpdateDisposal=(props)=> {
                     <div className='form-card'>
                         <div className='form-card-left'>
                           <label>Enter the name of the owner *</label><br/>
-                          <input type='text' name='Owner_name' id='Owner_name' value={Owner_name} onChange={handleInputChange} placeholder='Kaml de Silva' className='o-input' /><br/>
+                          <input type='text' name='Owner_name' id='Owner_name' 
+                          value={Owner_name} 
+                          onChange={handleInputChange} placeholder='Kaml de Silva' className='o-input' /><br/>
                           <label>Contact Number *</label><br/>
-                          <input type='text' name='Owner_number' id='Owner_number' value={Owner_number} onChange={handleInputChange} placeholder='0711345674' className='o-input' /><br/>
+                          <input type='text' name='Owner_number' id='Owner_number' 
+                          value={Owner_number} 
+                          onChange={handleInputChange} placeholder='0711345674' className='o-input' /><br/>
                           <label>Email Address *</label><br/>
                           <input type='text' name='email_address' id='email_address' value={email_address} onChange={handleInputChange} placeholder='Kaml@gmail.com' className='o-input' /><br/>
                           <label>Enter the name of the place where  Organic Disposals are. *</label><br/>
                           <input type='text' name='Place_name' id='Place_name' value={Place_name} onChange={handleInputChange} placeholder='Green tea home' className='o-input' /><br/>
                           <label>Upload a image of the place</label><a href=''><span>Upload *</span></a><br/>
-                          <button id="submit" name="submit" onClick={onSubmit}>Update</button>
+                          <button id="submit" name="submit">Update</button>
                         </div>
                         <div className='form-card-right'>
                         <label>Enter Organic Disposal Type *</label><br/>

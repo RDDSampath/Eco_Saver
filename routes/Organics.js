@@ -74,7 +74,7 @@ router.put('/organic/update/:id',(req,res)=>{
 
 //delete post
 
-router.delete('/inorganic/delete/:id',(req,res) =>{
+router.delete('/organic/delete/:id',(req,res) =>{
     Organics.findByIdAndRemove(req.params.id).exec((err,deletePost) =>{
 
         if(err) return res.status(400).json({
