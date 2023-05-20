@@ -133,6 +133,18 @@ app.post("/user/login", async (req, res) => {
   
   //========= delete user =================//
   
+  app.post("/user/deleteUser", async (req, res) => {
+    const { userid } = req.body;
+    try {
+      User.deleteOne({ _id: userid }, function (err, res) {
+        console.log(err);
+      });
+      res.send({ status: "Ok", data: "Deleted" });
+    } catch (error) {
+      console.log(error);
+    }
+  });
+  
   //========= update user =================//
   
   app.get("/user/paginatedUsers", async (req, res) => {
