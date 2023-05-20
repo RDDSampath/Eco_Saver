@@ -31,7 +31,7 @@ font-family: 'Poppins', sans-serif;
 
 .dash-container{
      width:100%;
-     height:86vw;
+     height:50vw;
      background-image: url(./assest/Image/backgroundAnim.svg);
      background-size: cover;
      /* background: rgb(9,121,97);
@@ -938,15 +938,15 @@ font-family: 'Poppins', sans-serif;
      height:auto;
      background-color: rgba(255, 255, 255, 0.293);
      float:right;
- }
+ }   
  .h-box{
-     width:23vw;
-     height:20vw;
-     background-color: rgb(231, 248, 244);
+     width:23.2vw;
+  height:20vw;
+     background-color: rgb(255, 255, 255);
      float:left;
      margin:1.5vw ;
-     border-radius: 0.5vw;
-     border: 1px solid rgb(14, 240, 86);
+     border-radius: 0.1vw;
+     border: 1px solid rgb(255, 255, 255);
  }
  .location{
      width:1.2vw;
@@ -1064,7 +1064,7 @@ font-family: 'Poppins', sans-serif;
    }
    .container-d{
      width:100vw;
-     height:48vw;
+     height:50vw;
  }
  /*make card view changes*/ 
  *{

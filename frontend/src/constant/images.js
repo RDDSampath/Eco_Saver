@@ -55,6 +55,7 @@ import A3 from '../assest/Image/a3.png';
 import A4 from '../assest/Image/a4.png';
 import A5 from '../assest/Image/a5.png';
 import A6 from '../assest/Image/a6.png';
+import C1 from '../assest/Image/c1.png';
 export default {
     Logo,Flogo,
     Mode,
@@ -71,5 +72,5 @@ export default {
     ,About,Contact,
     Bin,MyRes,Form1Img,Sent,Form1Img2,Waste,Login1,Signup1,Comsign,
     Prof,Logout,
-    A6,A2,A3,A4,A5,A7  
+    A6,A2,A3,A4,A5,A7,C1
 };

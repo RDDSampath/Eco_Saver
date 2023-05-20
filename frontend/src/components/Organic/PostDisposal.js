@@ -59,7 +59,7 @@ function PostDisposal() {
     axios.post('/organic/add', formData).then((res) => {
       if (res.data.success) {
         alert('Organic Disposal Place Added Successfully');
-        window.location = "/od";
+        window.location = "/organic/disposalPlaces";
         setFormData({
           Owner_name: '',
           Owner_number: '',
@@ -104,10 +104,10 @@ function PostDisposal() {
                         <div className='form-card-right'>
                         <label>Enter Organic Disposal Type *</label><br/>
                         <select  name="type" value={formData.type} className="o-input" onChange={handleInputChange}>
-                          <option value="1">Paper sheets</option>
-                          <option value="2">Food disposal</option>
-                          <option value="1">Tree leaf litter and other parts of trees</option>
-                          <option value="2">Waste clothes.</option>
+                          <option value="Paper sheets">Paper sheets</option>
+                          <option value="Food disposal">Food disposal</option>
+                          <option value="Tree leaf litter and other parts of trees">Tree leaf litter and other parts of trees</option>
+                          <option value="Waste clothes">Waste clothes.</option>
                         </select><br/>
                           <label>Weight (kg) *</label><br/>
                           <input type='text' name='weight' value={formData.weight} onChange={handleInputChange} placeholder='10' className='o-input' /><br/>

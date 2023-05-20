@@ -60,9 +60,17 @@ At EcoSaver, we are committed to providing eco-friendly solutions for waste mana
             <div className='section-4'>
                 
             <h3>Contact Us</h3>
-            {/* <img src={images.Contact}/> */}
+            <img src={images.Contact}/>
             <div className="contact-left">
-                form
+                <div className="contact-box">
+                    <div className="contact-box-1">
+                        <h4>Address</h4>
+                        <p>123, Galle Road, Colombo 03</p>
+                        <h4>Address</h4>
+                        <p>123, Galle Road, Colombo 03</p>
+                    </div>
+                </div>
+
             </div>
                
 

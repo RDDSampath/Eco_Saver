@@ -47,6 +47,7 @@ const UpdateDisposal=(props)=> {
           weight: '',
           location: '',
         });
+        window.location.href = '/organic/disposalPlaces';
       }else {
         alert('Failed to update Organic');
       }
@@ -79,8 +80,10 @@ const UpdateDisposal=(props)=> {
                         <div className='form-card-right'>
                         <label>Enter Organic Disposal Type *</label><br/>
                         <select  name="type" id="type" value={type} className="o-input" onChange={handleInputChange}>
-                          <option value="1">Option one</option>
-                          <option value="2">Option two</option>
+                          <option value="Paper sheets">Paper sheets</option>
+                          <option value="Food disposal">Food disposal</option>
+                          <option value="Tree leaf litter and other parts of trees">Tree leaf litter and other parts of trees</option>
+                          <option value="Waste clothes">Waste clothes.</option>
                         </select><br/>
                           <label>Weight (kg) *</label><br/>
                           <input type='text' name='weight' id='weight' value={weight} onChange={handleInputChange} placeholder='10' className='o-input' /><br/>

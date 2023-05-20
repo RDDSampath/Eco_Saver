@@ -2,6 +2,7 @@ import React,{useState, useEffect} from 'react';
 import axios from 'axios';
 import { useNavigate} from 'react-router-dom';
 import SideNavC from '../Utilities/SideNavC';
+import Header from '../home/HeaderS';
 
 import images from '../../constant/images';
 
@@ -26,10 +27,10 @@ const DisposalPlaces =()=>{
     navigate(`/organic/disposal/${place._id}`, { state: { place } });
   };
     return(<>
-        <div className='container-d'>
+        <div className='dash-container'>
+          <Header/>
             <SideNavC/>
-            
-            <div  className='h-container'>
+            <h2 style={{marginLeft:'30vw',marginTop:'1vw'}}>Disposal Places</h2>
                 {data.map((place, index) => (
                   <a onClick={()=>handleClick(place)}>
               <div key={index} className='h-box'>
@@ -42,7 +43,6 @@ const DisposalPlaces =()=>{
               </div>
               </a>
                 ))}
-          </div>
         </div>
         </>
     )
