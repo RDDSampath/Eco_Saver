@@ -24,22 +24,22 @@ const home =()=>{
                 <div className="box-H">
                     <div className="box-1">
                         <img src={images.Gc} className='h-image'/>
-                        <h6 className="about-Text">Saw any garbage lying around that needs to be collected?</h6>
+                        {/* <h6 className="about-Text">Saw any garbage lying around that needs to be collected?</h6> */}
                         <a href='/' className="btn" ><div className="btn-hs">Schedule a Garbage Collection</div></a>
                     </div>
                     <div className="box-1">
-                        <img src={images.Wc} className='h-image'/>
-                        <h6 className="about-Text">Have any recyclable waste lying around that you'd like to sell?</h6>
+                        <img src={images.Bin} className='h-image'/>
+                        {/* <h6 className="about-Text">Have any recyclable waste lying around that you'd like to sell?</h6> */}
                         <a href='/' className="btn" ><div className="btn-hs">Sell Your Recyclable Waste</div></a>
                     </div>
                     <div className="box-1">
                         <img src={images.Rc} className='h-image'/>
-                        <h6 className="about-Text">Looking for sustainable products made from recycled waste?</h6>
+                        {/* <h6 className="about-Text">Looking for sustainable products made from recycled waste?</h6> */}
                         <a href='/' className="btn" ><div className="btn-hs">Shop Sustainable Products</div></a>
                     </div>
                     <div className="box-1">
                         <img src={images.Pc} className='h-image'/>
-                        <h6 className="about-Text">Are you Interested in waste sorting and recycling?</h6>
+                        {/* <h6 className="about-Text">Are you Interested in waste sorting and recycling?</h6> */}
                         <a href='/' className="btn" ><div className="btn-hs">Learn Waste sorting and Recycling</div></a>
                     </div>
                 </div>

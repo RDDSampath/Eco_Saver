@@ -23,6 +23,7 @@ const Bdashboard =()=>{
     const [activeTab, setActiveTab] = useState('tab1');
     const [inorganics, setInorganics] = useState([]);
     const uid = inorganics.userId;
+    const uData = JSON.parse(localStorage.getItem('userData'));
     const settings = {
       dots: false,
       infinite: true,
@@ -79,8 +80,6 @@ const Bdashboard =()=>{
     axios.get("/inorganic/getall").then(res => {
       if(res.data.success) {
         setInorganics(res.data.existingInorganics);
-        console.log(res.data.existingInorganics);
-        console.log('Inorganic',inorganics);
       }
     });
   };
@@ -179,7 +178,7 @@ const handleSearchArea = (e) => {
             <HeaderS/>
             <SideNavB/>
             <div className='dash-main-box'>
-              <h1 style={{fontFamily: 'Kanit',}}>User Dashboard</h1>
+              <h1 style={{fontFamily: 'Kanit',}}>Well come Back! {uData.userName} your Dashboard</h1>
             <div className='dash-box-a'>
                 <div style={{width:'8vw',float:'left'}}>
                   <h6 className='d-text'>Request</h6>
