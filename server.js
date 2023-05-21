@@ -6,15 +6,6 @@ const cors = require('cors');
 const app = express();
 
 //import routes
-<<<<<<< HEAD
-
-const myResFormRoutes = require('./routes/MyResForms');
-const bcrypt = require("bcryptjs");
-const jwt = require("jsonwebtoken");
-require('./models/Users');
-const JWT_SECRET = "abcd"
-
-=======
 const inorganicRoutes = require('./routes/Inorganics');
 const priceListRoutes = require('./routes/PriceLists');
 const organicRoutes = require('./routes/Organics');
@@ -25,20 +16,16 @@ const jwt = require("jsonwebtoken");
 require('./models/Users');
 const JWT_SECRET = "abcd"
 
->>>>>>> 4eb98c1ad93a4ec9dc915539ac9c625c8683ef05
 
 //app middleware
 app.use(bodyParser.json());
 app.use(cors());
 
 //route middleware
-<<<<<<< HEAD
-=======
 app.use(inorganicRoutes);
 app.use(priceListRoutes);
 app.use(organicRoutes);
 app.use(productRoutes);
->>>>>>> 4eb98c1ad93a4ec9dc915539ac9c625c8683ef05
 app.use(myResFormRoutes);
 
 
@@ -99,11 +86,7 @@ app.post("/user/login", async (req, res) => {
     }
     if (await bcrypt.compare(password, user.password)) {
       const token = jwt.sign({ email: user.email }, JWT_SECRET, {
-<<<<<<< HEAD
-        expiresIn: "120m",
-=======
         expiresIn: "30m",
->>>>>>> 4eb98c1ad93a4ec9dc915539ac9c625c8683ef05
       }); 
       if (res.status(201)) {
         return res.json({ status: "ok", data: token });
@@ -119,36 +102,6 @@ app.post("/user/login", async (req, res) => {
   
   //========= user Data =================//
   
-<<<<<<< HEAD
-   app.post("/userData", async (req, res) => {
-  const { token } = req.body;
-  try {
-    const user = jwt.verify(token, JWT_SECRET, (err, res) => {
-      if (err) {
-        return "token expired";
-      }
-      return res;
-    });
-    console.log(user);
-    if (user == "token expired") {
-      return res.send({ status: "error", data: "token expired" });
-    }
-
-    const useremail = user.email;
-    User.findOne({ email: useremail })
-      .then((data) => {
-        res.send({ status: "ok", data: data });
-      })
-      .catch((error) => {
-        res.send({ status: "error", data: error });
-      });
-  } catch (error) { }
-});
-  
-  //========= get All users =================//
-  
-   app.get("/user/getAllUser", async (req, res) => {
-=======
    app.post("/user/data", async (req, res)=>{
       const {token} = req.body;
       try {
@@ -170,7 +123,6 @@ app.post("/user/login", async (req, res) => {
   //========= get All users =================//
 
   app.get("/user/getAllUser", async (req, res) => {
->>>>>>> 4eb98c1ad93a4ec9dc915539ac9c625c8683ef05
     try {
       const allUser = await User.find({});
       res.send({ status: "ok", data: allUser });
@@ -179,49 +131,6 @@ app.post("/user/login", async (req, res) => {
     }
   });
   
-<<<<<<< HEAD
-  //========= delete user =================//
-  
-  app.post("/user/deleteUser", async (req, res) => {
-    const { userid } = req.body;
-    try {
-      User.deleteOne({ _id: userid }, function (err, res) {
-        console.log(err);
-      });
-      res.send({ status: "Ok", data: "Deleted" });
-    } catch (error) {
-      console.log(error);
-    }
-  });
-  
-  //========= update user =================//
-  
-  app.get("/user/paginatedUsers", async (req, res) => {
-    const allUser = await User.find({});
-    const page = parseInt(req.query.page)
-    const limit = parseInt(req.query.limit)
-  
-    const startIndex = (page - 1) * limit
-    const lastIndex = (page) * limit
-  
-    const results = {}
-    results.totalUser=allUser.length;
-    results.pageCount=Math.ceil(allUser.length/limit);
-  
-    if (lastIndex < allUser.length) {
-      results.next = {
-        page: page + 1,
-      }
-    }
-    if (startIndex > 0) {
-      results.prev = {
-        page: page - 1,
-      }
-    }
-    results.result = allUser.slice(startIndex, lastIndex);
-    res.json(results)
-  });
-=======
  //========= update user =================//
 
  app.get("/user/paginatedUsers", async (req, res) => {
@@ -249,4 +158,3 @@ app.post("/user/login", async (req, res) => {
   results.result = allUser.slice(startIndex, lastIndex);
   res.json(results)
 });
->>>>>>> 4eb98c1ad93a4ec9dc915539ac9c625c8683ef05

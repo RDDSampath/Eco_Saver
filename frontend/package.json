@@ -24,10 +24,6 @@
     "react": "^18.2.0",
     "react-chartjs-2": "^2.11.1",
     "react-dom": "^18.2.0",
-<<<<<<< HEAD
-    "react-hooks-useform": "^0.1.86",
-=======
->>>>>>> 4eb98c1ad93a4ec9dc915539ac9c625c8683ef05
     "react-phone-number-input": "^3.2.19",
     "react-router-dom": "^6.4.2",
     "react-scripts": "5.0.1",
