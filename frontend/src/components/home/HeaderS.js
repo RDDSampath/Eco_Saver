@@ -1,18 +1,7 @@
 import React,{useState, useEffect} from 'react';
 import images from '../../constant/images';
 
-<<<<<<< HEAD
-const HeaderS =({userData})=>{
-
-  if (userData == null) {
-    const uData = JSON.parse(localStorage.getItem('userData'));
-    userData = {
-      userName: uData.userName,
-    };
-  }
-=======
 const HeaderS =()=>{
->>>>>>> 4eb98c1ad93a4ec9dc915539ac9c625c8683ef05
 
   const logOut = () => {
     window.localStorage.clear();
@@ -42,19 +31,6 @@ const HeaderS =()=>{
             <ul className='title-menue'>
             <li>
                 <div> 
-<<<<<<< HEAD
-                    <div style={{width:'8vw', alignItems:'center', justifyContent:'center'}}>
-                        <a href='' className='H-img'>
-                        <img src={images.Prof} alt='profile' className='H-imga'/>
-                        <h6 style={{fontSize:'12px', marginRight:'2px', fontWeight:600}}>{userData.userName}</h6>
-                        </a>
-                        <a  className='H-img' onClick={logOut}>
-                            <img src={images.Logout} alt='logout' className='H-imgb' />
-                            
-                        </a>
-                    </div>
-                    
-=======
                     <div style={{width:'15vw', alignItems:'center', justifyContent:'center'}}>
                         <a href='' className='H-img'>
                         <img src={images.Prof} alt='profile' className='H-imga'/>
@@ -64,7 +40,6 @@ const HeaderS =()=>{
                         </a>
                     </div>
                     <h6 style={{fontSize:'12px', marginRight:'10px', fontWeight:600}}>kamal</h6>
->>>>>>> 4eb98c1ad93a4ec9dc915539ac9c625c8683ef05
                     
                 </div>
               </li>
@@ -76,11 +51,7 @@ const HeaderS =()=>{
                 <ul className="dropdown-menu">
                   <li className='drop'><a href="/myResources">My Resources </a></li>
                   <li className='drop'><a href="/myResourcesForm">Create Resources</a></li>
-<<<<<<< HEAD
-                  <li className='drop'><a href="/viewMyResources">View Resources</a></li>
-=======
                   <li className='drop'><a href="/viewMyResource">View Resources</a></li>
->>>>>>> 4eb98c1ad93a4ec9dc915539ac9c625c8683ef05
                 </ul>
               </li>
               <li>

@@ -23,11 +23,7 @@ const SignIn =()=>{
         email,
         address,
         password,
-<<<<<<< HEAD
-        userType: "user",
-=======
         userType: "Admin",
->>>>>>> 4eb98c1ad93a4ec9dc915539ac9c625c8683ef05
       }),
     })
       .then((res) => res.json())
