@@ -96,8 +96,13 @@ export default function AdminHome({ userData }) {
   return (
     <div className="auth-wrapper" style={{ height: "auto" }}>
       <div className="auth-inner" style={{ width: "auto" }}>
+<<<<<<< HEAD
+        <h3 style={{ width: 500,marginLeft:'5vw' }}>Welcom Admin</h3>
+        <table style={{ width: 500,marginLeft:'5vw' }}>
+=======
         <h3>Welcom Admin</h3>
         <table style={{ width: 500 }}>
+>>>>>>> 4eb98c1ad93a4ec9dc915539ac9c625c8683ef05
           <tr>
             <th>Name</th>
             <th>Phone Number</th>
@@ -122,7 +127,11 @@ export default function AdminHome({ userData }) {
             );
           })}
         </table>
+<<<<<<< HEAD
+        {/* <ReactPaginate
+=======
         <ReactPaginate
+>>>>>>> 4eb98c1ad93a4ec9dc915539ac9c625c8683ef05
           breakLabel="..."
           nextLabel="next >"
           onPageChange={handlePageClick}
@@ -140,10 +149,17 @@ export default function AdminHome({ userData }) {
           nextLinkClassName="page-link"
           activeClassName="active"
           forcePage={currentPage.current-1}
+<<<<<<< HEAD
+        /> */}
+        {/* <input placeholder="Limit" onChange={e=>setLimit(e.target.value)}/>
+        <button onClick={changeLimit}>Set Limit</button> */}
+        <button onClick={logOut} className="btn btn-primary" style={{marginLeft:'50vw' }}>
+=======
         />
         <input placeholder="Limit" onChange={e=>setLimit(e.target.value)}/>
         <button onClick={changeLimit}>Set Limit</button>
         <button onClick={logOut} className="btn btn-primary">
+>>>>>>> 4eb98c1ad93a4ec9dc915539ac9c625c8683ef05
           Log Out
         </button>
       </div>

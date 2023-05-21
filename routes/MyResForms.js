@@ -37,8 +37,13 @@ router.get('/myResForm/getall', (req,res) =>{
 
 
 //update myResForm
+<<<<<<< HEAD
+router.put('/myResForm/update/:id',(req,res)=>{
+    myResForm.findByIdAndUpdate(
+=======
 router.put('/products/update/:id',(req,res)=>{
     products.findByIdAndUpdate(
+>>>>>>> 4eb98c1ad93a4ec9dc915539ac9c625c8683ef05
         req.params.id,
         {
             $set:req.body
@@ -58,15 +63,24 @@ router.put('/products/update/:id',(req,res)=>{
 
 //delete post
 
+<<<<<<< HEAD
+router.delete('/myResForm/delete/:id',(req,res) =>{
+    myResForm.findByIdAndRemove(req.params.id).exec((err,deletemyResForm) =>{
+=======
 router.delete('/products/delete/:id',(req,res) =>{
     products.findByIdAndRemove(req.params.id).exec((err,deleteProduct) =>{
+>>>>>>> 4eb98c1ad93a4ec9dc915539ac9c625c8683ef05
 
         if(err) return res.status(400).json({
             message:"Delete Unsuccessfull",err
         });
 
         return res.json({
+<<<<<<< HEAD
+            message:"Delete Successfull",deletemyResForm
+=======
             message:"Delete Successfull",deleteProduct
+>>>>>>> 4eb98c1ad93a4ec9dc915539ac9c625c8683ef05
         });
     });
 });

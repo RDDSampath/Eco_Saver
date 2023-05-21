@@ -4,6 +4,10 @@ import Header from '../home/HeaderS';
 import Footer from '../home/footer';
 
 const MyResourseForms = () => {
+<<<<<<< HEAD
+  
+=======
+>>>>>>> 4eb98c1ad93a4ec9dc915539ac9c625c8683ef05
   const [formData, setFormData] = useState({
           title: '',
           Category: '',
@@ -69,6 +73,11 @@ const MyResourseForms = () => {
         alert('Failed to add');
     });
 };
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 4eb98c1ad93a4ec9dc915539ac9c625c8683ef05
     return (
         <div className='container-2'>
           <Header/>
@@ -118,7 +127,10 @@ const MyResourseForms = () => {
       </div>
       <button className='submit' id="submit" name="submit">Submit</button>
     </form>
+<<<<<<< HEAD
+=======
     
+>>>>>>> 4eb98c1ad93a4ec9dc915539ac9c625c8683ef05
     </div>
     <Footer/>
   </div>
