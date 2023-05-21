@@ -31,7 +31,11 @@ font-family: 'Poppins', sans-serif;
 
 .dash-container{
      width:100%;
+<<<<<<< HEAD
      height:50vw;
+=======
+     height:86vw;
+>>>>>>> 4eb98c1ad93a4ec9dc915539ac9c625c8683ef05
      background-image: url(./assest/Image/backgroundAnim.svg);
      background-size: cover;
      /* background: rgb(9,121,97);
@@ -492,11 +496,19 @@ font-family: 'Poppins', sans-serif;
  /*home*/
  .section-1{
      width: 100%;
+<<<<<<< HEAD
      height:55vw;
      background-size:cover;
      /* background-position: fixed;
      background-attachment: fixed; */
      background-image: url(./assest/Image/back1.png);
+=======
+     height:42.5vw;
+     background-size:cover;
+     /* background-position: fixed;
+     background-attachment: fixed; */
+     background-image: radial-gradient(circle at 67% 83%, hsla(317,0%,96%,0.05) 0%, hsla(317,0%,96%,0.05) 1%,transparent 1%, transparent 5%,transparent 5%, transparent 100%),radial-gradient(circle at 24% 80%, hsla(317,0%,96%,0.05) 0%, hsla(317,0%,96%,0.05) 27%,transparent 27%, transparent 63%,transparent 63%, transparent 100%),radial-gradient(circle at 23% 5%, hsla(317,0%,96%,0.05) 0%, hsla(317,0%,96%,0.05) 26%,transparent 26%, transparent 82%,transparent 82%, transparent 100%),radial-gradient(circle at 21% 11%, hsla(317,0%,96%,0.05) 0%, hsla(317,0%,96%,0.05) 35%,transparent 35%, transparent 45%,transparent 45%, transparent 100%),radial-gradient(circle at 10% 11%, hsla(317,0%,96%,0.05) 0%, hsla(317,0%,96%,0.05) 21%,transparent 21%, transparent 81%,transparent 81%, transparent 100%),radial-gradient(circle at 19% 61%, hsla(317,0%,96%,0.05) 0%, hsla(317,0%,96%,0.05) 20%,transparent 20%, transparent 61%,transparent 61%, transparent 100%),radial-gradient(circle at 13% 77%, hsla(317,0%,96%,0.05) 0%, hsla(317,0%,96%,0.05) 63%,transparent 63%, transparent 72%,transparent 72%, transparent 100%),radial-gradient(circle at 30% 93%, hsla(317,0%,96%,0.05) 0%, hsla(317,0%,96%,0.05) 33%,transparent 33%, transparent 82%,transparent 82%, transparent 100%),linear-gradient(90deg, rgb(22,207,152),rgb(16,139,116));
+>>>>>>> 4eb98c1ad93a4ec9dc915539ac9c625c8683ef05
  }
  .section-2{
      width: 100%;
@@ -519,7 +531,11 @@ font-family: 'Poppins', sans-serif;
  .section-4{
      width: 100%;
      height:42.5vw;
+<<<<<<< HEAD
      background-image: url(./assest/Image/back2.png);
+=======
+     background-image: url(./assest/Image/ecoBackground.png);
+>>>>>>> 4eb98c1ad93a4ec9dc915539ac9c625c8683ef05
      background-position: fixed;
      background-attachment: fixed;
      background-size: cover;
@@ -534,7 +550,11 @@ font-family: 'Poppins', sans-serif;
      backdrop-filter: blur( 10.5px );
      -webkit-backdrop-filter: blur( 10.5px );
      border-radius: 10px;
+<<<<<<< HEAD
      border: 2px solid rgba(0, 0, 0, 0.18);                                                                                                                                     
+=======
+     border: 1px solid rgba( 255, 255, 255, 0.18 );                                                                                                                                     
+>>>>>>> 4eb98c1ad93a4ec9dc915539ac9c625c8683ef05
  }
  .box-1:hover{
      transform: scale(1.1);
@@ -597,18 +617,33 @@ font-family: 'Poppins', sans-serif;
      color: #00855b;
      font-weight: 500;
      font-size: 1vw;
+<<<<<<< HEAD
      background: rgba(255, 255, 255, 0.6);
       box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+=======
+     background: rgba(16, 255, 108, 0.6);
+     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+>>>>>>> 4eb98c1ad93a4ec9dc915539ac9c625c8683ef05
      backdrop-filter: blur( 7.5px );
      -webkit-backdrop-filter: blur( 7.5px );
      border-radius: 10px;
      border: 1px solid rgb(255, 255, 255);
+<<<<<<< HEAD
      font-family: 'Nova Flat', cursive;
  }
  .btn-hs:hover{
      transition-duration: 0s;
      background-color: #63f89f;
      color: rgb(38, 46, 37);
+=======
+     font-family: 'Mochiy Pop One', sans-serif;
+ }
+ .btn-hs:hover{
+     transform: scale(1.);
+     transition-duration: 0s;
+     background-color: #00ff00;
+     color: white;
+>>>>>>> 4eb98c1ad93a4ec9dc915539ac9c625c8683ef05
  }
  .H-left_box{
      width: 60vw;
@@ -938,6 +973,7 @@ font-family: 'Poppins', sans-serif;
      height:auto;
      background-color: rgba(255, 255, 255, 0.293);
      float:right;
+<<<<<<< HEAD
  }   
  .h-box{
      width:23.2vw;
@@ -947,6 +983,17 @@ font-family: 'Poppins', sans-serif;
      margin:1.5vw ;
      border-radius: 0.1vw;
      border: 1px solid rgb(255, 255, 255);
+=======
+ }
+ .h-box{
+     width:23vw;
+     height:20vw;
+     background-color: rgb(231, 248, 244);
+     float:left;
+     margin:1.5vw ;
+     border-radius: 0.5vw;
+     border: 1px solid rgb(14, 240, 86);
+>>>>>>> 4eb98c1ad93a4ec9dc915539ac9c625c8683ef05
  }
  .location{
      width:1.2vw;
@@ -1064,7 +1111,11 @@ font-family: 'Poppins', sans-serif;
    }
    .container-d{
      width:100vw;
+<<<<<<< HEAD
      height:50vw;
+=======
+     height:48vw;
+>>>>>>> 4eb98c1ad93a4ec9dc915539ac9c625c8683ef05
  }
  /*make card view changes*/ 
  *{
@@ -1570,11 +1621,18 @@ a.article:hover {
 
 .sec-topic{
   font-family: Georgia, serif;
+<<<<<<< HEAD
   font-size: 5vw;
   letter-spacing: 0px;
   word-spacing: 0px;
   color: #030502;
   text-shadow: #166706 10px 10px 10px;
+=======
+  font-size: 4vw;
+  letter-spacing: 0px;
+  word-spacing: 0px;
+  color: #000000;
+>>>>>>> 4eb98c1ad93a4ec9dc915539ac9c625c8683ef05
   font-weight: 700;
   text-decoration: none solid rgb(68, 68, 68);
   font-style: normal;
@@ -1584,8 +1642,13 @@ a.article:hover {
   margin-left: 5vw;
   float: left;
   animation-name: samplec;
+<<<<<<< HEAD
   animation-duration: 10s;
   animation-iteration-count: 10;
+=======
+  animation-duration: 5s; 
+  animation-iteration-count: 2;
+>>>>>>> 4eb98c1ad93a4ec9dc915539ac9c625c8683ef05
 }
 
 @keyframes samplec{
@@ -1607,14 +1670,22 @@ a.article:hover {
   font-size: 1.8vw;
   letter-spacing: 0px;
   word-spacing: 1px;
+<<<<<<< HEAD
   color: #ffffff;
   text-shadow: #ffffff 10px 10px 10px;
+=======
+  color: #104606;
+>>>>>>> 4eb98c1ad93a4ec9dc915539ac9c625c8683ef05
   font-weight: 400;
   text-decoration: none solid rgb(68, 68, 68);
   font-style: normal;
   font-variant: small-caps;
   text-transform: uppercase;
+<<<<<<< HEAD
   margin-top: 6vw;
+=======
+  margin-top: 2vw;
+>>>>>>> 4eb98c1ad93a4ec9dc915539ac9c625c8683ef05
   margin-left: 7vw;
   line-height: 3vw;
   float: left;
@@ -1905,8 +1976,12 @@ header{
 .container-2{
     width: 100vw;
     height: 48vw;
+<<<<<<< HEAD
     background-image: url('./assest/Image/backgroundAnim.svg');
      background-size: cover;
+=======
+    
+>>>>>>> 4eb98c1ad93a4ec9dc915539ac9c625c8683ef05
 }
 
 .form-1{ 
@@ -1957,8 +2032,12 @@ h4{
 /* MyRes */
 .container-a{
   width: 100vw;
+<<<<<<< HEAD
   background-image: url('./assest/Image/backgroundAnim.svg');
   background-size: cover;  
+=======
+  
+>>>>>>> 4eb98c1ad93a4ec9dc915539ac9c625c8683ef05
 }
 .ResImg{
   width: 100vw;
@@ -2059,14 +2138,20 @@ h4{
   width: 100vw;
 }
 .topic-v{
+<<<<<<< HEAD
   margin-left: 25vw;
   font-size:2.5vw;
   margin-top: 2vw;
   font-weight: 700;
+=======
+  margin-left: 35vw;
+  font-size:x-large;
+>>>>>>> 4eb98c1ad93a4ec9dc915539ac9c625c8683ef05
 }
 .inResBox1{
   height:32vw;
   width: 95vw;
+<<<<<<< HEAD
 
   border-radius:1.2vw;
   margin-bottom: 1vw;
@@ -2078,6 +2163,12 @@ backdrop-filter: blur( 14.5px );
 -webkit-backdrop-filter: blur( 14.5px );
 border-radius: 10px;
 border: 1px solid rgba( 255, 255, 255, 0.18 );
+=======
+  background-color: #A9E9A8;
+  border-radius:1.2vw;
+  margin-bottom: 1vw;
+  margin-top: 2vw;
+>>>>>>> 4eb98c1ad93a4ec9dc915539ac9c625c8683ef05
 }
 .details1{ 
   flex-direction: row;
@@ -2104,6 +2195,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   margin-top: 0.5vw;
   margin-left: 1vw;
   float: right;
+<<<<<<< HEAD
   background-color: #1ee5a6;
   font-weight: bold;
   padding: 0.5vw 1vw;
@@ -2111,6 +2203,14 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   color: #fff;
   margin-top:4vw;
   border:1px solid #105f46;
+=======
+  background-color: #014E35;
+  font-weight: bold;
+  padding: 0.5vw 1vw;
+  border-radius: 0.8vw;
+  color: #fff;
+  margin-top:4vw;
+>>>>>>> 4eb98c1ad93a4ec9dc915539ac9c625c8683ef05
 }
 
 .H-img{
@@ -2140,6 +2240,7 @@ li:hover .dropdown-menu {
 
 .drop a{
   width:8vw;
+<<<<<<< HEAD
   color: #010101;
   font-weight: bold;
   font-size: 1vw;
@@ -2147,6 +2248,15 @@ li:hover .dropdown-menu {
 }
 .drop a:hover{
   color: #098019;
+=======
+  color: #fff;
+  font-weight: bold;
+  font-size: 1vw;
+  background-color: #00cf1c73;
+}
+.drop a:hover{
+  color: #009213;
+>>>>>>> 4eb98c1ad93a4ec9dc915539ac9c625c8683ef05
   font-weight: bold;
   font-size: 1vw;
   background-color: #ffffff;

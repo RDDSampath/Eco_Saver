@@ -37,6 +37,7 @@ export default function App() {
             <MDBCol md="3" lg="4" xl="3" className='mx-auto mb-4'>
               <h6 className='text-uppercase fw-bold mb-4'>
                 <MDBIcon icon="gem" className="me-3" />
+<<<<<<< HEAD
                 EcoSaver
               </h6>
               <p>
@@ -45,6 +46,13 @@ export default function App() {
                recycle effectively, and protect the environment. 
                Join us in creating a greener future. Together, let's make a positive 
               impact on our planet. Visit our website today!
+=======
+                Company name
+              </h6>
+              <p>
+                Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit.
+>>>>>>> 4eb98c1ad93a4ec9dc915539ac9c625c8683ef05
               </p>
             </MDBCol>
 
@@ -52,22 +60,38 @@ export default function App() {
               <h6 className='text-uppercase fw-bold mb-4'>Products</h6>
               <p>
                 <a href='#!' className='text-reset'>
+<<<<<<< HEAD
                   Shoes
+=======
+                  Angular
+>>>>>>> 4eb98c1ad93a4ec9dc915539ac9c625c8683ef05
                 </a>
               </p>
               <p>
                 <a href='#!' className='text-reset'>
+<<<<<<< HEAD
                   Clothes
+=======
+                  React
+>>>>>>> 4eb98c1ad93a4ec9dc915539ac9c625c8683ef05
                 </a>
               </p>
               <p>
                 <a href='#!' className='text-reset'>
+<<<<<<< HEAD
                  Materials
+=======
+                  Vue
+>>>>>>> 4eb98c1ad93a4ec9dc915539ac9c625c8683ef05
                 </a>
               </p>
               <p>
                 <a href='#!' className='text-reset'>
+<<<<<<< HEAD
                  offers
+=======
+                  Laravel
+>>>>>>> 4eb98c1ad93a4ec9dc915539ac9c625c8683ef05
                 </a>
               </p>
             </MDBCol>
@@ -76,22 +100,38 @@ export default function App() {
               <h6 className='text-uppercase fw-bold mb-4'>Useful links</h6>
               <p>
                 <a href='#!' className='text-reset'>
+<<<<<<< HEAD
                   www.wm.com
+=======
+                  Pricing
+>>>>>>> 4eb98c1ad93a4ec9dc915539ac9c625c8683ef05
                 </a>
               </p>
               <p>
                 <a href='#!' className='text-reset'>
+<<<<<<< HEAD
                   www.springer.com
+=======
+                  Settings
+>>>>>>> 4eb98c1ad93a4ec9dc915539ac9c625c8683ef05
                 </a>
               </p>
               <p>
                 <a href='#!' className='text-reset'>
+<<<<<<< HEAD
                  dribbble.com
+=======
+                  Orders
+>>>>>>> 4eb98c1ad93a4ec9dc915539ac9c625c8683ef05
                 </a>
               </p>
               <p>
                 <a href='#!' className='text-reset'>
+<<<<<<< HEAD
                 themeforest.net
+=======
+                  Help
+>>>>>>> 4eb98c1ad93a4ec9dc915539ac9c625c8683ef05
                 </a>
               </p>
             </MDBCol>
@@ -100,6 +140,7 @@ export default function App() {
               <h6 className='text-uppercase fw-bold mb-4'>Contact</h6>
               <p>
                 <MDBIcon icon="home" className="me-2" />
+<<<<<<< HEAD
                  LakeRoad, Malabe ,Srilanka
               </p>
               <p>
@@ -111,6 +152,19 @@ export default function App() {
               </p>
               <p>
                 <MDBIcon icon="print" className="me-3" /> + 94 234 567 89
+=======
+                New York, NY 10012, US
+              </p>
+              <p>
+                <MDBIcon icon="envelope" className="me-3" />
+                info@example.com
+              </p>
+              <p>
+                <MDBIcon icon="phone" className="me-3" /> + 01 234 567 88
+              </p>
+              <p>
+                <MDBIcon icon="print" className="me-3" /> + 01 234 567 89
+>>>>>>> 4eb98c1ad93a4ec9dc915539ac9c625c8683ef05
               </p>
             </MDBCol>
           </MDBRow>
@@ -118,9 +172,15 @@ export default function App() {
       </section>
 
       <div className='text-center p-4' id='foterbottom'>
+<<<<<<< HEAD
         © 2023 Copyright:
         <a className='text-reset fw-bold' href='/'>
           EcoSaver.com
+=======
+        © 2021 Copyright:
+        <a className='text-reset fw-bold' href='https://mdbootstrap.com/'>
+          MDBootstrap.com
+>>>>>>> 4eb98c1ad93a4ec9dc915539ac9c625c8683ef05
         </a>
       </div>
     </MDBFooter>

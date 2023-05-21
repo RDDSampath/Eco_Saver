@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import images from '../../constant/images';
+<<<<<<< HEAD
 import jsPDF from "jspdf";
 import "jspdf-autotable";
 import Header from '../home/HeaderS';
@@ -9,6 +10,12 @@ import Footer from '../home/footer';
 const MyResources = () => {
   const [myResForms, setMyResForms] = useState([]);
   const uData = JSON.parse(localStorage.getItem('userData'));
+=======
+
+
+const MyResources = () => {
+  const [myResForms, setMyResForms] = useState([]);
+>>>>>>> 4eb98c1ad93a4ec9dc915539ac9c625c8683ef05
 
   useEffect(() => {
     const fetchData = async () => {
@@ -23,6 +30,7 @@ const MyResources = () => {
     fetchData();
   }, []);
   
+<<<<<<< HEAD
   const getReport = (my) => {
     const doc = new jsPDF();
     doc.setFontSize(15);
@@ -58,10 +66,19 @@ const MyResources = () => {
         <div className='aa'>
         <a href='/myResourcesForm'><div  className='bb'>Add My Resource</div></a>
         <a href='/viewMyResources'><div  className='bb'>View My Resource</div></a>
+=======
+  return (
+    <div className='container-a'>
+       <img src={images.MyRes} alt='resimg' className='ResImg'/>
+        <div className='aa'>
+        <a href='/myResourceform'><div  className='bb'>Add My Resource</div></a>
+        <a href='/ViewMyResources'><div  className='bb'>View My Resource</div></a>
+>>>>>>> 4eb98c1ad93a4ec9dc915539ac9c625c8683ef05
         <h5 className='srh' style={{marginTop:'2vw',float:'left',marginLeft:'44vw',marginTop:'1.7vw',fontWeight:'bold'}}>Search</h5>
         <input type='text'  placeholder='Search category' style={{width:'16vw',height:'3vw',marginTop:'1.2vw', float:'right',marginRight:'2vw',borderRadius:'0.3vw'}}/>
 
       </div>
+<<<<<<< HEAD
       {myResForms.map((my) => (
       <div className='resBox' key={my._id}>
         <br/>
@@ -73,6 +90,19 @@ const MyResources = () => {
               <h5 className='data'>{my.Category}</h5>
               <h5 className='data' >{my.description}</h5>
               <button className='btnD' onClick={()=>getReport(my)}> Download</button>
+=======
+      {myResForms.map((myResForm) => (
+      <div className='resBox' key={myResForm._id}>
+        <h4 className='name'>Kamal Silva</h4>
+          <div className='inResBox'>
+          <img src={myResForm.file} alt='Res1' className='res-a'/>
+           <div className='details'>
+             <h5 className='data-b'>{myResForm.title}</h5>
+              <h5 className='data'>{myResForm.Category}</h5>
+              <h5 className='data' >{myResForm.description}</h5>
+              <h5 className='data-a'>www.wrfound.org.uk</h5>
+              <button className='btnD'> Download</button>
+>>>>>>> 4eb98c1ad93a4ec9dc915539ac9c625c8683ef05
             </div>
           </div>
           {/* <h4 className='cmt'>Comment</h4><br/>
@@ -80,7 +110,10 @@ const MyResources = () => {
           <a href='/'><img src={images.Sent} alt='sent' className='snt-a'/> </a> */}
       </div>
       ))}
+<<<<<<< HEAD
        <Footer/>
+=======
+>>>>>>> 4eb98c1ad93a4ec9dc915539ac9c625c8683ef05
     </div>
   )
 }

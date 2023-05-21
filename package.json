@@ -22,7 +22,10 @@
     "mdb-react-ui-kit": "^6.0.0",
     "mongoose": "^6.3.0",
     "nodemon": "^2.0.15",
+<<<<<<< HEAD
     "react-hooks-useform": "^0.1.86",
+=======
+>>>>>>> 4eb98c1ad93a4ec9dc915539ac9c625c8683ef05
     "react-paginate": "^8.2.0",
     "react-router-dom": "^6.3.0",
     "slick-carousel": "^1.8.1"

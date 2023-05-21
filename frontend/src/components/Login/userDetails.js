@@ -9,7 +9,11 @@ export default function UserDetails() {
   
 
   useEffect(() => {
+<<<<<<< HEAD
     fetch("/userData", {
+=======
+    fetch("/user/data", {
+>>>>>>> 4eb98c1ad93a4ec9dc915539ac9c625c8683ef05
       method: "POST",
       crossDomain: true,
       headers: {
@@ -32,9 +36,12 @@ export default function UserDetails() {
           alert("Token expired login again");
           window.localStorage.clear();
           window.location.href = "/";
+<<<<<<< HEAD
         } else {
           // Store userData in local storage
           localStorage.setItem('userData', JSON.stringify(data.data));
+=======
+>>>>>>> 4eb98c1ad93a4ec9dc915539ac9c625c8683ef05
         }
       });
   }, []);
