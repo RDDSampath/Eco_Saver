@@ -9,26 +9,8 @@ const Login =()=>{
     const [password, setPassword] = useState("");
     const [refresh, setRefresh] = useState(false);
 
-    const success = () => toast.success('login successful!', {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-        });
-    const unsuccess = () => toast.error('login failed!', {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-        });
+    
+
 
     function handleSubmit(e) {
       e.preventDefault();
@@ -51,12 +33,12 @@ const Login =()=>{
         .then((data) => {
           console.log(data, "userRegister");
           if (data.status == "ok") {
-            success();
+            alert('Loggin successfull');
             window.localStorage.setItem("token", data.data);
             window.localStorage.setItem("loggedIn", true);
             window.location.href = "./userDetails";
           }else{
-            unsuccess();
+            alert('Loggin faild! Please try again');
           }
         });
   };

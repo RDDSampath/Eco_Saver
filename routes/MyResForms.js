@@ -37,8 +37,8 @@ router.get('/myResForm/getall', (req,res) =>{
 
 
 //update myResForm
-router.put('/products/update/:id',(req,res)=>{
-    products.findByIdAndUpdate(
+router.put('/myResForm/update/:id',(req,res)=>{
+    myResForm.findByIdAndUpdate(
         req.params.id,
         {
             $set:req.body
@@ -58,15 +58,15 @@ router.put('/products/update/:id',(req,res)=>{
 
 //delete post
 
-router.delete('/products/delete/:id',(req,res) =>{
-    products.findByIdAndRemove(req.params.id).exec((err,deleteProduct) =>{
+router.delete('/myResForm/delete/:id',(req,res) =>{
+    myResForm.findByIdAndRemove(req.params.id).exec((err,deletemyResForm) =>{
 
         if(err) return res.status(400).json({
             message:"Delete Unsuccessfull",err
         });
 
         return res.json({
-            message:"Delete Successfull",deleteProduct
+            message:"Delete Successfull",deletemyResForm
         });
     });
 });
