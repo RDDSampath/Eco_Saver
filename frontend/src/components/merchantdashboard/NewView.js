@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import moment from 'moment';
-import SideNavB from '../Utilities/SideNavB';
+import SideNav from './SideNavBar';
 import 'bootstrap/dist/css/bootstrap.css';
 import { ResponsivePie } from '@nivo/pie';
 import images from '../../constant/images';
@@ -11,7 +11,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import jsPDF from "jspdf";
 import "jspdf-autotable";
-import HeaderS from '../home/HeaderS';
+import Header from '../home/merchantHeader';
 import Footer from '../home/footer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faTrash, faFileExport } from '@fortawesome/free-solid-svg-icons';
@@ -19,11 +19,10 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 
 
 
-const Bdashboard =()=>{
+const NewView =()=>{
     const [activeTab, setActiveTab] = useState('tab1');
     const [inorganics, setInorganics] = useState([]);
     const uid = inorganics.userId;
-    const uData = JSON.parse(localStorage.getItem('userData'));
     const settings = {
       dots: false,
       infinite: true,
@@ -33,56 +32,59 @@ const Bdashboard =()=>{
       slidesToShow: 1,
       slidesToScroll: 1
     };
-    useEffect(() => {
-      retrieveInorganics();
-    }, []);
+    
+    // useEffect(() => {
+    //   retrieveInorganics();
+    // }, []);
 
-    const generateReport = () => {
-      const doc = new jsPDF();
+    // const generateReport = () => {
+    //   const doc = new jsPDF();
 
-      doc.autoTable({
-        head: [[
-        "House No",
-        "Street",
-        "City",
-        "PhoneNo",
-        "totalWeight",
-        "totalPrice",
-        "date"
-        ]],
-        body: inorganics.map((item) => [
-        item.HouseNo,
-        item.Street,
-        item.City,
-        item.PhoneNo,
-        item.totalWeight+" KG",
-        item.totalPrice+" LKR",
-        item.date   
-        ]),
-      });
+    //   doc.autoTable({
+    //     head: [[
+    //     "House No",
+    //     "Street",
+    //     "City",
+    //     "PhoneNo",
+    //     "totalWeight",
+    //     "totalPrice",
+    //     "date"
+    //     ]],
+    //     body: inorganics.map((item) => [
+    //     item.HouseNo,
+    //     item.Street,
+    //     item.City,
+    //     item.PhoneNo,
+    //     item.totalWeight+" KG",
+    //     item.totalPrice+" LKR",
+    //     item.date   
+    //     ]),
+    //   });
 
-      // Add styling to the PDF document
-      doc.setFontSize(12);
-      doc.text("User Name ", 10, 5);
-      doc.text("Inorganic Historical Report", 10, 10);
-      doc.text("Generated on " + new Date().toLocaleString(), 10, 280);
-      doc.setFontSize(8);
-      doc.setTextColor(100);
+    //   // Add styling to the PDF document
+    //   doc.setFontSize(12);
+    //   doc.text("User Name ", 10, 5);
+    //   doc.text("Inorganic Historical Report", 10, 10);
+    //   doc.text("Generated on " + new Date().toLocaleString(), 10, 280);
+    //   doc.setFontSize(8);
+    //   doc.setTextColor(100);
       
 
-      // Export the PDF document
-      doc.save("inorganicHistoricalData.pdf");
-    }
+    //   // Export the PDF document
+    //   doc.save("inorganicHistoricalData.pdf");
+    // }
 
 
 
-  const retrieveInorganics = () => {
-    axios.get("/inorganic/getall").then(res => {
-      if(res.data.success) {
-        setInorganics(res.data.existingInorganics);
-      }
-    });
-  };
+  // const retrieveInorganics = () => {
+  //   axios.get("/inorganic/getall").then(res => {
+  //     if(res.data.success) {
+  //       setInorganics(res.data.existingInorganics);
+  //       console.log(res.data.existingInorganics);
+  //       console.log('Inorganic',inorganics);
+  //     }
+  //   });
+  // };
 
   const totalWeight = inorganics.reduce((acc, curr) => acc + parseInt(curr.totalWeight), 0);
   const totalPrice = inorganics.reduce((acc, curr) => acc + parseInt(curr.totalPrice), 0);
@@ -163,22 +165,22 @@ const handleSearchArea = (e) => {
     },
   ];
 
-  const onDelete = (id) => {
-    axios.delete('/inorganic/delete/'+id)
-      .then((res) => {
-      alert("Successfully Deleted");
-      window.location = '/inorganic';
-      retrieveInorganics();
-    })
-  };
+  // const onDelete = (id) => {
+  //   axios.delete('/inorganic/delete/'+id)
+  //     .then((res) => {
+  //     alert("Successfully Deleted");
+  //     window.location = '/inorganic';
+  //     retrieveInorganics();
+  //   })
+  // };
 
 
     return(
         <div className="dash-container">
-            <HeaderS/>
-            <SideNavB/>
+            <Header/>
+            <SideNav/>
             <div className='dash-main-box'>
-              <h1 style={{fontFamily: 'Kanit',}}>Well come Back! {uData.userName} your Dashboard</h1>
+              <h1 style={{fontFamily: 'Kanit',}}>Merchant Dashboard</h1>
             <div className='dash-box-a'>
                 <div style={{width:'8vw',float:'left'}}>
                   <h6 className='d-text'>Request</h6>
@@ -308,7 +310,7 @@ const handleSearchArea = (e) => {
             name="searchQuery"
             onChange={handleSearchArea}
             />
-            <a onClick={generateReport}>
+            <a >
             <FontAwesomeIcon icon={faFileExport} 
             style={{width:'1.8vw',height:'1.8vw', marginLeft:'5vw', marginRight:'1vw', color:'blue'}} /> 
              Report Generate</a>
@@ -335,7 +337,7 @@ const handleSearchArea = (e) => {
                 <td>{rowData.totalWeight} LKR</td>
                 <td>{rowData.totalPrice} LKR</td>
                 <td>{moment(rowData.date).format('MMMM Do YYYY, h a')}</td>
-                <td><div onClick={()=>onDelete(rowData._id)}><FontAwesomeIcon icon={faTrash} style={{color: "#ff0033",}} /></div></td>
+                <td><div ><FontAwesomeIcon icon={faTrash} style={{color: "#ff0033",}} /></div></td>
                 </tr>
             ))}
             </tbody>
@@ -383,82 +385,16 @@ const handleSearchArea = (e) => {
                     Other
                 </Button>
                 </NavItem>
-                <TabContent activeTab={activeTab} className='tab-dash' style={{marginTop:'1vw'}} >
                 
-                <TabPane tabId="tab1">
-                <img src={images.N1} className='list-Img-n' id='list-Img-a'/>
-                <div className="list-group">
-                    <button type="button" className="list-group-item list-group-item-action" aria-current="true">
-                      <h3>Glass වීදුරු</h3>
-                    </button>
-                    <button type="button" className="list-group-item list-group-item-action">
-                      <h6>Glass Bottle</h6><h6>10 LKR</h6>
-                    </button>
-                    <button type="button" className="list-group-item list-group-item-action">
-                    <h6>Glass Plate</h6><h6>10 LKR</h6>
-                    </button>
-                    <button type="button" className="list-group-item list-group-item-action" disabled>
-                    <h6>Glass Other</h6><h6>8 LKR</h6>
-                    </button>
-                </div>
-                </TabPane>
-                <TabPane tabId="tab2">
-                <img src={images.N2} className='list-Img-n' id='list-Img-a'/>
-                <div className="list-group">
-                    <button type="button" className="list-group-item list-group-item-action" aria-current="true">
-                    <h3>Metal ලෝහ </h3>
-                    </button>
-                    <button type="button" className="list-group-item list-group-item-action">
-                    <h6>Metal Plate</h6><h6>20 LKR</h6>
-                    </button>
-                    <button type="button" className="list-group-item list-group-item-action">
-                    <h6>Metal Pipe</h6><h6>30 LKR</h6>
-                    </button>
-                    <button type="button" className="list-group-item list-group-item-action" disabled>
-                    <h6>Metal Other</h6><h6>15 LKR</h6>
-                    </button>
-                </div>
-                </TabPane>
-                <TabPane tabId="tab3">
-                <img src={images.N3} className='list-Img-n' id='list-Img-a'/>
-                <div className="list-group">
-                    <button type="button" className="list-group-item list-group-item-action" aria-current="true">
-                    <h3>Plastic ප්ලාස්ටික්</h3>
-                    </button>
-                    <button type="button" className="list-group-item list-group-item-action">
-                    <h6>Plastic Bottle</h6><h6>5 LKR</h6>
-                    </button>
-                    <button type="button" className="list-group-item list-group-item-action">
-                    <h6>Plastic Plate</h6><h6>8 LKR</h6>
-                    </button>
-                    <button type="button" className="list-group-item list-group-item-action" disabled>
-                    <h6>Plastic Other</h6><h6>5 LKR</h6>
-                    </button>
-                </div>
-                </TabPane>
-                <TabPane tabId="tab4">
-                <img src={images.N4} className='list-Img-n' id='list-Img-a'/>
-                <div className="list-group">
-                    <button type="button" className="list-group-item list-group-item-action" aria-current="true">
-                      <h5>Electrical Waste විද්‍යුත් අපද්‍රව්‍යය</h5>
-                    </button>
-                    <button type="button" className="list-group-item list-group-item-action">
-                    <h6>Batteries</h6><h6>500 LKR</h6>
-                    </button>
-                    <button type="button" className="list-group-item list-group-item-action">
-                    <h6>Bulbs</h6><h6>10 LKR</h6>
-                    </button>
-                    <button type="button" className="list-group-item list-group-item-action" disabled>
-                    <h6>Electrical Waste</h6><h6>100 LKR</h6>
-                    </button>
-                </div>
-                </TabPane>
-            </TabContent>
+                
+                
+                
+           
                 
             </Nav>
             
         </div>
-        <div className='dash-table-box-c'>
+        {/* <div className='dash-table-box-c'>
         <Slider {...settings}>
                             <div>
                                 <img src={images.S4} alt="slider" style={{width:'73.5vw',height:'10vw',borderRadius:'0.3vw'}} />
@@ -470,10 +406,10 @@ const handleSearchArea = (e) => {
                                 <img src={images.S6} alt="slider" style={{width:'73.5vw',height:'10vw',borderRadius:'0.3vw'}} />
                             </div>
                         </Slider>
-        </div>
+        </div> */}
       </div>
   <Footer/>
 </div>
 )
 };
-export default Bdashboard;
+export default NewView;

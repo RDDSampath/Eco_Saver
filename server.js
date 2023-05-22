@@ -6,7 +6,10 @@ const cors = require('cors');
 const app = express();
 
 //import routes
-
+const inorganicRoutes = require('./routes/Inorganics');
+const priceListRoutes = require('./routes/PriceLists');
+const organicRoutes = require('./routes/Organics');
+const productRoutes = require('./routes/Products');
 const myResFormRoutes = require('./routes/MyResForms');
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
@@ -19,6 +22,10 @@ app.use(bodyParser.json());
 app.use(cors());
 
 //route middleware
+app.use(inorganicRoutes);
+app.use(priceListRoutes);
+app.use(organicRoutes);
+app.use(productRoutes);
 app.use(myResFormRoutes);
 
 
