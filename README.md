@@ -1,4 +1,5 @@
 # Eco_Saver
+<br/>
 MERN Project
 
 3rd Year 2nd Semester - ITPM project (Waste Management System) 
@@ -10,14 +11,6 @@ built with :octocat:
 <br/>
 <br/>
 
-
-- **Language** : 
-
-> Java [Java](https://www.java.com/en/)
-
-> Spring [Spring](https://spring.io/)
-
-> React [React](https://react.dev/)
 
  
 - **Development environment** : [Intellij IDEA](https://www.jetbrains.com/idea/)
