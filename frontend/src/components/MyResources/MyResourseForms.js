@@ -54,7 +54,7 @@ const MyResourseForms = () => {
 
     axios.post('/myResForm/add', formData).then((res) => {
       if (res.data.success) {
-        alert('Added Successfully');
+        // alert('Added Successfully');
         window.location = "/myResources";
         setFormData({
           title: '',
@@ -64,10 +64,10 @@ const MyResourseForms = () => {
           file: [],
         });
       } else {
-        alert('Failed to add ');
+        // alert('Failed to add ');
       }
     }).catch((error) => {
-        alert('Failed to add');
+        // alert('Failed to add');
     });
 };
 

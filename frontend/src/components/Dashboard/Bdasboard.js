@@ -166,7 +166,7 @@ const handleSearchArea = (e) => {
   const onDelete = (id) => {
     axios.delete('/inorganic/delete/'+id)
       .then((res) => {
-      alert("Successfully Deleted");
+      // alert("Successfully Deleted");
       window.location = '/inorganic';
       retrieveInorganics();
     })
@@ -386,7 +386,7 @@ const handleSearchArea = (e) => {
                 <TabContent activeTab={activeTab} className='tab-dash' style={{marginTop:'1vw'}} >
                 
                 <TabPane tabId="tab1">
-                <img src={images.N1} className='list-Img-n' id='list-Img-a'/>
+                <img src={images.N1} className='list-Img-n' alt='image' id='list-Img-a'/>
                 <div className="list-group">
                     <button type="button" className="list-group-item list-group-item-action" aria-current="true">
                       <h3>Glass වීදුරු</h3>
@@ -403,7 +403,7 @@ const handleSearchArea = (e) => {
                 </div>
                 </TabPane>
                 <TabPane tabId="tab2">
-                <img src={images.N2} className='list-Img-n' id='list-Img-a'/>
+                <img src={images.N2} className='list-Img-n' alt='image' id='list-Img-a'/>
                 <div className="list-group">
                     <button type="button" className="list-group-item list-group-item-action" aria-current="true">
                     <h3>Metal ලෝහ </h3>
@@ -420,7 +420,7 @@ const handleSearchArea = (e) => {
                 </div>
                 </TabPane>
                 <TabPane tabId="tab3">
-                <img src={images.N3} className='list-Img-n' id='list-Img-a'/>
+                <img src={images.N3}  alt='image' className='list-Img-n' id='list-Img-a'/>
                 <div className="list-group">
                     <button type="button" className="list-group-item list-group-item-action" aria-current="true">
                     <h3>Plastic ප්ලාස්ටික්</h3>
@@ -437,7 +437,7 @@ const handleSearchArea = (e) => {
                 </div>
                 </TabPane>
                 <TabPane tabId="tab4">
-                <img src={images.N4} className='list-Img-n' id='list-Img-a'/>
+                <img src={images.N4}  alt='image' className='list-Img-n' id='list-Img-a'/>
                 <div className="list-group">
                     <button type="button" className="list-group-item list-group-item-action" aria-current="true">
                       <h5>Electrical Waste විද්‍යුත් අපද්‍රව්‍යය</h5>
@@ -461,7 +461,7 @@ const handleSearchArea = (e) => {
         <div className='dash-table-box-c'>
         <Slider {...settings}>
                             <div>
-                                <img src={images.S4} alt="slider" style={{width:'73.5vw',height:'10vw',borderRadius:'0.3vw'}} />
+                                <img src={images.S4}  alt="slider" style={{width:'73.5vw',height:'10vw',borderRadius:'0.3vw'}} />
                             </div>
                             <div>
                                 <img src={images.S5} alt="slider" style={{width:'73.5vw',height:'10vw',borderRadius:'0.3vw'}} />

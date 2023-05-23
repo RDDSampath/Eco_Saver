@@ -62,22 +62,22 @@ const otherW = (parseInt(formData.Batteries) + parseInt(formData.Bulbs) + parseI
     try {
       const res = await axios.post('/inorganic/add', formDataWithTotal);
       if (res.status === 200) {
-        alert('Form data submitted successfully!');
+        // alert('Form data submitted successfully!');
         window.location = '/inorganic';
       } else {
-        alert('DB Something went wrong!');
+        // alert('DB Something went wrong!');
       }
     } catch (err) {
       console.log(err);
-      alert('Something went wrong!');
+      // alert('Something went wrong!');
     } finally {
       setSubmitting(false);
     }
   };
 
   const handleDelete =()=>{
-    alert('Deleted !');
-    window.location = '/a';
+    // alert('Deleted !');
+    window.location = '/inorganic';
   };
 
   
@@ -132,8 +132,8 @@ const otherW = (parseInt(formData.Batteries) + parseInt(formData.Bulbs) + parseI
                             <div className='item-view' style={{backgroundColor:'#abc',height:'3vw',borderRadius:'1vw', border:'1px solid black'}}>{totalPrice} LKR</div>
                         </div>
                         <div className='iconSet-v'>
-                            <a href="/c"><img src={images.Edit} className='icon-img-v'/></a>
-                            <img src={images.Delete} className='icon-img-v' onClick={handleDelete}/>
+                            <a href="/inorganic/createRequest"><img src={images.Edit}  alt='image' className='icon-img-v'/></a>
+                            <img src={images.Delete}  alt='image' className='icon-img-v' onClick={handleDelete}/>
                             <Button className='Btn-V'  onClick={handleSubmit} >Confirm &#9989;</Button>
                         </div>
                     </div>

@@ -33,12 +33,12 @@ const Login =()=>{
         .then((data) => {
           console.log(data, "userRegister");
           if (data.status == "ok") {
-            alert('Loggin successfull');
+            // alert('Loggin successfull');
             window.localStorage.setItem("token", data.data);
             window.localStorage.setItem("loggedIn", true);
             window.location.href = "./userDetails";
           }else{
-            alert('Loggin faild! Please try again');
+            // alert('Loggin faild! Please try again');
           }
         });
   };

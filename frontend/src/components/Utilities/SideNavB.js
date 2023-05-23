@@ -14,7 +14,7 @@ const SideNavB = () => {
     <div style={{flexDirection:'row'}}>
         <div>
             <div className="sidenav open">
-                <img src={images.LogoNav} style={{width:'11vw',height:'11vw'}} className='navLogo' />
+                <img src={images.LogoNav} style={{width:'11vw',height:'11vw'}} alt='image' className='navLogo' />
                 <a href="/inorganic"><FontAwesomeIcon icon={faLayerGroup} /> Dashboard</a>
                 <a href="/inorganic/createRequest"><FontAwesomeIcon icon={faCartPlus} /> Add Inorganic</a>
                 <a href="/"> <FontAwesomeIcon icon={faStore} /> Go to Market</a>

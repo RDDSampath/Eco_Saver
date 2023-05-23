@@ -26,7 +26,7 @@ const ViewMyResources = () => {
   const onDelete = (id) => {
     axios.delete('/myResForm/delete/'+id)
       .then((res) => {
-      alert("Successfully Deleted");
+      // alert("Successfully Deleted");
       window.location = '/viewMyResources';
       fetchData();
     })

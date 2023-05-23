@@ -18,7 +18,7 @@ const DetailDisposal = () => {
     const onDelete = (id) => {
         axios.delete('/organic/delete/'+id)
           .then((res) => {
-          alert("Successfully Deleted");
+          // alert("Successfully Deleted");
           window.location = '/organic';
         })
       };
@@ -70,7 +70,7 @@ const DetailDisposal = () => {
                 <Card className='pdCardIn' style={{marginTop:'3vw',width:'64vw',height:'30vw'}}>
                     <div className='form-card'>
                         <div className='form-card-left'>
-                            <img src={place.imageUrl} className='homeImg' />
+                            <img src={place.imageUrl} className='homeImg'  alt='image' />
                             <button id="edit" name="submit" onClick={()=>handleClick(place)}>Edit</button>
                             <button id="delete" name="submit" onClick={()=>onDelete(id)}>Delete</button>
                         </div>
@@ -81,7 +81,7 @@ const DetailDisposal = () => {
                             <label>{place.Owner_number}</label><div/>
                             <label>{place.email_address}</label><div/>
                             <label>{place.type}-{place.weight} KG</label><div/>
-                            <img src={images.RecycleMan} style={{marginLeft:'15vw'}} /><br/>
+                            <img src={images.RecycleMan}  alt='image' style={{marginLeft:'15vw'}} /><br/>
                         
                         </div>
                     </div>

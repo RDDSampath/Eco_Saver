@@ -10,7 +10,7 @@ const SideNavC = () => {
     <div style={{flexDirection:'row'}}>
         <div>
             <div className="sidenav open">
-            <img src={images.LogoNav} style={{width:'11vw',height:'11vw'}} className='navLogo' />
+            <img src={images.LogoNav} style={{width:'11vw',height:'11vw'}} alt='image' className='navLogo' />
                 <a href="/organic"><FontAwesomeIcon icon={faLayerGroup} /> Organic Dashboard</a>
                 <a href="/organic/postDisposal"><FontAwesomeIcon icon={faCartPlus} /> Organic Disposal</a>
                 <a href="/organic/organicPlaces"><FontAwesomeIcon icon={faCartPlus} /> Organic Places</a>

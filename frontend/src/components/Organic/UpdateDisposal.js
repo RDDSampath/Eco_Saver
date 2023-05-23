@@ -37,7 +37,7 @@ const UpdateDisposal=(props)=> {
 
     axios.put('/organic/update/'+id, formData).then((res) => {
       if (res.data.success) {
-        alert('Organic updated successfully');
+        // alert('Organic updated successfully');
         setFormData({
           Owner_name: '',
           Owner_number: '',
@@ -49,7 +49,7 @@ const UpdateDisposal=(props)=> {
         });
         window.location.href = '/organic/disposalPlaces';
       }else {
-        alert('Failed to update Organic');
+        // alert('Failed to update Organic');
       }
     });
   };

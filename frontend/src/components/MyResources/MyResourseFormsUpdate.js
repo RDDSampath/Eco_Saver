@@ -32,7 +32,7 @@ const MyResourseFormsUpdate = () => {
 
     axios.put('/myResForm/update/'+id, formData).then((res) => {
       if (res.data.success) {
-        alert('updated successfully');
+        // alert('updated successfully');
         setFormData({
           title: '',
           Category: '',
@@ -41,10 +41,10 @@ const MyResourseFormsUpdate = () => {
         });
         window.location = "/viewMyResources";
       } else {
-        alert('Failed to update ');
+        // alert('Failed to update ');
       }
     }).catch((error) => {
-        alert('Failed to update');
+        // alert('Failed to update');
     });
 };
     return (

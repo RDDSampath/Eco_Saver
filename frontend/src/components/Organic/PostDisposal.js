@@ -58,7 +58,7 @@ function PostDisposal() {
 
     axios.post('/organic/add', formData).then((res) => {
       if (res.data.success) {
-        alert('Organic Disposal Place Added Successfully');
+        // alert('Organic Disposal Place Added Successfully');
         window.location = "/organic/disposalPlaces";
         setFormData({
           Owner_name: '',
@@ -71,10 +71,10 @@ function PostDisposal() {
           imageUrl: [],
         });
       } else {
-        alert('Failed to add Organic Disposal Place');
+        // alert('Failed to add Organic Disposal Place');
       }
     }).catch((error) => {
-        alert('Failed to add Organic Disposal Place');
+        // alert('Failed to add Organic Disposal Place');
     });
 };
 
@@ -113,7 +113,7 @@ function PostDisposal() {
                           <input type='text' name='weight' value={formData.weight} onChange={handleInputChange} placeholder='10' className='o-input' /><br/>
                           <label>Enter location *</label><br/>
                           <input type='text' name='location' value={formData.location} onChange={handleInputChange} placeholder='A/2b Hidellana, Rathnapura, Sri Lanka' className='o-input' /><br/>
-                          <img src={formData.imageUrl ==! [] ?(images.EcoGirlBlue):(formData.imageUrl)} style={{marginTop:'1vw'}}/>
+                          <img src={formData.imageUrl ==! [] ?(images.EcoGirlBlue):(formData.imageUrl)} style={{marginTop:'1vw'}}  alt='image'/>
                         </div>
                     </div>
                     </form>

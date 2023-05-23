@@ -124,7 +124,7 @@ const CreateRequest =()=>{
                                         Location
                                     </Button>
                                 </NavItem>
-                                <img src={images.LogoNav2} style={{width:'11vw',height:'11vw',marginLeft:'2vw'}} className='navLogo2' />
+                                <img src={images.LogoNav2}  alt='image' style={{width:'11vw',height:'11vw',marginLeft:'2vw'}} className='navLogo2' />
                         </div>
                         <div className='right-c'>
                         <form noValidate >
@@ -166,7 +166,7 @@ const CreateRequest =()=>{
                                             /><b> KG</b>
                                         
                                         <Button className='next-Btn' onClick={() => toggleTab('tab2')}>Next</Button>
-                                        <img src={images.N1} style={{
+                                        <img src={images.N1}  alt='image' style={{
                                             width:'13vw',
                                             height:'13vw',
                                             marginLeft:'2vw',
@@ -212,12 +212,12 @@ const CreateRequest =()=>{
                                             /><b> KG</b>
                                         
                                         <Button className='next-Btn' onClick={() => toggleTab('tab3')}>Next</Button>
-                                        <img src={images.N2} style={{
+                                        <img src={images.N2}  style={{
                                             width:'13vw',
                                             height:'13vw',
                                             marginLeft:'2vw',
                                             marginTop:'2vw'
-                                        }}/>
+                                        }}  alt='image'/>
                                     </div>
                                 </div>
                                 </TabPane>
@@ -256,7 +256,7 @@ const CreateRequest =()=>{
                                             /><b> KG</b>
                                         
                                         <Button className='next-Btn' onClick={() => toggleTab('tab4')}>Next</Button>
-                                        <img src={images.N3} style={{
+                                        <img src={images.N3}  alt='image' style={{
                                             width:'13vw',
                                             height:'13vw',
                                             marginLeft:'2vw',
@@ -300,7 +300,7 @@ const CreateRequest =()=>{
                                             /><b> KG</b>
                                         
                                         <Button className='next-Btn' onClick={() => toggleTab('tab5')}>Set Location</Button>
-                                        <img src={images.N4} style={{
+                                        <img src={images.N4} alt='image' style={{
                                             width:'13vw',
                                             height:'13vw',
                                             marginLeft:'2vw',

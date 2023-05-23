@@ -30,15 +30,15 @@ const SignIn =()=>{
       .then((data) => {
         if (data.error) {
           setError(data.error);
-          alert(data.error);
+          // alert(data.error);
         } else {
-          alert("Registration successful");
+          // alert("Registration successful");
           window.location.href="./sign-in"
           // redirect to login page
         }
       })
       .catch((error) => {
-        alert("Failed to register user");
+        // alert("Failed to register user");
         console.log(error);
       });
   }

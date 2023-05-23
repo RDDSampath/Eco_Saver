@@ -300,7 +300,7 @@ const ODashboard =()=>{
                 <Bar dataKey="uv" fill="#82ca9d" />
               </BarChart>
             </div>
-            <img src={images.EcoGirlBlue} className="oDash-img"/>
+            <img src={images.EcoGirlBlue}  alt='image' className="oDash-img"/>
             
             <div className="chartCard-right">
             <div className='od-container'>
