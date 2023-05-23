@@ -1,7 +1,7 @@
 # Eco_Saver
 <br/>
 MERN Project
-
+<br/>
 3rd Year 2nd Semester - ITPM project (Waste Management System) 
 
 <br/>
@@ -13,7 +13,7 @@ built with :octocat:
 
 
  
-- **Development environment** : [Intellij IDEA](https://www.jetbrains.com/idea/)
+- **Development environment** : [Visual Studio Code](https://code.visualstudio.com/download)
  
 - **Database** : [MongoDB](https://www.mongodb.com/)
 
