@@ -2,7 +2,6 @@
 <br/>
 MERN Project
 <br/>
-<br/>
 3rd Year 2nd Semester - ITPM project (Waste Management System) 
 
 <br/>
@@ -17,6 +16,8 @@ built with :octocat:
 - **Development environment** : [Visual Studio Code](https://code.visualstudio.com/download)
  
 - **Database** : [MongoDB](https://www.mongodb.com/)
+
+- **MERN project**
 
 <br/>
 <br/>
