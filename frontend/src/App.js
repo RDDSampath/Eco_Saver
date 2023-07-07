@@ -4,7 +4,6 @@ import "./App.css";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 //****============ Dashboard ================****//
 import UserDashboard from './components/Dashboard/Bdasboard';
@@ -40,8 +39,6 @@ import ViewMyResources from "./components/MyResources/ViewMyResources";
 import UpdateMyResources from "./components/MyResources/MyResourseFormsUpdate";
 
 function App() {
-  const isLoggedIn = window.localStorage.getItem("loggedIn");
-  console.log("isLoggedIn ==>", isLoggedIn);
   const isLoggedIn = window.localStorage.getItem("loggedIn");
   console.log("isLoggedIn ==>", isLoggedIn);
   return (
