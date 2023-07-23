@@ -4,6 +4,9 @@ import SideNavC from '../Utilities/SideNavC';
 import { Card } from 'reactstrap';
 import images from '../../constant/images';
 import { useLocation, useNavigate } from 'react-router-dom';
+import Header from '../home/HeaderS';
+import Swal from 'sweetalert2';
+import 'sweetalert2/dist/sweetalert2.min.css';
 
 const UpdateDisposal=(props)=> {
 
@@ -37,7 +40,11 @@ const UpdateDisposal=(props)=> {
 
     axios.put('/organic/update/'+id, formData).then((res) => {
       if (res.data.success) {
-        alert('Organic updated successfully');
+        Swal.fire({
+          icon: 'success',
+          title: 'Organic Disposal Place Updated Successfully',
+          text: 'The organic disposal place was Updated successfully!',
+        }).then((result) => {
         setFormData({
           Owner_name: '',
           Owner_number: '',
@@ -48,13 +55,21 @@ const UpdateDisposal=(props)=> {
           location: '',
         });
         window.location.href = '/organic/disposalPlaces';
+      });
       }else {
-        alert('Failed to update Organic');
+        Swal.fire({
+          icon: 'error',
+          title: 'Failed to Update Organic Disposal Place',
+          text: 'Something went wrong. Please try again.',
+        });
       }
     });
   };
   return (
     <div className='container-c'>
+      <div style={{backgroundColor:'black'}}>
+          <Header/>
+          </div>
         <SideNavC className='sidenav'/>
             <Card className='pdCard'>
                 <h5>Update a Organic Disposal Place</h5>

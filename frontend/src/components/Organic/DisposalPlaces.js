@@ -28,7 +28,9 @@ const DisposalPlaces =()=>{
   };
     return(<>
         <div className='dash-container'>
+        <div style={{backgroundColor:'black'}}>
           <Header/>
+          </div>
             <SideNavC/>
             <h2 style={{marginLeft:'30vw',marginTop:'1vw'}}>Disposal Places</h2>
                 {data.map((place, index) => (

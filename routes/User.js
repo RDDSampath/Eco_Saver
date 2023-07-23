@@ -104,6 +104,51 @@ router.post("/user/deleteUser", async (req, res) => {
 
 //========= update user =================//
 
+// router.put('/user/update/:id',(req,res)=>{
+//   User.findByIdAndUpdate(
+//       req.params.id,
+//       {
+//           $set:req.body
+//       },
+//       (err,post)=>{
+//           if(err){
+//               return res.status(400).json({error:err});
+//           }
+
+//           return res.status(200).json({
+//               success:"Updated Successfully"
+//           });
+//       }
+//   );
+// });
+router.put("/user/update/:id", async (req, res) => {
+  const { userId } = req.params; // Extract the userId from the request parameters
+  const { userName, phoneNumber, email, address, password, userType } = req.body;
+  const encryptedPassword = await bcrypt.hash(password, 10);
+
+  try {
+      // Check if the user exists based on the userId
+      const user = await User.findById(userId);
+      if (!user) {
+          return res.send({ error: "User not found" });
+      }
+
+      // Update the user data with the provided information
+      user.userName = userName;
+      user.phoneNumber = phoneNumber;
+      user.email = email;
+      user.address = address;
+
+      // Save the updated user to the database
+      await user.save();
+
+      res.send({ status: "ok", data: user });
+  } catch (error) {
+      console.log(error);
+      res.send({ status: "error", error: "Failed to update user" });
+  }
+});
+
 router.get("/user/paginatedUsers", async (req, res) => {
   const allUser = await User.find({});
   const page = parseInt(req.query.page)

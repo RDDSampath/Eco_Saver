@@ -1,6 +1,7 @@
 import React from "react";
 import SideNav from '../Utilities/SideNav';
 import { ResponsivePie } from '@nivo/pie';
+import Header from '../home/HeaderS';
 
 const Ndashboard =()=>{
   const p1 = [
@@ -53,6 +54,9 @@ const Ndashboard =()=>{
   ];
     return(
             <div className="dash-container">
+              <div style={{backgroundColor:'black'}}>
+          <Header/>
+          </div>
                 <SideNav/>
           <div className='dash-main-box'>
             <h1>Buser</h1>

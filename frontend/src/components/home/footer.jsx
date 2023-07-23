@@ -1,9 +1,10 @@
 import React from 'react';
 import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
+import images from '../../constant/images';
 
 export default function App() {
   return (
-    <MDBFooter bgColor='light' className='text-center text-lg-start text-muted'  style={{marginTop:'5vw'}} >
+    <MDBFooter bgColor='light' className='text-center text-lg-start text-muted' >
       <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom' id='footerhead'>
         <div className='me-5 d-none d-lg-block' >
           <span>Get connected with us on social networks:</span>
@@ -36,8 +37,7 @@ export default function App() {
           <MDBRow className='mt-3'>
             <MDBCol md="3" lg="4" xl="3" className='mx-auto mb-4'>
               <h6 className='text-uppercase fw-bold mb-4'>
-                <MDBIcon icon="gem" className="me-3" />
-                EcoSaver
+                <img src={images.Logo} alt="Logo" width="120" />
               </h6>
               <p>
               Your destination for sustainable waste management. 
@@ -76,22 +76,22 @@ export default function App() {
               <h6 className='text-uppercase fw-bold mb-4'>Useful links</h6>
               <p>
                 <a href='#!' className='text-reset'>
-                  www.wm.com
+                  www.eco.com
                 </a>
               </p>
               <p>
                 <a href='#!' className='text-reset'>
-                  www.springer.com
+                  www.saveeco.com
                 </a>
               </p>
               <p>
                 <a href='#!' className='text-reset'>
-                 dribbble.com
+                 nature.com
                 </a>
               </p>
               <p>
                 <a href='#!' className='text-reset'>
-                themeforest.net
+                wasteclean.net
                 </a>
               </p>
             </MDBCol>

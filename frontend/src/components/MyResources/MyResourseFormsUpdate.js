@@ -49,7 +49,9 @@ const MyResourseFormsUpdate = () => {
 };
     return (
         <div className='container-2'>
+          <div style={{backgroundColor:'black'}}>
           <Header/>
+          </div>
             <div className='form-1'>
              <div className='topic'>
                 <h5 style={{marginLeft:'3vw',paddingTop:'1vw'}}>Update My Recycling Resources</h5>

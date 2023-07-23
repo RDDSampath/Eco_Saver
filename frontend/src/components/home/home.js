@@ -1,50 +1,74 @@
+import React from "react";
 import images from "../../constant/images";
-import Header from "../home/header";
 import Footer from "./footer";
+import Header from "./header";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faLocationDot,faEnvelope,faPhone,faXmark,faCircleExclamation} from '@fortawesome/free-solid-svg-icons';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 
-const home =()=>{
+const Home =()=>{
+    const [isOpen, setIsOpen] = React.useState(false);
+
+  const openPopup = () => {
+    setIsOpen(true);
+  };
+
+  const closePopup = () => {
+    setIsOpen(false);
+  };
     return(
         <div className='home'>
-            <Header/>
+             
             <div className='section-1' id='sec_1'>
+            <div className='T-home'>
+            <Header/>
             <h1 className='sec-topic' >𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐭𝐨 𝐄𝐜𝐨𝐒𝐚𝐯𝐞𝐫</h1>
             <p>
                 <h3 className='sec-title'>𝐄𝐜𝐨𝐒𝐚𝐯𝐞𝐫 𝐢𝐬 𝐚 𝐩𝐥𝐚𝐭𝐟𝐨𝐫𝐦 𝐭𝐡𝐚𝐭 𝐚𝐢𝐦𝐬 𝐭𝐨 𝐩𝐫𝐨𝐦𝐨𝐭𝐞 𝐬𝐮𝐬𝐭𝐚𝐢𝐧𝐚𝐛𝐢𝐥𝐢𝐭𝐲 𝐭𝐡𝐫𝐨𝐮𝐠𝐡 𝐭𝐡𝐞 𝐮𝐬𝐞 𝐨𝐟 𝐭𝐞𝐜𝐡𝐧𝐨𝐥𝐨𝐠𝐲 𝐚𝐧𝐝 𝐢𝐧𝐧𝐨𝐯𝐚𝐭𝐢𝐨𝐧 𝐭𝐨 𝐚𝐝𝐝𝐫𝐞𝐬𝐬 𝐭𝐡𝐞 𝐢𝐬𝐬𝐮𝐞𝐬 𝐨𝐟 𝐰𝐚𝐬𝐭𝐞 𝐦𝐚𝐧𝐚𝐠𝐞𝐦𝐞𝐧𝐭 𝐚𝐧𝐝 𝐫𝐞𝐜𝐲𝐜𝐥𝐢𝐧𝐠.</h3>
 
             </p>
                 <img src={images.A1} className='home-sideLogo'/>
-                
-        
             </div>
-            <div className='section-2'>
-            <div className="T-home">
+            <div className="B-home">
                 <h2 className="Title-Home">Create a cleaner, greener world with our innovative garbage </h2>
-                <h2 className="Title-Home">management and recycling solutions</h2></div>
-                <div className="box-H">
-                    <div className="box-1">
-                        <img src={images.Gc} className='h-image'/>
-                        {/* <h6 className="about-Text">Saw any garbage lying around that needs to be collected?</h6> */}
-                        <a href='/' className="btn" ><div className="btn-hs">Schedule a Garbage Collection</div></a>
-                    </div>
-                    <div className="box-1">
-                        <img src={images.Bin} className='h-image'/>
-                        {/* <h6 className="about-Text">Have any recyclable waste lying around that you'd like to sell?</h6> */}
-                        <a href='/' className="btn" ><div className="btn-hs">Sell Your Recyclable Waste</div></a>
-                    </div>
-                    <div className="box-1">
-                        <img src={images.Rc} className='h-image'/>
-                        {/* <h6 className="about-Text">Looking for sustainable products made from recycled waste?</h6> */}
-                        <a href='/' className="btn" ><div className="btn-hs">Shop Sustainable Products</div></a>
-                    </div>
-                    <div className="box-1">
-                        <img src={images.Pc} className='h-image'/>
-                        {/* <h6 className="about-Text">Are you Interested in waste sorting and recycling?</h6> */}
-                        <a href='/' className="btn" ><div className="btn-hs">Learn Waste sorting and Recycling</div></a>
-                    </div>
-                </div>
+                <h2 className="Title-Home">management and recycling solutions</h2>
             </div>
-            <div className='section-3'>
+            </div>
+             
+            <div className='section-2'>
+            <div className="box-H">
+                <a onClick={openPopup} className="btn" ><div className="box-1">
+                        <div className="hh-box">
+                            <img src={images.A5} className='h-image'/>
+                        </div>
+                        
+                        <div className="btn-hs">Schedule a Garbage Collection</div>
+                    </div></a>
+                    <a onClick={openPopup} className="btn" ><div className="box-1">
+                    <div className="hh-box">
+                        <img src={images.A3} className='h-image'/>
+                    </div>
+                        
+                        <div className="btn-hs">Sell Your Recyclable Waste</div>
+                    </div></a>
+                    <a onClick={openPopup}><div className="box-1">
+                    <div className="hh-box">
+                        <img src={images.A2} className='h-image'/>
+                    </div>
+                        <div className="btn-hs">Shop Sustainable Products</div>
+                    </div></a>
+                    <a onClick={openPopup} className="btn" >
+                    <div className="box-1">
+                    <div className="hh-box">
+                        <img src={images.A6} className='h-image'/>
+                    </div>
+                        
+                        <div className="btn-hs">Learn Waste sorting and Recycling</div>
+                    </div></a>
+                </div>   
+            </div>
+            <div className='section-3' id="aboutUS">
                 <h3>About Us</h3>
                 <img src={images.About}/>
                 <div className="about-Boxb">
@@ -58,18 +82,47 @@ At EcoSaver, we are committed to providing eco-friendly solutions for waste mana
                 </div>
             
             </div>
-            <div className='section-4'>
+            <div className='section-4' id="contactUS">
                 
             <h3>Contact Us</h3>
-            {/* <img src={images.Contact}/> */}
+            <img src={images.Contact} className="secIMG"/>
             <div className="contact-left">
-                form
-            </div>
-               
-
+                <div style={{float:'left',}} className="contact-box">
+                <h5><FontAwesomeIcon icon={faPhone} /></h5>
+                <p> </p><br/><br/>
+                <h5><FontAwesomeIcon icon={faLocationDot} /></h5>
+                <p> </p><br/><br/>
+                <h5><FontAwesomeIcon icon={faEnvelope} /></h5>
                 </div>
-            <Footer/>
+                <div className="contact-box">
+                        <h5>Phone Number:</h5>
+                        <p>041 52 68 356</p>
+                        <h5>Address</h5>
+                        <p>123, Galle Road, Colombo 03</p>
+                        <h5>E-mail</h5>
+                        <p>eco.saver@gmail.com</p>
+                </div>
+                <img src={images.whatsapp} className="contactS" style={{width:'100px',height:'100px',marginLeft:'2vw'}}/>
+                <img src={images.Email} className="contactS" style={{width:'100px',height:'100px',marginLeft:'2vw'}}/>
+                <img src={images.telegram} className="contactS" style={{width:'100px',height:'100px',marginLeft:'2vw'}}/>
+            </div>
+        </div>
+        {isOpen && (
+        <div className="popupl">
+          <div className="popup-contentl">
+          <button className="closeBtn" onClick={closePopup}> <FontAwesomeIcon icon={faXmark} /> </button>
+            <center>
+            <h2>You need to</h2>
+            <h2>Sign in or Sign up</h2>
+            <h1 style={{color:'red'}}><FontAwesomeIcon icon={faCircleExclamation} /></h1>
+            </center>
+          </div>
+          
+          
+        </div>
+      )}
+    <Footer/>
     </div>
     )
 };
-export default home;
+export default Home;

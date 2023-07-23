@@ -38,7 +38,9 @@ const ViewMyResources = () => {
 
     return (
       <div className='container-b'>
-        <Header/>
+        <div style={{backgroundColor:'black'}}>
+          <Header/>
+          </div>
           <h4 className='topic-v'>My Recycling Education Resources</h4>
           {myResForms.map((item, index) => (
         <div className='inResBox1' key={index}>

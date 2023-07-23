@@ -5,6 +5,10 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import images from '../../constant/images';
 
 const SideNavC = () => {
+  const logOut = () => {
+    window.localStorage.clear();
+    window.location.href = "/";
+  };
 
   return (
     <div style={{flexDirection:'row'}}>
@@ -15,7 +19,7 @@ const SideNavC = () => {
                 <a href="/organic/postDisposal"><FontAwesomeIcon icon={faCartPlus} /> Organic Disposal</a>
                 <a href="/organic/organicPlaces"><FontAwesomeIcon icon={faCartPlus} /> Organic Places</a>
                 <a href="#"> <FontAwesomeIcon icon={faUser} /> My Profile</a>
-                <a href="#"><FontAwesomeIcon icon={faRightFromBracket} /> Log Out</a>
+                <a onClick={logOut} style={{cursor:"pointer"}}><FontAwesomeIcon icon={faRightFromBracket} /> Log Out</a>
             </div>
       </div>
     </div>

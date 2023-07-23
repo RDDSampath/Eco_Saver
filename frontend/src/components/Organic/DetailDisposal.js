@@ -6,6 +6,9 @@ import images from '../../constant/images';
 import { useLocation, useNavigate } from 'react-router-dom';
 import jsPDF from "jspdf";
 import "jspdf-autotable";
+import Header from '../home/HeaderS';
+import Swal from 'sweetalert2';
+import 'sweetalert2/dist/sweetalert2.min.css';
 
 const DetailDisposal = () => {
     const location = useLocation();
@@ -18,8 +21,13 @@ const DetailDisposal = () => {
     const onDelete = (id) => {
         axios.delete('/organic/delete/'+id)
           .then((res) => {
-          alert("Successfully Deleted");
+            Swal.fire({
+              icon: 'success',
+              title: 'Successfully Deleted',
+              text: 'The item was successfully deleted!',
+            }).then((result) => {
           window.location = '/organic';
+        });
         })
       };
       const handleClick = (place) => {
@@ -64,6 +72,9 @@ const DetailDisposal = () => {
 
   return (
     <div className='container-c'>
+      <div style={{backgroundColor:'black'}}>
+          <Header/>
+          </div>
         <SideNavC className='sidenav'/>
         <span className='detail-textu'>Details</span> <button id="submit" name="submit" onClick={getReport}>Generate Report  </button>
             <Card className='pdCard' style={{width:'70vw',height:'36vw'}}>

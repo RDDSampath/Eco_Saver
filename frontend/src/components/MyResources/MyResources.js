@@ -52,8 +52,9 @@ const MyResources = () => {
   
   return (
     <div className='container-a'>
-     
-     <Header/>
+     <div style={{backgroundColor:'black'}}>
+          <Header/>
+          </div>
        <img src={images.MyRes} alt='resimg' className='ResImg'/>
         <div className='aa'>
         <a href='/myResourcesForm'><div  className='bb'>Add My Resource</div></a>

@@ -2,6 +2,8 @@ import React,{useState} from 'react'
 import axios from 'axios';
 import Header from '../home/HeaderS';
 import Footer from '../home/footer';
+import Swal from 'sweetalert2';
+import 'sweetalert2/dist/sweetalert2.min.css';
 
 const MyResourseForms = () => {
   
@@ -54,8 +56,13 @@ const MyResourseForms = () => {
 
     axios.post('/myResForm/add', formData).then((res) => {
       if (res.data.success) {
-        alert('Added Successfully');
+        Swal.fire({
+          icon: 'success',
+          title: 'Post Added Successfully',
+          text: 'Your post has been added successfully!',
+        }).then(() => {
         window.location = "/myResources";
+        });
         setFormData({
           title: '',
           Category: '',
@@ -64,17 +71,27 @@ const MyResourseForms = () => {
           file: [],
         });
       } else {
-        alert('Failed to add ');
+        Swal.fire({
+          icon: 'error',
+          title: 'Failed to Add Post',
+          text: 'Something went wrong. Please try again.',
+        });
       }
     }).catch((error) => {
-        alert('Failed to add');
+      Swal.fire({
+        icon: 'error',
+        title: 'Failed to Add Post',
+        text: 'Something went wrong. Please try again.',
+      });
     });
 };
 
 
     return (
         <div className='container-2'>
+          <div style={{backgroundColor:'black'}}>
           <Header/>
+          </div>
             <div className='form-1'>
              <div className='topic'>
                 <h5 style={{marginLeft:'3vw',paddingTop:'1vw'}}>Add My Recycling Resources</h5>

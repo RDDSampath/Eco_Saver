@@ -25,18 +25,18 @@ const CreateRequest =()=>{
     const [activeTab, setActiveTab] = useState('tab1');
     const currentDate = new Date().toISOString();
     const [formData, setFormData] = useState({
-        GlassBottle: '0',
-        GlassPlate: '0',
-        GlassOther: '0',
-        IronPlate: '0',
-        IronPipe: '0',
-        IronOther: '0',
-        PlasticBottle: '0',
-        PlasticPlate: '0',
-        PlasticOther: '0',
-        Batteries: '0',
-        Bulbs: '0',
-        ElectricalWaste: '0',
+        GlassBottle: '',
+        GlassPlate: '',
+        GlassOther: '',
+        IronPlate: '',
+        IronPipe: '',
+        IronOther: '',
+        PlasticBottle: '',
+        PlasticPlate: '',
+        PlasticOther: '',
+        Batteries: '',
+        Bulbs: '',
+        ElectricalWaste: '',
         HouseNo: '',
         Street: '',
         City: '',
@@ -46,11 +46,11 @@ const CreateRequest =()=>{
 
       const handleInputChange = (e) => {
         const { name, value } = e.target;
-    
         setFormData({
           ...formData,
           [name]: value,
         });
+
       };
       
         const handlePhoneChange = (value) => {
@@ -69,7 +69,9 @@ const CreateRequest =()=>{
   };
     return(
         <div className='container-c'>
-            <Header/>
+            <div style={{backgroundColor:'black'}}>
+          <Header/>
+          </div>
             <SideNav className='sidenav'/>
             <div className='container-create'>
                 <h3 className='topic-create'>Inorganic Garbadge Collection</h3>

@@ -156,7 +156,9 @@ const ODashboard =()=>{
   ];
     return(
         <div className="organic-dash">
+          <div style={{backgroundColor:'black'}}>
           <Header/>
+          </div>
           <SideNavC/>
           <div className='dash-main-box'>
             <h1>Organic Dashboard</h1>

@@ -34,7 +34,7 @@ import Home_6 from '../assest/Image/homef.png';
 import RecycleMan from '../assest/Image/recycleMan.png';
 import EcoGirlBlue from '../assest/Image/ecogirlblue.png';
 import EcoGirlYellow from '../assest/Image/ecogirlyellow.png';
-import A1 from '../assest/Image/s1.svg';
+import A1 from '../assest/Image/s1.png';
 import About from '../assest/Image/ss2.png';
 import Contact from '../assest/Image/contactus.png';
 import Bin from '../assest/Image/bin.png';
@@ -56,6 +56,10 @@ import A4 from '../assest/Image/a4.png';
 import A5 from '../assest/Image/a5.png';
 import A6 from '../assest/Image/a6.png';
 import C1 from '../assest/Image/c1.png';
+import BG123 from '../assest/Image/back123.jpg';
+import whatsapp from '../assest/Image/WhatsApp.png';
+import telegram from '../assest/Image/telegram.png';
+import Email from '../assest/Image/email.png';
 export default {
     Logo,Flogo,
     Mode,
@@ -72,5 +76,6 @@ export default {
     ,About,Contact,
     Bin,MyRes,Form1Img,Sent,Form1Img2,Waste,Login1,Signup1,Comsign,
     Prof,Logout,
-    A6,A2,A3,A4,A5,A7,C1
+    A6,A2,A3,A4,A5,A7,C1,
+    BG123,whatsapp,telegram,Email
 };

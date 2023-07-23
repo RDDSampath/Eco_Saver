@@ -10,6 +10,8 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Header from '../home/HeaderS';
 import Footer from '../home/footer';
+import Swal from 'sweetalert2';
+import 'sweetalert2/dist/sweetalert2.min.css';
 
   const ViewRequest =(props)=>{
 
@@ -17,12 +19,6 @@ import Footer from '../home/footer';
   const formData = location.state?.formData;
   const [submitting, setSubmitting] = useState(false);
  
-
-  const image = [
-    { id: 1, url: images.Slide1 },
-    { id: 2, url: images.Slide2 },
-    { id: 3, url: images.Slide3 }
-  ];
   const settings = {
     dots: true,
     infinite: true,
@@ -33,16 +29,28 @@ import Footer from '../home/footer';
     slidesToScroll: 1
   };
 
+  const gb = parseInt(formData.GlassBottle);
+  const gp = parseInt(formData.GlassPlate);
+  const go = parseInt(formData.GlassOther);
+  const ip = parseInt(formData.IronPlate);
+  const ipp = parseInt(formData.IronPipe);
+  const io = parseInt(formData.IronOther);
+  const pb = parseInt(formData.PlasticBottle);
+  const pp = parseInt(formData.PlasticPlate);
+  const po = parseInt(formData.PlasticOther);
+  const b = parseInt(formData.Batteries);
+  const bl = parseInt(formData.Bulbs);
+  const ew = parseInt(formData.ElectricalWaste);
 
-const glassW = (parseInt(formData.GlassBottle) + parseInt(formData.GlassPlate) + parseInt(formData.GlassOther));
-const ironW = (parseInt(formData.IronPlate) + parseInt(formData.IronPipe) + parseInt(formData.IronOther));
-const plasticW = (parseInt(formData.PlasticBottle) + parseInt(formData.PlasticPlate) + parseInt(formData.PlasticOther));
-const otherW = (parseInt(formData.Batteries) + parseInt(formData.Bulbs) + parseInt(formData.ElectricalWaste));
+const glassW = gb + gp + go;
+const ironW = ip + ipp + io;
+const plasticW = pb + pp + po;
+const otherW = b + bl + ew;
 
-  const glassP = (parseInt(formData.GlassBottle*10) + parseInt(formData.GlassPlate*10) + parseInt(formData.GlassOther*8));
-  const ironP = (parseInt(formData.IronPlate*20) + parseInt(formData.IronPipe*30) + parseInt(formData.IronOther*15));
-  const plasticP = (parseInt(formData.PlasticBottle*5) + parseInt(formData.PlasticPlate*8) + parseInt(formData.PlasticOther*5));
-  const otherP = (parseInt(formData.Batteries*500) + parseInt(formData.Bulbs*10) + parseInt(formData.ElectricalWaste*100));
+  const glassP = (gb*10) + (gp*10) + (go*8);
+  const ironP = (ip*20) + (ipp*30) + (io*15);
+  const plasticP = (pb*5) + (pp*8) + (po*5);
+  const otherP = (b*500) + (bl*10) + (ew*100);
 
     // Calculate the total weight and price based on the individual values
     const totalWeight = (glassW + ironW + plasticW + otherW);
@@ -62,14 +70,27 @@ const otherW = (parseInt(formData.Batteries) + parseInt(formData.Bulbs) + parseI
     try {
       const res = await axios.post('/inorganic/add', formDataWithTotal);
       if (res.status === 200) {
-        alert('Form data submitted successfully!');
+        Swal.fire({
+          icon: 'success',
+          title: 'Garbage Collection added',
+          text: 'The garbage collection was added successfully!',
+        }).then(() => {
         window.location = '/inorganic';
+        });
       } else {
-        alert('DB Something went wrong!');
+        Swal.fire({
+        icon: 'error',
+        title: 'Failed to add Garbage Collection',
+        text: 'Something went wrong. Please try again.',
+      });
       }
     } catch (err) {
       console.log(err);
-      alert('Something went wrong!');
+      Swal.fire({
+        icon: 'error',
+        title: 'Failed to add Garbage Collection',
+        text: 'Something went wrong. Please try again.',
+      });;
     } finally {
       setSubmitting(false);
     }
@@ -84,7 +105,9 @@ const otherW = (parseInt(formData.Batteries) + parseInt(formData.Bulbs) + parseI
   
     return(
         <div className='container-c'>
+          <div style={{backgroundColor:'black'}}>
           <Header/>
+          </div>
             <SideNav className='sidenav'/>
             <div className='container-create'>
             <h3 className='topic-create'>Inorganic waste </h3>

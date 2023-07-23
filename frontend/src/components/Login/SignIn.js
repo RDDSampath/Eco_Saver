@@ -1,5 +1,9 @@
 import React,{useState} from 'react';
 import images from '../../constant/images';
+import Swal from 'sweetalert2';
+import 'sweetalert2/dist/sweetalert2.min.css';
+import Headera from '../home/header';
+import Footer from '../home/footer';
 
 const SignIn =()=>{
   const [userName, setUserName] = useState("");
@@ -32,28 +36,30 @@ const SignIn =()=>{
           setError(data.error);
           alert(data.error);
         } else {
-          alert("Registration successful");
+          Swal.fire({
+            icon: 'success',
+            title: 'Registration Successful',
+            text: 'Thank you for registering!',
+          }).then(() => {
           window.location.href="./sign-in"
           // redirect to login page
+          });
         }
       })
       .catch((error) => {
-        alert("Failed to register user");
+        Swal.fire({
+          icon: 'error',
+          title: 'Registration Failed',
+          text: 'Something went wrong. Please try again.',
+        });
         console.log(error);
       });
   }
 
     return(
         <div className='container-c'>
-            {/**header */}
-            {/* <header>
-                <img src={images.Logo} alt='logo' className='logo-a'/>
-                <a href='/' className='btn-l' style={{backgroundColor:'#024731',color:'white'}}>Sign In</a>
-                <a href='/' className='btn-l'>Return policy</a>
-                <a href='/' className='btn-l'>About us</a>
-                <a href='/' className='btn-l' >Contact us</a> 
-            </header> */}
-              
+          <div style={{backgroundColor:'black'}}>
+            <Headera/></div>
             <div className='lgnBox-sign'>
                  <img src={images.Signup1} alt='login' className='sign-a'/>
                    <div className='lgnData-a'>
@@ -107,13 +113,7 @@ const SignIn =()=>{
                         
                    </div>   
                </div>
-
-
-            {/**footer */}
-            {/* <footer className='footer-b'>
-                <img src={images.Bin} alt='bin' className='bin-a'/>
-                <h4 className='footer1'>Copyright 2023 by Referenes Data. All Rights Reserved.</h4>
-            </footer> */}
+               <Footer/>
         </div>
         )
     };

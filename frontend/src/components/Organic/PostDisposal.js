@@ -3,6 +3,9 @@ import SideNavC from '../Utilities/SideNavC';
 import { Card } from 'reactstrap';
 import images from '../../constant/images';
 import axios from 'axios';
+import Header from '../home/HeaderS';
+import Swal from 'sweetalert2';
+import 'sweetalert2/dist/sweetalert2.min.css';
 
 function PostDisposal() {
   console.log(images);
@@ -58,7 +61,11 @@ function PostDisposal() {
 
     axios.post('/organic/add', formData).then((res) => {
       if (res.data.success) {
-        alert('Organic Disposal Place Added Successfully');
+        Swal.fire({
+          icon: 'success',
+          title: 'Organic Disposal Place Added Successfully',
+          text: 'The organic disposal place was added successfully!',
+        }).then((result) => {
         window.location = "/organic/disposalPlaces";
         setFormData({
           Owner_name: '',
@@ -69,17 +76,29 @@ function PostDisposal() {
           weight: '',
           location: '',
           imageUrl: [],
-        });
+        })
+      });
       } else {
-        alert('Failed to add Organic Disposal Place');
+        Swal.fire({
+          icon: 'error',
+          title: 'Failed to Add Organic Disposal Place',
+          text: 'Something went wrong. Please try again.',
+        });
       }
     }).catch((error) => {
-        alert('Failed to add Organic Disposal Place');
+      Swal.fire({
+        icon: 'error',
+        title: 'Failed to Add Organic Disposal Place',
+        text: 'Something went wrong. Please try again.',
+      });;
     });
 };
 
   return (
     <div className='container-c'>
+      <div style={{backgroundColor:'black'}}>
+          <Header/>
+          </div>
         <SideNavC className='sidenav'/>
             <Card className='pdCard'>
                 <h5>Post a Organic Disposal Place</h5>

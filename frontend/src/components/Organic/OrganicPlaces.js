@@ -13,6 +13,9 @@ const OrganicPlaces =()=>{
   };
     return(
         <div className='container-c'>
+            <div style={{backgroundColor:'black'}}>
+          <Header/>
+          </div>
             <SideNav className='sidenav'/>
             <div className='container-backg'>
                 <div style={{flexDirection:'row'}}>

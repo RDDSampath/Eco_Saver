@@ -7,7 +7,7 @@ import images from '../../constant/images';
 const SideNavB = () => {
   const logOut = () => {
     window.localStorage.clear();
-    window.location.href = "./sign-in";
+    window.location.href = "/";
   };
 
   return (

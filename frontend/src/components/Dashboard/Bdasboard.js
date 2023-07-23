@@ -175,7 +175,9 @@ const handleSearchArea = (e) => {
 
     return(
         <div className="dash-container">
+          <div style={{backgroundColor:'black',}} >
             <HeaderS/>
+            </div>
             <SideNavB/>
             <div className='dash-main-box'>
               <h1 style={{fontFamily: 'Kanit',}}>Well come Back! {uData.userName} your Dashboard</h1>
@@ -329,13 +331,12 @@ const handleSearchArea = (e) => {
             {inorganics.map((rowData, index) => (
             
                 <tr key={index}>
-                  <td><a href={`/inorganic/getall/${rowData._id}`} style={{ textDecoration: "none" }}>
-              {rowData.City}
-            </a></td>
+                  <td>
+              {rowData.City}</td>
                 <td>{rowData.totalWeight} LKR</td>
                 <td>{rowData.totalPrice} LKR</td>
                 <td>{moment(rowData.date).format('MMMM Do YYYY, h a')}</td>
-                <td><div onClick={()=>onDelete(rowData._id)}><FontAwesomeIcon icon={faTrash} style={{color: "#ff0033",}} /></div></td>
+                {/* <td><div onClick={()=>onDelete(rowData._id)}><FontAwesomeIcon icon={faTrash} style={{color: "#ff0033",}} /></div></td> */}
                 </tr>
             ))}
             </tbody>
@@ -461,13 +462,13 @@ const handleSearchArea = (e) => {
         <div className='dash-table-box-c'>
         <Slider {...settings}>
                             <div>
-                                <img src={images.S4} alt="slider" style={{width:'73.5vw',height:'10vw',borderRadius:'0.3vw'}} />
+                                <img src={images.S4} alt="slider" style={{width:'73.5vw',height:'15vw',borderRadius:'0.3vw'}} />
                             </div>
                             <div>
-                                <img src={images.S5} alt="slider" style={{width:'73.5vw',height:'10vw',borderRadius:'0.3vw'}} />
+                                <img src={images.S5} alt="slider" style={{width:'73.5vw',height:'15vw',borderRadius:'0.3vw'}} />
                             </div>
                             <div>
-                                <img src={images.S6} alt="slider" style={{width:'73.5vw',height:'10vw',borderRadius:'0.3vw'}} />
+                                <img src={images.S6} alt="slider" style={{width:'73.5vw',height:'15vw',borderRadius:'0.3vw'}} />
                             </div>
                         </Slider>
         </div>

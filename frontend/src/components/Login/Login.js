@@ -2,15 +2,17 @@ import React,{useState}from 'react';
 import images from '../../constant/images';
 import {toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Swal from 'sweetalert2';
+import 'sweetalert2/dist/sweetalert2.min.css';
+import Header from '../home/header';
+import Footer from '../home/footer';
 
 
 const Login =()=>{
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [refresh, setRefresh] = useState(false);
-
     
-
 
     function handleSubmit(e) {
       e.preventDefault();
@@ -33,26 +35,29 @@ const Login =()=>{
         .then((data) => {
           console.log(data, "userRegister");
           if (data.status == "ok") {
-            alert('Loggin successfull');
-            window.localStorage.setItem("token", data.data);
-            window.localStorage.setItem("loggedIn", true);
-            window.location.href = "./userDetails";
+            Swal.fire({
+              icon: 'success',
+              title: 'Login Successful',
+              text: 'Welcome back!',
+            }).then(() => {
+              window.localStorage.setItem('token', data.data);
+              window.localStorage.setItem('loggedIn', true);
+              window.location.href = './userDetails';
+            });
           }else{
-            alert('Loggin faild! Please try again');
+            Swal.fire({
+              icon: 'error',
+              title: 'Login Failed',
+              text: 'Invalid credentials. Please try again.',
+            });
           }
         });
   };
 
     return(
         <div className='container-l'>
-            {/**header */}
-            {/* <header>
-                <img src={images.Logo} alt='logo' className='logo-a'/>
-                <a href='/' className='btn-l' style={{backgroundColor:'#024731',color:'white'}}>Sign Up</a>
-                <a href='/' className='btn-l'>Return policy</a>
-                <a href='/' className='btn-l'>About us</a>
-                <a href='/' className='btn-l' >Contact us</a> 
-            </header> */}
+            <div style={{backgroundColor:'black'}}>
+            <Header/></div>
                <div className='lgnBox'>
                  <img src={images.Login1} alt='login' className='login-a'/>
                    <div className='lgnData'>
@@ -82,13 +87,7 @@ const Login =()=>{
                         
                    </div>   
                </div>
-
-            {/**footer */}
-            {/* <footer className='footer-a'>
-                <img src={images.Bin} alt='bin' className='bin-a'/>
-                <h4 className='footer1'>Copyright 2023 by Referenes Data. All Rights Reserved.</h4>
-            </footer> */}
-           
+            <Footer/>     
         </div>
     )
 };
